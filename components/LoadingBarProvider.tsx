@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import LoadingBar from 'react-top-loading-bar';
 
-const LoadingBarProvider = ({ children }: { children: React.ReactNode }) => {
+const RouteTransitionLoadingBarProvider = ({ children }: { children: React.ReactNode }) => {
   const [progress, setProgress] = useState(0);
   const pathname = usePathname();
 
@@ -28,4 +28,4 @@ const LoadingBarProvider = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default LoadingBarProvider;
+export default RouteTransitionLoadingBarProvider;
