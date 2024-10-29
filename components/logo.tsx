@@ -12,10 +12,9 @@ export function Logo({ className }: { className?: string }) {
           alt='Hard Rock Treks & Expeditions'
           width={60}
           height={60}
-          layout='fixed'
         />
         <div className={cn("relative flex flex-col items-start justify-start gap-0 p-0 font-semibold text-secondary uppercase text-2xl leading-none mix-blend-difference", className)}>
-          <span className='bg-gradient-to-br from-background via-secondary to-primary bg-clip-text text-transparent'>
+          <span className='mix-blend-difference'>
             Hard Rock Treks & Expeditions
           </span>
           <span className='font-normal text-base'>

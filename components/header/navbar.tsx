@@ -1,9 +1,10 @@
 'use client';
 
 import { PhoneCall } from 'lucide-react';
-import { NavMenu } from './nav-menu';
-import ButtonWithIcon from '@/components/button-with-icon';
-import { Logo } from '@/components/logo';
+// import { NavMenu } from './nav-menu';
+import { NavMenu } from "@/components/header/NavMenu"
+import ButtonWithIcon from '@/components/ButtonWithIcon';
+import { Logo } from '@/components/Logo';
 
 export default function Navbar() {
   return (

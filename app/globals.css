@@ -83,6 +83,6 @@
 }
 
 .container > *:not(.hero) {
-  margin-left: 1rem; /* px-4 equivalent */
-  margin-right: 1rem; /* px-4 equivalent */
+  margin-left: 2rem; /* px-4 equivalent */
+  margin-right: 2rem; /* px-4 equivalent */
 }

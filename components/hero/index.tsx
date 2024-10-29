@@ -1,6 +1,6 @@
-import { Searchbar } from '@/components/home/search-bar';
+import { Searchbar } from '@/components/home/Searchbar';
 import Image from 'next/image';
-import { Headline } from './headline';
+import { Headline } from './Headline';
 
 export default function Hero() {
   return (
@@ -8,9 +8,7 @@ export default function Hero() {
       <Image
         src="https://cdn.pixabay.com/photo/2015/05/26/12/42/everest-784617_1280.jpg"
         alt="Hero Image"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
+        fill={true}
         className="-z-10"
       />
       <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-black bg-opacity-50"></div>
