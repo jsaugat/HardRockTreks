@@ -10,6 +10,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 z-50 w-full">
       <div className="container flex h-16 items-center">
+        {/* Justify Between */}
         <div className="mx-4 hidden md:flex justify-between w-full">
           <Logo />
           <section className="flex items-center gap-2">

@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistSans.className}>
         <TopLoadingBarProvider>
-          <div className="min-h-screen bg-background relative">
+          <div className="min-h-screen bg-secondary relative">
             <Navbar />
             <main className="container mx-auto relative z-0">
               {children}
