@@ -14,7 +14,7 @@ export function PopularDestinations() {
         buttonLabel='View all destinations'
       >
         {/* <div className="h-80 w-full bg-secondary rounded-2xl flex justify-center items-center"> */}
-          <DestinationsCarousel />
+        <DestinationsCarousel />
         {/* </div> */}
       </ContentTemplate>
     </div>
