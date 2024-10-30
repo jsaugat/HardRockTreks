@@ -11,7 +11,6 @@ export default function Home() {
       <Hero />
       <PopularDestinations />
       <Packages />
-      <div className="h-screen bg-green-900 mb-10" />
     </>
   )
 }

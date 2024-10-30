@@ -24,18 +24,20 @@ export function ContentTemplate({
       {/* Header Section */}
       <section className="flex items-end justify-between w-full">
         <header>
-          <h1 className='text-3xl sm:text-4xl lg:text-6xl font-semibold uppercase tracking-tight bg-gradient-to-br from-primary to-black via-primary bg-clip-text text-transparent'>
+          {/* Title */}
+          <h1 className='text-3xl sm:text-4xl lg:text-6xl font-bold uppercase font-neueRegrade tracking-tight bg-gradient-to-br from-primary via-primary to-foreground bg-clip-text text-transparent'>
             {title}
           </h1>
+          {/* Subtitle */}
           {subtitle &&
             <p className='text-lg'>{subtitle}</p>
           }
         </header>
+        {/* 'View all' button */}
         {hasButton &&
-          <Button variant={"outline"} asChild>
+          <Button variant={"outline"} className='shadow-md' asChild>
             <Link href={`/${buttonHref}`}>{buttonLabel}</Link>
           </Button>
-
         }
       </section>
       {/* Content */}
