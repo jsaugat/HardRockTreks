@@ -1,17 +1,17 @@
-import { Searchbar } from '@/components/home/Searchbar';
-import Image from 'next/image';
-import { Headline } from './Headline';
+import { Searchbar } from "@/components/home/Searchbar";
+import Image from "next/image";
+import { Headline } from "./Headline";
 
 export default function Hero() {
   return (
     <div className="hero relative h-screen flex items-center justify-center">
       <Image
-        src="https://cdn.pixabay.com/photo/2015/05/26/12/42/everest-784617_1280.jpg"
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Hero Image"
         fill={true}
         className="-z-10"
       />
-      <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-black bg-opacity-50"></div>
+      <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-black bg-opacity-40"></div>
       <section className="text-center space-y-4">
         <Headline />
 

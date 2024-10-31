@@ -1,6 +1,7 @@
 import { ContentTemplate } from "@/components/home/ContentTemplate";
 import { Card } from "@/components/ui/card";
 import React from "react";
+import { ActivitiesCarousel } from "./ActivitiesCarousel";
 
 export function Activites() {
   return (
@@ -12,11 +13,7 @@ export function Activites() {
         buttonLabel="View all activities"
         hasButton
       >
-        <section className="h-96 flex justify-between items-center gap-5">
-          <Card className="flex-1 border bg-card h-full rounded-2xl"></Card>
-          <Card className="flex-1 border bg-card h-full rounded-2xl"></Card>
-          <Card className="flex-1 border bg-card h-full rounded-2xl"></Card>
-        </section>
+        <ActivitiesCarousel />
       </ContentTemplate>
     </div>
   );

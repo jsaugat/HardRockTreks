@@ -1,14 +1,22 @@
 [
   {
-    "name": "Trekking",
-    "noOfPackages": 84
+    "title": "Trekking",
+    "noOfPackages": 84,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    "name": "Cultural Tours",
-    "noOfPackages": 4
+    "title": "Cultural Tours",
+    "noOfPackages": 4,
+    "image": "https://images.unsplash.com/photo-1615753378120-247a44dea109?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    "name": "Jungle Safari",
-    "noOfPackages": 5
+    "title": "Expedition Climbing",
+    "noOfPackages": 5,
+    "image": "https://images.unsplash.com/photo-1491986981770-cb1eee867c54?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "title": "Jungle Safari",
+    "noOfPackages": 5,
+    "image": "https://images.unsplash.com/photo-1662958882371-9b3c5d9a0c25?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]
