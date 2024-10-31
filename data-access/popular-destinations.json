@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "The Everest",
+    "image": "https://images.unsplash.com/photo-1606829411515-35bac5e69de7?q=80&w=1794&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Mountain Landscape"
+  },
+  {
+    "id": 2,
+    "title": "Annapurna Range",
+    "image": "https://images.unsplash.com/photo-1678086029951-5154accbd21b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Sunset Over Hills"
+  },
+  {
+    "id": 3,
+    "title": "Manaslu",
+    "image": "https://images.unsplash.com/photo-1492566068484-ad7505f8aaff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Snowy Peaks"
+  }
+]

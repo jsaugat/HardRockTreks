@@ -33,7 +33,11 @@ export function ContentTemplate({
         </header>
         {/* 'View all' button */}
         {hasButton && (
-          <Button variant={"outline"} className="shadow-md" asChild>
+          <Button
+            variant={"outline"}
+            className="border-muted-foreground/50"
+            asChild
+          >
             <Link href={`/${buttonHref}`}>{buttonLabel}</Link>
           </Button>
         )}

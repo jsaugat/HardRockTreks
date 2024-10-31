@@ -1,15 +1,15 @@
-import { ContentTemplate } from '@/components/home/ContentTemplate'
-import { Card } from '@/components/ui/card'
-import React from 'react'
+import { ContentTemplate } from "@/components/home/ContentTemplate";
+import { Card } from "@/components/ui/card";
+import React from "react";
 
 export function Activites() {
   return (
-    <div className='py-20'>
+    <div className="py-20">
       <ContentTemplate
-        title='Travel Activities'
-        subtitle='A unique blend of adventure, culture, and natural wonders.'
-        buttonHref='/activities'
-        buttonLabel='View all activities'
+        title="Travel Activities"
+        subtitle="A unique blend of adventure, culture, and natural wonders."
+        buttonHref="/activities"
+        buttonLabel="View all activities"
         hasButton
       >
         <section className="h-96 flex justify-between items-center gap-5">
@@ -19,5 +19,5 @@ export function Activites() {
         </section>
       </ContentTemplate>
     </div>
-  )
+  );
 }
