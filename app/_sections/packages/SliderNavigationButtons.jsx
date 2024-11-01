@@ -42,9 +42,8 @@ export const SliderNavigationButtons = ({ packagesSwiperContainerRef }) => {
         variant={"outline"}
         size={"icon"}
         onClick={() => packagesSwiperContainerRef.current?.swiper?.slidePrev()}
-        className={`border-muted-foreground/50 hover:bg-primary hover:text-primary-foreground ${
-          leftPressed ? "bg-primary text-primary-foreground" : ""
-        }`}
+        className={`border-muted-foreground/50 hover:bg-primary hover:border-primary hover:text-primary-foreground ${leftPressed ? "bg-primary text-primary-foreground" : ""
+          }`}
       >
         <ChevronLeft className="w-5 h-5" />
       </Button>
@@ -52,9 +51,8 @@ export const SliderNavigationButtons = ({ packagesSwiperContainerRef }) => {
         variant={"outline"}
         size={"icon"}
         onClick={() => packagesSwiperContainerRef.current?.swiper?.slideNext()}
-        className={`border-muted-foreground/50 hover:bg-primary hover:text-primary-foreground ${
-          rightPressed ? "bg-primary text-primary-foreground" : ""
-        }`}
+        className={`border-muted-foreground/50 hover:bg-primary hover:border-primary hover:text-primary-foreground ${rightPressed ? "bg-primary text-primary-foreground" : ""
+          }`}
       >
         <ChevronRight className="w-5 h-5" />
       </Button>

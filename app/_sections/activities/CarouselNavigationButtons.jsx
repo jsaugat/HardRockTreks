@@ -11,7 +11,7 @@ export const CarouselNavigationButtons = ({
         variant={"outline"}
         size={"icon"}
         onClick={() => activitiesSwiperContainerRef.current?.swiper?.slidePrev()}
-        className="border-muted-foreground/50 hover:bg-primary hover:text-primary-foreground"
+        className="border-muted-foreground/50 hover:bg-primary hover:border-primary hover:text-primary-foreground"
       >
         <ChevronLeft className="w-5 h-5" />
       </Button>
@@ -19,7 +19,7 @@ export const CarouselNavigationButtons = ({
         variant={"outline"}
         size={"icon"}
         onClick={() => activitiesSwiperContainerRef.current?.swiper?.slideNext()}
-        className="border-muted-foreground/50 hover:bg-primary hover:text-primary-foreground"
+        className="border-muted-foreground/50 hover:bg-primary hover:border-primary hover:text-primary-foreground"
       >
         <ChevronRight className="w-5 h-5" />
       </Button>

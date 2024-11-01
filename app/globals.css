@@ -83,7 +83,8 @@
   }
 }
 
-.container > *:not(.hero, .tripPlanner) {
+/* Set container margin for elements other than hero and tripPlanner */
+.container > *:not(.hero) {
   margin-left: 2rem; /* px-4 equivalent */
   margin-right: 2rem; /* px-4 equivalent */
 }
