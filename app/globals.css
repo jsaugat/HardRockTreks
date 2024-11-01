@@ -63,7 +63,7 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
-    --darker: #80838A; /* darker border */
+    --darker: #80838a; /* darker border */
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
     --chart-1: 220 70% 50%;
@@ -86,4 +86,12 @@
 .container > *:not(.hero, .tripPlanner) {
   margin-left: 2rem; /* px-4 equivalent */
   margin-right: 2rem; /* px-4 equivalent */
+}
+
+/* Swiper Pagination Styles */
+.swiper-pagination-bullet-active {
+  background-color: rgb(56, 56, 56) !important;
+}
+.swiper-pagination-bullet {
+  background-color: rgb(136, 136, 136);
 }

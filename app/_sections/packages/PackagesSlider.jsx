@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import "./slider.css";
 import { SliderNavigationButtons } from "./SliderNavigationButtons";
 import { useRef } from "react";
 import { Card } from '@/components/ui/card';
@@ -36,8 +35,8 @@ export const PackagesSlider = () => {
         className="md:h-[500px]"
       >
         {packagesData.map((pkg) => (
-          <SwiperSlide className='overflow-visible'>
-            <PackageCard pkg={pkg} key={pkg.title} />
+          <SwiperSlide key={pkg.title} className='overflow-visible'>
+            <PackageCard pkg={pkg} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -52,7 +51,7 @@ const PackageCard = ({ pkg }) => {
   return (
     <Card
       key={title}
-      className="h-full p-3 pb-8 flex rounded-3xl"
+      className="h-full p-3 md:h-[440px] flex rounded-3xl"
     >
       {/* //? IMAGE SECTION - LEFT */}
       <div className="relative h-full w-3/5 rounded-xl overflow-hidden" >

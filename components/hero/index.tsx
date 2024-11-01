@@ -11,10 +11,9 @@ export default function Hero() {
         fill={true}
         className="-z-10"
       />
-      <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-black bg-opacity-40"></div>
+      <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-gradient-to-b from-foreground/20 via-foreground/20 to-black"></div>
       <section className="text-center space-y-4">
         <Headline />
-
         {/* <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
           Discover amazing destinations and plan your next adventure with us.
         </p>

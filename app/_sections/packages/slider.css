@@ -1,6 +1,6 @@
 /* Swiper Pagination Styles */
 .swiper-pagination-bullet-active {
-  background-color: rgb(59, 130, 246) !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 .swiper-pagination-bullet {
   background-color: rgb(136, 136, 136);

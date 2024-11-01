@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import "./carousel.css";
 import { CarouselNavigationButtons } from "./CarouselNavigationButtons";
 import { useRef } from "react";
 import { Card } from "@/components/ui/card";
@@ -23,7 +22,7 @@ export const ActivitiesCarousel = () => {
         slidesPerView={3}
         loop={true}
         autoplay={{
-          delay: 5000,
+          delay: 1500,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -34,7 +33,7 @@ export const ActivitiesCarousel = () => {
         className="md:h-[460px]"
       >
         {activitiesData.map((act) => (
-          <SwiperSlide className="rounded-3xl">
+          <SwiperSlide key={act.title} className="rounded-3xl">
             <Card className="relative md:h-[400px] w-full rounded-3xl overflow-hidden">
               {/* IMAGE */}
               <Image
@@ -48,7 +47,7 @@ export const ActivitiesCarousel = () => {
                 {act.title}
               </h2>
               {/* PACKAGES NUMBER BADGE */}
-              <div className="absolute top-2 right-2 bg-primary-foreground/20 text-white px-2 py-1 rounded-full">
+              <div className="absolute top-2 right-2 bg-muted-foreground/50 backdrop-blur-sm text-secondary px-2 py-1 rounded-full">
                 {act.noOfPackages} Packages
               </div>
               {/* BLACK OVERLAY GRADIENT  */}

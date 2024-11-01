@@ -3,7 +3,7 @@ import { Flame, Map } from "lucide-react";
 
 export default function TripPlanner() {
   return (
-    <section className="mt-20 mb-10 rounded-2xl flex flex-col items-center gap-5 p-20 bg-gradient-to-br from-[#e3ffe7] to-[#d9e7ff] border border-foreground/20">
+    <section className=" mb-10 rounded-2xl flex flex-col items-center gap-5 p-20 bg-gradient-to-br from-[#e3ffe7] to-[#d9e7ff] border">
       {/* TITLE */}
       <h1 className="text-7xl text-center font-semibold font-neueRegrade">
         Prepare your personalized
