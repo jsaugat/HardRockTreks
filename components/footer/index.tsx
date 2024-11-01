@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import { IconBrandTripadvisor } from "@tabler/icons-react";
 import { IconBrandX } from "@tabler/icons-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Headphones, PhoneCall, Send } from "lucide-react";
 
 // Declare the menuLinks array outside the component
 const menuLinks = [
@@ -17,7 +17,6 @@ const menuLinks = [
   { href: "/company-profile", label: "Company Profile" },
   { href: "/contact", label: "Contact" },
 ];
-
 const communityLinks = [
   { href: "/videos", label: "Videos" },
   { href: "/photo-gallery", label: "Photo Gallery" },
@@ -28,50 +27,68 @@ const communityLinks = [
 export default function Footer() {
   return (
     <footer className="pt-8 container pb-3 bg-foreground text-primary-foreground flex flex-col gap-44">
-      <div className="flex justify-between">
-        <section className="flex flex-col gap-6">
+      <main className="flex flex-col gap-12 lg:gap-10 md:flex-row justify-between">
+        {/*TITLE AND SOCIAL SECTION */}
+        <section className="flex flex-col gap-8">
           <Title />
-          <SocialIcons />
+          <section className="flex md:block items-start justify-between md:space-y-8">
+            <ContactInfo />
+            <SocialIcons />
+          </section>
         </section>
-        <section className="grid grid-cols-3 gap-8">
-          <div>
-            <h2 className="text-sm text-muted-foreground uppercase">Email</h2>
-            <p>hardrockom@gmail.com</p>
-          </div>
-          <div>
-            <h2 className="text-sm text-muted-foreground uppercase">Phone</h2>
-            <p>+977 9841117524 </p>
-          </div>
-          <div>
-            <h2 className="text-sm text-muted-foreground uppercase">
-              Holland Support
-            </h2>
-            <p>+31-614196086</p>
-          </div>
-          <div>
-            <h2 className="text-sm text-muted-foreground uppercase">Menu</h2>
-            <ul>
-              {menuLinks.map((link, index) => (
-                <li key={index}>
-                  <Link href={link.href}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-sm text-muted-foreground uppercase">
-              Community
-            </h2>
-            <ul>
-              {communityLinks.map((link, index) => (
-                <li key={index}>
-                  <Link href={link.href}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
+        {/* MENU AND LINKS SECTION */}
+        <section className="flex flex-col lg:flex-row gap-4 lg:gap-32">
+          {/* Contacts */}
+          {/* <div className="text-blue-300 lg:flex lg:flex-col lg:items-start gap-5 lg:gap-4">
+            <div>
+              <h2 className="text-sm text-muted-foreground uppercase flex gap-2 lg:gap-1 items-center">
+                <Send className="h-4 w-4" />
+                Email
+              </h2>
+              <p>hardrockom@gmail.com</p>
+            </div>
+            <div>
+              <h2 className="text-sm text-muted-foreground uppercase flex gap-2 lg:gap-1 items-center">
+                <PhoneCall className="h-4 w-4" />
+                Phone
+              </h2>
+              <p>+977 9841117524 </p>
+            </div>
+            <div>
+              <h2 className="text-sm text-muted-foreground uppercase flex gap-2 lg:gap-1 items-center">
+                <Headphones className="h-4 w-4" />
+                Holland Support
+              </h2>
+              <p>+31-614196086</p>
+            </div>
+          </div> */}
+          {/* Menu */}
+          <div className="flex lg:justify-start gap-20 lg:gap-16">
+            <div>
+              <h2 className="text-sm text-muted-foreground uppercase">Menu</h2>
+              <ul>
+                {menuLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-sm text-muted-foreground uppercase">
+                Community
+              </h2>
+              <ul>
+                {communityLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
-      </div>
+      </main>
       <FooterBottom />
     </footer>
   );
@@ -80,17 +97,16 @@ export default function Footer() {
 // Title: Contact Us To Get Started
 const Title = () => {
   return (
-    <h1 className="text-6xl font-medium tracking-tight font-neueRegrade">
+    <h1 className="text-4xl md:text-6xl font-medium tracking-tight font-neueRegrade">
       Contact us now
-      <br /> to get started
+      <br /> to get started.
     </h1>
   );
 };
-
 // Social Icons
 const SocialIcons = () => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-col md:flex-row items-center gap-2 md:self-auto">
       <SocialButton icon={FacebookRoundedIcon} />
       <SocialButton icon={IconBrandX} />
       <SocialButton icon={IconBrandTripadvisor} ariaHidden={true} size="icon" />
@@ -112,20 +128,58 @@ const SocialButton: React.FC<{
   );
 };
 
+// Contact Info
+const ContactInfo = () => {
+  const contactDetails = useMemo(
+    () => [
+      {
+        icon: Send,
+        label: "Email",
+        info: "hardrockom@gmail.com",
+      },
+      {
+        icon: PhoneCall,
+        label: "Phone",
+        info: "+977 9841117524",
+      },
+      {
+        icon: Headphones,
+        label: "Holland Support",
+        info: "+31-614196086",
+      },
+    ],
+    []
+  );
+
+  return (
+    <section className="flex flex-col lg:flex-row lg:items-start gap-3 lg:gap-10">
+      {contactDetails.map(({ icon: Icon, label, info }) => (
+        <div key={label}>
+          <h2 className="text-sm text-muted-foreground uppercase flex gap-2 lg:gap-2 items-center">
+            <Icon className="h-4 w-4" />
+            {label}
+          </h2>
+          <p>{info}</p>
+        </div>
+      ))}
+    </section>
+  );
+};
+
 // Footer Bottom
 const FooterBottom = () => {
   return (
-    <section className="flex justify-between">
-      <p>
+    <section className="text-sm md:text-base text-muted-foreground flex flex-col md:flex-row justify-between">
+      <p className="text-center">
         © 1993 - 2024 Hard Rock Treks & Expedition Pvt. Ltd. All Rights
         Reserved.
       </p>
-      <p>
+      <p className="text-center text-muted-foreground">
         Designed and developed by{" "}
         <Link
           href={"https://www.saugatjoshi.com.np"}
           target="blank"
-          className="text-primary"
+          className="text-secondary hover:underline"
         >
           Saugat Joshi
         </Link>

@@ -1,11 +1,11 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
+import "./globals.css";
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
 // import { GeistMono } from 'geist/font/mono';
-import Navbar from '@/components/header/Navbar';
-import { Toaster } from '@/components/ui/sonner';
-import { TopLoadingBarProvider } from '@/contexts/TopLoadingBar';
-import Footer from '@/components/footer';
+import Navbar from "@/components/header/Navbar";
+import { Toaster } from "@/components/ui/sonner";
+import { TopLoadingBarProvider } from "@/contexts/TopLoadingBar";
+import Footer from "@/components/footer";
 import localFont from "next/font/local";
 
 // const inter = Inter({ subsets: ['latin'] });
@@ -37,8 +37,8 @@ const neueRegrade = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Hard Rock Treks & Expeditions',
-  description: 'Discover amazing destinations around Nepal.',
+  title: "Hard Rock Treks & Expeditions",
+  description: "Discover amazing destinations around Nepal.",
 };
 
 export default function RootLayout({
@@ -52,9 +52,7 @@ export default function RootLayout({
         <TopLoadingBarProvider>
           <div className="min-h-screen bg-secondary relative">
             <Navbar />
-            <main className="container mx-auto relative z-0">
-              {children}
-            </main>
+            <main className="container mx-auto relative z-0">{children}</main>
             <Footer />
           </div>
           <Toaster />

@@ -84,9 +84,17 @@
 }
 
 /* Set container margin for elements other than hero and tripPlanner */
-.container > *:not(.hero) {
-  margin-left: 2rem; /* px-4 equivalent */
-  margin-right: 2rem; /* px-4 equivalent */
+.container > *:not(.hero):not(.tripPlanner) {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* For medium and larger screens */
+@media (min-width: 768px) {
+  .container > *:not(.hero):not(.tripPlanner) {
+    margin-left: 2rem; /* equivalent to px-4 */
+    margin-right: 2rem; /* equivalent to px-4 */
+  }
 }
 
 /* Swiper Pagination Styles */
