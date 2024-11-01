@@ -6,12 +6,13 @@ export default function Hero() {
   return (
     <div className="hero relative h-screen flex items-center justify-center">
       <Image
-        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://images.pexels.com/photos/4360449/pexels-photo-4360449.jpeg"
         alt="Hero Image"
-        fill={true}
+        fill
         className="-z-10"
+        style={{ objectFit: "cover" }}
       />
-      <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-gradient-to-b from-foreground/20 via-foreground/20 to-black"></div>
+      <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-gradient-to-b from-foreground/10 via-foreground/30 to-black"></div>
       <section className="text-center space-y-4">
         <Headline />
         {/* <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">

@@ -37,7 +37,7 @@ export const DestinationsSlider = () => {
               <Image
                 src={destination.image}
                 alt={destination.title}
-                layout="fill"
+                fill
                 className="rounded-xl"
                 style={{
                   objectFit: "cover",
@@ -45,7 +45,7 @@ export const DestinationsSlider = () => {
                 }}
               />
               {/* OVERLAY GRADIENT */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-foreground/50 to-foreground opacity-80 rounded-xl" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-foreground/50 to-foreground/50 opacity-80 rounded-xl" />
               {/* TITLE */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary-foreground text-center lg:text-6xl font-semibold font-neueRegrade uppercase">
                 <span className="drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r via-secondary from-secondary to-secondary/50">

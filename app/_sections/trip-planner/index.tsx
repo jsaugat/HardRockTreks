@@ -1,11 +1,24 @@
 import ButtonWithIcon from "@/components/ButtonWithIcon";
+import { cn } from "@/lib/utils";
 import { Flame, Map } from "lucide-react";
 
 export default function TripPlanner() {
   return (
-    <section className=" mb-10 rounded-2xl flex flex-col items-center gap-5 p-20 bg-gradient-to-br from-[#e3ffe7] to-[#d9e7ff] border">
+    <section
+      className={cn(
+        "mb-10 rounded-2xl flex flex-col items-center gap-5 p-20 border",
+        // "bg-gradient-to-br from-[#e3ffe7] to-[#d9e7ff]"
+        "bg-gradient-to-br from-[#fff1e6] to-[#d4dfff]"
+      )}
+    >
       {/* TITLE */}
-      <h1 className="text-7xl text-center font-semibold font-neueRegrade">
+      <h1
+        className={cn(
+          "text-7xl text-center font-semibold font-neueRegrade",
+          // "bg-clip-text text-transparent bg-gradient-to-br from-[#0700b8] to-[#00ff88]"
+          "bg-clip-text text-transparent bg-gradient-to-br from-[#2427ff] to-[#ff7300]"
+        )}
+      >
         Prepare your personalized
         <br /> travel itinerary.
       </h1>
@@ -29,3 +42,5 @@ export default function TripPlanner() {
     </section>
   );
 }
+// #0700b8 0%,
+//   #00ff88

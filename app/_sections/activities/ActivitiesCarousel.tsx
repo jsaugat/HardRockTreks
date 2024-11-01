@@ -39,7 +39,7 @@ export const ActivitiesCarousel = () => {
               <Image
                 src={act.image}
                 alt={act.title}
-                layout="fill"
+                fill
                 style={{ objectFit: "cover" }}
               />
               {/* TITLE */}
@@ -47,7 +47,7 @@ export const ActivitiesCarousel = () => {
                 {act.title}
               </h2>
               {/* PACKAGES NUMBER BADGE */}
-              <div className="absolute top-2 right-2 bg-muted-foreground/50 backdrop-blur-sm text-secondary px-2 py-1 rounded-full">
+              <div className="absolute top-2 right-2 bg-foreground/40 text-secondary backdrop-blur-sm px-2 py-1 rounded-full">
                 {act.noOfPackages} Packages
               </div>
               {/* BLACK OVERLAY GRADIENT  */}

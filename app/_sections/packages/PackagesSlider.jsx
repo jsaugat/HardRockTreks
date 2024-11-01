@@ -58,7 +58,7 @@ const PackageCard = ({ pkg }) => {
         <Image
           src={image}
           alt={title}
-          layout="fill"
+          fill
           style={{ objectFit: "cover" }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black" />
