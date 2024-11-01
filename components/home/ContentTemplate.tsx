@@ -25,17 +25,17 @@ export function ContentTemplate({
       <section className="flex items-end justify-between w-full">
         <header>
           {/* Title */}
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-semibold font-neueRegrade  bg-gradient-to-r from-[#0030bd] via-purple-400 to-primary bg-clip-text text-transparent">
+          <h1 className="text-5xl sm:text-4xl lg:text-6xl font-semibold font-neueRegrade  bg-gradient-to-r from-[#0030bd] via-purple-400 to-primary bg-clip-text text-transparent">
             {title}
           </h1>
           {/* Subtitle */}
-          {subtitle && <p className="text-lg">{subtitle}</p>}
+          {subtitle && <p className="text-lg leading-tight">{subtitle}</p>}
         </header>
         {/* 'View all' button */}
         {hasButton && (
           <Button
             variant={"outline"}
-            className="border-muted-foreground/50"
+            className="hidden lg:block border-muted-foreground/50"
             asChild
           >
             <Link href={`/${buttonHref}`}>{buttonLabel}</Link>
@@ -44,6 +44,15 @@ export function ContentTemplate({
       </section>
       {/* Content */}
       <section>{children}</section>
+      {hasButton && (
+        <Button
+          variant={"outline"}
+          className="lg:hidden border-muted-foreground/50 w-full"
+          asChild
+        >
+          <Link href={`/${buttonHref}`}>{buttonLabel}</Link>
+        </Button>
+      )}
     </div>
   );
 }

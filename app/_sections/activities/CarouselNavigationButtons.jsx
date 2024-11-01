@@ -6,7 +6,7 @@ export const CarouselNavigationButtons = ({
   activitiesSwiperContainerRef,
 }) => {
   return (
-    <div className="flex items-center gap-2 mx-auto mt-3 justify-center">
+    <div className="hidden lg:flex items-center gap-2 mx-auto mt-3 justify-center">
       <Button
         variant={"outline"}
         size={"icon"}

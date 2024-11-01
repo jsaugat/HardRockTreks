@@ -6,7 +6,7 @@ export function PopularDestinations() {
   return (
     <div className="py-20">
       <ContentTemplate
-        title="Popular Destinations"
+        title="Top Destinations"
         subtitle="Explore the most popular destinations"
         hasButton
         buttonHref="/"

@@ -15,7 +15,7 @@ export default function TripPlanner() {
       {/* TITLE */}
       <h1
         className={cn(
-          "text-[2.7rem] leading-none lg:text-7xl lg:text-center font-semibold font-neueRegrade",
+          "text-4xl leading-none lg:text-7xl lg:text-center font-semibold font-neueRegrade",
           // "bg-clip-text text-transparent bg-gradient-to-br from-[#0700b8] to-[#00ff88]"
           "bg-clip-text text-transparent bg-gradient-to-br from-[#2427ff] to-[#ff7300]"
         )}

@@ -10,19 +10,21 @@ import { CarouselNavigationButtons } from "./CarouselNavigationButtons";
 import { useRef } from "react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import useWindowDimensions from "@/hooks/useWindowDimension";
 
 export const ActivitiesCarousel = () => {
   const activitiesSwiperContainerRef = useRef(null); // Type swiperContainerRef correctly
+  const { width, height } = useWindowDimensions();
   return (
     <>
       <Swiper
         ref={activitiesSwiperContainerRef}
         modules={[Navigation, Pagination, A11y, Autoplay]}
         spaceBetween={20}
-        slidesPerView={3}
+        slidesPerView={width && width < 768 ? 1 : 3} // Show 1 slide on mobile and 3 on desktop.
         loop={true}
         autoplay={{
-          delay: 1500,
+          delay: width && width < 768 ? 3000 : 2500, // Slower autoplay on mobile.
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -34,7 +36,7 @@ export const ActivitiesCarousel = () => {
       >
         {activitiesData.map((act) => (
           <SwiperSlide key={act.title} className="rounded-3xl">
-            <Card className="relative md:h-[400px] w-full rounded-3xl overflow-hidden">
+            <Card className="relative h-[360px] md:h-[400px] w-full rounded-3xl overflow-hidden">
               {/* IMAGE */}
               <Image
                 src={act.image}
