@@ -44,7 +44,9 @@ export function Logo({ className }: { className?: string }) {
             className
           )}
         >
-          <span className="text-foreground tracking-tight font-bold">Hard Rock Treks & Expeditions</span>
+          <span className="text-foreground lg:text-primary-foreground tracking-tight">
+            Hard Rock Treks & Expeditions
+          </span>
           <span className="hidden lg:block font-normal text-base">
             Since 1993
           </span>
