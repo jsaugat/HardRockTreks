@@ -76,7 +76,7 @@ export const NavMenu = () => {
   const handleSubMenuLeave = () => setOpenSubMenu(null);
 
   return (
-    <nav className="p-1 mx-auto w-fit bg-background rounded-full border flex items-center shadow-md">
+    <nav className="hidden p-1 mx-auto w-fit bg-background rounded-full border lg:flex items-center shadow-md">
       {routes.map(({ href, label, menu }, idx) => {
         const isActive = pathname === href;
         return (

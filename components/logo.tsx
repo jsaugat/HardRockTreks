@@ -40,12 +40,14 @@ export function Logo({ className }: { className?: string }) {
         <div
           className={cn(
             isVisible ? "opacity-100" : "opacity-0 pointer-events-none",
-            "relative flex flex-col items-start justify-start gap-0 p-0 font-semibold text-secondary uppercase text-2xl leading-none drop-shadow-[0_1px_20px_rgba(59,130,246,1)] mix-blend-difference",
+            "relative flex flex-col items-start justify-start gap-0 p-0 font-semibold text-secondary uppercase text-xl lg:text-2xl leading-none drop-shadow-[0_1px_20px_rgba(59,130,246,1)]",
             className
           )}
         >
-          <span className="">Hard Rock Treks & Expeditions</span>
-          <span className="font-normal text-base">Since 1993</span>
+          <span className="text-foreground tracking-tight font-bold">Hard Rock Treks & Expeditions</span>
+          <span className="hidden lg:block font-normal text-base">
+            Since 1993
+          </span>
         </div>
       </main>
     </Link>

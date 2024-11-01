@@ -84,14 +84,14 @@
 }
 
 /* Set container margin for elements other than hero and tripPlanner */
-.container > *:not(.hero):not(.tripPlanner) {
+.container > *:not(.hero):not(.tripPlanner):not(.navbar) {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
 /* For medium and larger screens */
 @media (min-width: 768px) {
-  .container > *:not(.hero):not(.tripPlanner) {
+  .container > *:not(.hero):not(.tripPlanner):not(.navbar) {
     margin-left: 2rem; /* equivalent to px-4 */
     margin-right: 2rem; /* equivalent to px-4 */
   }
