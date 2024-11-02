@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TopLoadingBarProvider } from "@/contexts/TopLoadingBar";
 import Footer from "@/components/footer";
 import localFont from "next/font/local";
+import { NavProvider } from "@/contexts/Nav";
 
 // const inter = Inter({ subsets: ['latin'] });
 // Local Font
@@ -50,12 +51,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${GeistSans.className} ${neueRegrade.variable}`}>
         <TopLoadingBarProvider>
-          <div className="min-h-screen bg-secondary relative">
-            <Navbar />
-            <main className="container mx-auto relative z-0">{children}</main>
-            <Footer />
-          </div>
-          <Toaster />
+          <NavProvider>
+            <div className="min-h-screen bg-secondary relative">
+              <Navbar />
+              <main className="container mx-auto relative z-0">{children}</main>
+              <Footer />
+            </div>
+            <Toaster />
+          </NavProvider>
         </TopLoadingBarProvider>
       </body>
     </html>

@@ -26,8 +26,9 @@ const communityLinks = [
 
 export default function Footer() {
   return (
-    <footer className="pt-8 container pb-3 bg-foreground text-primary-foreground flex flex-col gap-44">
-      <main className="flex flex-col gap-12 lg:gap-10 md:flex-row justify-between">
+    <footer className="pt-16 lg:pt-10 container pb-3 bg-foreground text-primary-foreground flex flex-col gap-44">
+      {/* FOOTER TOP */}
+      <main className="flex flex-col gap-20 lg:gap-10 md:flex-row justify-between">
         {/*TITLE AND SOCIAL SECTION */}
         <section className="flex flex-col gap-8">
           <Title />
@@ -62,31 +63,7 @@ export default function Footer() {
               <p>+31-614196086</p>
             </div>
           </div> */}
-          {/* Menu */}
-          <div className="flex lg:justify-start gap-20 lg:gap-16">
-            <div>
-              <h2 className="text-sm text-muted-foreground uppercase">Menu</h2>
-              <ul>
-                {menuLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href}>{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h2 className="text-sm text-muted-foreground uppercase">
-                Community
-              </h2>
-              <ul>
-                {communityLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link href={link.href}>{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <MenuLinks />
         </section>
       </main>
       <FooterBottom />
@@ -106,7 +83,7 @@ const Title = () => {
 // Social Icons
 const SocialIcons = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-2 md:self-auto">
+    <div className="flex flex-col md:flex-row items-center gap-3 md:gap-2 md:self-auto">
       <SocialButton icon={FacebookRoundedIcon} />
       <SocialButton icon={IconBrandX} />
       <SocialButton icon={IconBrandTripadvisor} ariaHidden={true} size="icon" />
@@ -152,20 +129,54 @@ const ContactInfo = () => {
   );
 
   return (
-    <section className="flex flex-col lg:flex-row lg:items-start gap-3 lg:gap-10">
+    <section className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
       {contactDetails.map(({ icon: Icon, label, info }) => (
-        <div key={label}>
+        <div key={label} className="space-y-1 md:space-y-0">
+          {/* Label */}
           <h2 className="text-sm text-muted-foreground uppercase flex gap-2 lg:gap-2 items-center">
             <Icon className="h-4 w-4" />
             {label}
           </h2>
+          {/* Detail */}
           <p>{info}</p>
         </div>
       ))}
     </section>
   );
 };
-
+// Menu Links
+const MenuLinks = () => {
+  return (
+    <menu className="flex lg:justify-start gap-20 lg:gap-16">
+      {/* Menu */}
+      <div>
+        <h2 className="text-sm text-muted-foreground uppercase">Menu</h2>
+        <ul className="mt-3 md:mt-0 space-y-3 md:space-y-0">
+          {menuLinks.map((link, index) => (
+            <li key={index}>
+              <Link href={link.href} className="hover:underline">
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* Community */}
+      <div>
+        <h2 className="text-sm text-muted-foreground uppercase">Community</h2>
+        <ul className="mt-3 md:mt-0 space-y-3 md:space-y-0">
+          {communityLinks.map((link, index) => (
+            <li key={index}>
+              <Link href={link.href} className="hover:underline">
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </menu>
+  );
+};
 // Footer Bottom
 const FooterBottom = () => {
   return (

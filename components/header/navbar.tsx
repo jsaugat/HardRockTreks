@@ -1,32 +1,60 @@
 "use client";
 
-import { Menu, PhoneCall } from "lucide-react";
-// import { NavMenu } from './nav-menu';
+import { Menu, PhoneCall, X } from "lucide-react";
 import { NavMenu } from "@/components/header/NavMenu";
 import ButtonWithIcon from "@/components/ButtonWithIcon";
 import { Logo } from "@/components/Logo";
 import { Button } from "../ui/button";
+import { useNav } from "@/contexts/Nav";
+import { cn } from "@/lib/utils";
+import { useEffect } from "react";
+import { OverlayNavMenu } from "./OverlayNavMenu";
 
 export default function Navbar() {
+  const { isNavOpen, toggleNav } = useNav();
+  useEffect(() => {
+    //! Disable scrolling when nav is open
+    if (isNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = ""; // Reset to default
+    }
+
+    // Cleanup when component unmounts or isNavOpen changes
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isNavOpen]);
+
   return (
-    <header className="navbar fixed lg:top-2 z-50 w-full">
-      <div className="container pt-1 h-16 flex items-center bg-secondary md:bg-transparent">
-        {/* Justify Between */}
-        <div className="mx-0 flex justify-between w-full">
-          <Logo />
-          <section className="flex items-center gap-2">
-            <NavMenu />
-            <ButtonWithIcon
-              icon={<PhoneCall className="w-4 h-4 text-background" />}
-              label="Contact us"
-            />
-          </section>
-          {/* HAMBURGER (MOBILE) */}
-          <Button size="icon" variant={"ghost"} className="lg:hidden h-12 w-16">
-            <Menu className="text-foreground w-8 h-8" />
-          </Button>
+    <>
+      <header className="navbar fixed lg:top-2 z-50 w-full">
+        <div className="container pt-1 h-16 flex items-center md:bg-transparent">
+          {/* Justify Between */}
+          <div className="mx-0 flex justify-between w-full">
+            <Logo />
+            <section className="flex items-center gap-2">
+              <NavMenu />
+              <ButtonWithIcon
+                icon={<PhoneCall className="w-4 h-4 text-background" />}
+                label="Contact us"
+                className="hidden lg:flex"
+              />
+            </section>
+            {/* HAMBURGER (MOBILE) */}
+            <Button
+              size="icon"
+              className="lg:hidden rounded-md bg-foreground/40 hover:bg-foreground/50 backdrop-blur-md w-12"
+              onClick={toggleNav}
+            >
+              <Menu className="text-primary-foreground w-7 h-7" />
+            </Button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      {/* Render OverlayMenu Component */}
+      <OverlayNavMenu isNavOpen={isNavOpen} onClose={toggleNav} />
+    </>
   );
 }

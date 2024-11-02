@@ -48,7 +48,8 @@ export const BigPackageCard = ({ pkg }: { pkg: any }) => {
               USD {price}
             </span>
           </p>
-          <Button className="pr-1 lg:w-full lg:h-12 border border-primary bg-gradient-to-r from-primary via-primary to-secondary hover:to-primary transition-all duration-300 flex justify-between items-center">
+          {/* BOOK BUTTON */}
+          <Button className="pr-1 lg:w-full lg:h-12 border border-primary bg-gradient-to-r from-primary via-primary to-blue-400 transition-all duration-300 hover:ring flex justify-between items-center">
             <span className="w-10"></span>
             <span>Book Now</span>
             <div className="rounded-full bg-background h-10 w-10 flex items-center justify-center ml-2">

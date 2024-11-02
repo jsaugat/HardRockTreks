@@ -2,15 +2,18 @@ import useWindowDimensions from "@/hooks/useWindowDimension";
 import React from "react";
 
 export const Headline = () => {
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   return width && width < 768 ? <SmallHeadline /> : <LargeHeadline />;
 };
 
 // MOBILE
 const SmallHeadline = () => {
   return (
-    <h1 className="text-5xl font-neueRegrade uppercase text-primary-foreground text-center font-bold">
-      Adventures beyound dreams.
+    <h1 className="text-5xl text-center font-neueRegrade uppercase text-primary-foreground font-bold drop-shadow-md">
+      <span className="bg-clip-text text-transparent bg-gradient-to-br from-primary-foreground via-primary-foreground to-[#ffbd87]">
+        From Trails to Summits
+      </span>
+      <span className="text-xl block">Your Next Adventure Awaits</span>
     </h1>
   );
 };
