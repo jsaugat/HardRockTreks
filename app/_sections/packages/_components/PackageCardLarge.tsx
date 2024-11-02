@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowUpRight, ChartColumn, SunDim } from "lucide-react";
 import Image from "next/image";
 
-export const BigPackageCard = ({ pkg }: { pkg: any }) => {
+export const LargePackageCard = ({ pkg }: { pkg: any }) => {
   const { title, subtitle, description, image, duration, difficulty, price } =
     pkg;
   return (

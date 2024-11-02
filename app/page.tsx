@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/hero";
+import Hero from "@/app/_sections/hero";
 import { PopularDestinations } from "@/app/_sections/popular-destinations";
 import { Packages } from "@/app/_sections/packages";
 import React from "react";

@@ -10,11 +10,11 @@ import { SliderNavigationButtons } from "./CarouselNavigation";
 import { useRef } from "react";
 import useWindowDimensions from '@/hooks/useWindowDimension';
 import { SmallPackageCard } from './PackageCardSmall';
-import { BigPackageCard } from './PackageCardBig';
+import { LargePackageCard } from './PackageCardLarge';
 
 export const PackagesCarousel = () => {
   const packagesSwiperContainerRef = useRef(null); // Type swiperContainerRef correctly
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   return (
     <>
       <Swiper
@@ -29,14 +29,15 @@ export const PackagesCarousel = () => {
           pauseOnMouseEnter: true,
         }}
         navigation={false}
+        // pagination={{ clickable: width && width < 768 ? false : true }}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log({ swiper })}
         onSlideChange={() => console.log("slide change")}
-        className="md:h-[500px]"
+        className="h-[440px] md:h-[500px]"
       >
         {packagesData.map((pkg) => (
           <SwiperSlide key={pkg.title} className='overflow-visible'>
-            {width < 768 ? <SmallPackageCard pkg={pkg} /> : <BigPackageCard pkg={pkg} />}
+            {width < 768 ? <SmallPackageCard pkg={pkg} /> : <LargePackageCard pkg={pkg} />}
           </SwiperSlide>
         ))}
       </Swiper>

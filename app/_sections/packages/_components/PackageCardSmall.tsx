@@ -18,13 +18,13 @@ export const SmallPackageCard = ({ pkg }: { pkg: any }) => {
       />
       {/* Price and Button */}
       <div className="relative z-20 m-2 self-end">
-        <div className="font-neueRegrade bg-secondary w-fit rounded-full px-2 p-0">
+        <div className="px-2 p-0 pt-1 font-neueRegrade border border-border/50 bg-foreground/30 text-primary-foreground w-fit rounded-full">
           {/* <span className="text-xl font-normal mr-3 text-foreground">
             Starting from
           </span> */}
-          <p className="text-xl font-medium">
+          <p className="text-2xl font-medium">
             USD
-            <span className="font-semibold ml-1">{pkg.price}</span>
+            <span className="font-semibold ml-1">${pkg.price}</span>
           </p>
         </div>
         {/* <Button className="mt-3 pr-1 bg-gradient-to-r from-primary to-purple-500 hover:from-primary transition-all flex justify-between items-center">
@@ -54,10 +54,10 @@ export const SmallPackageCard = ({ pkg }: { pkg: any }) => {
           <p className="text-lg leading-tight">{pkg.subtitle}</p>
         </div>
         <p className="text-sm leading-tight">{pkg.description}</p>
-        <Button className="mt-3 pr-1 h-12 bg-gradient-to-r from-primary via-primary to-foreground border border-primary hover:from-primary transition-all flex justify-between items-center">
-          <span className="font-medium uppercase">Book Now</span>
-          <div className="rounded-full bg-background h-8 w-8 flex items-center justify-center ml-2">
-            <ArrowUpRight className="h-6 w-6 text-primary" />
+        <Button className="mt-3 pr-1 h-14 text-black bg-gradient-to-br from-white via-80% via-white to-white transition-all flex justify-between items-center">
+          <span className="font-semibold text-xl uppercase">Book Now</span>
+          <div className="rounded-full bg-primary h-12 w-12 flex items-center justify-center ml-2">
+            <ArrowUpRight className="h-8 w-8 text-primary-foreground" />
           </div>
         </Button>
       </section>

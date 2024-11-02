@@ -20,12 +20,12 @@ export function ContentTemplate({
   buttonHref,
 }: ContentTemplateProps) {
   return (
-    <div className="space-y-6">
+    <div>
       {/* Header Section */}
       <section className="flex items-end justify-between w-full">
         <header>
           {/* Title */}
-          <h1 className="text-5xl sm:text-4xl lg:text-6xl font-semibold font-neueRegrade  bg-gradient-to-r from-[#0030bd] via-purple-400 to-primary bg-clip-text text-transparent">
+          <h1 className="text-[2.8rem] sm:text-4xl lg:text-6xl font-semibold font-neueRegrade  bg-gradient-to-r from-[#0030bd] via-purple-400 to-primary bg-clip-text text-transparent">
             {title}
           </h1>
           {/* Subtitle */}
@@ -43,7 +43,8 @@ export function ContentTemplate({
         )}
       </section>
       {/* Content */}
-      <section>{children}</section>
+      <section className="mt-5">{children}</section>
+      {/* "View all packages" button for small screen */}
       {hasButton && (
         <Button
           variant={"outline"}

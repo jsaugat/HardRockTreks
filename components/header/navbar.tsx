@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="navbar fixed lg:top-2 z-50 w-full">
+      <header className="navbar fixed lg:top-2 z-20 w-full">
         <div className="container pt-1 h-16 flex items-center md:bg-transparent">
           {/* Justify Between */}
           <div className="mx-0 flex justify-between w-full">

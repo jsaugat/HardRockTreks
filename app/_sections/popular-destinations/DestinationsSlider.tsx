@@ -29,7 +29,7 @@ export const DestinationsSlider = () => {
         // pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log({ swiper })}
         onSlideChange={() => console.log("slide change")}
-        className="lg:h-[460px]"
+        className="lg:h-[460px] mb-3"
       >
         {popularDestinations.map((destination) => (
           <SwiperSlide key={destination.id} className="">

@@ -1,4 +1,4 @@
-import { Searchbar } from "@/components/home/Searchbar";
+import { SearchbarDialog } from "@/components/home/Searchbar";
 import Image from "next/image";
 import { Headline } from "./Headline";
 import { ArrowDown } from "lucide-react";
@@ -29,7 +29,7 @@ export default function Hero() {
             <Link href="/contact">Contact Us</Link>
           </Button>
         </div> */}
-        <Searchbar />
+        <SearchbarDialog />
       </section>
       {/* EXPLORE MORE */}
       <div

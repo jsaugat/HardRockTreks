@@ -14,7 +14,7 @@ import useWindowDimensions from "@/hooks/useWindowDimension";
 
 export const ActivitiesCarousel = () => {
   const activitiesSwiperContainerRef = useRef(null); // Type swiperContainerRef correctly
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   return (
     <>
       <Swiper
@@ -32,7 +32,7 @@ export const ActivitiesCarousel = () => {
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log({ swiper })}
         onSlideChange={() => console.log("slide change")}
-        className="md:h-[460px]"
+        className="h-[400px] md:h-[460px]"
       >
         {activitiesData.map((act) => (
           <SwiperSlide key={act.title} className="rounded-3xl">
