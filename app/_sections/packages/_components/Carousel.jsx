@@ -33,7 +33,7 @@ export const PackagesCarousel = () => {
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log({ swiper })}
         onSlideChange={() => console.log("slide change")}
-        className="h-[440px] md:h-[500px]"
+        className="h-[440px] md:h-[520px]"
       >
         {packagesData.map((pkg) => (
           <SwiperSlide key={pkg.title} className='overflow-visible'>

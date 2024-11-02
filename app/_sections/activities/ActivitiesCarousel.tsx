@@ -29,10 +29,10 @@ export const ActivitiesCarousel = () => {
           pauseOnMouseEnter: true,
         }}
         navigation={false}
-        pagination={{ clickable: true }}
+        // pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log({ swiper })}
         onSlideChange={() => console.log("slide change")}
-        className="h-[400px] md:h-[460px]"
+        className="h-[400px] md:h-[400px] mb-5"
       >
         {activitiesData.map((act) => (
           <SwiperSlide key={act.title} className="rounded-3xl">

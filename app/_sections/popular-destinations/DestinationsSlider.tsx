@@ -21,7 +21,7 @@ export const DestinationsSlider = () => {
         slidesPerView={1}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
         }}
@@ -29,11 +29,11 @@ export const DestinationsSlider = () => {
         // pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log({ swiper })}
         onSlideChange={() => console.log("slide change")}
-        className="lg:h-[460px] mb-3"
+        className="lg:h-[440px] mb-5"
       >
         {popularDestinations.map((destination) => (
           <SwiperSlide key={destination.id} className="">
-            <div className="relative w-full h-[400px] rounded-3xl overflow-hidden">
+            <div className="relative w-full h-[400px] lg:h-[440px] rounded-3xl overflow-hidden">
               <Image
                 src={destination.image}
                 alt={destination.title}
