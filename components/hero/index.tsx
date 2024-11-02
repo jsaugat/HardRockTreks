@@ -15,7 +15,7 @@ export default function Hero() {
         style={{ objectFit: "cover" }}
       />
       {/* OVERLAY GRADIENT */}
-      <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-gradient-to-b from-foreground/10 via-foreground/30 to-foreground" />
+      <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-gradient-to-b from-foreground/20 via-foreground/40 to-foreground" />
       <section className="relative -top-20 md:static text-center space-y-4">
         <Headline />
         {/* <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
