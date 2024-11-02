@@ -32,7 +32,17 @@ export default function Hero() {
         <Searchbar />
       </section>
       {/* EXPLORE MORE */}
-      <div className="absolute bottom-6 right-6 cursor-pointer text-primary-foreground flex justify-center items-start gap-2">
+      <div
+        onClick={() => {
+          const topDestinationSection =
+            document.getElementById("top-destinations");
+
+          topDestinationSection?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }}
+        className="absolute bottom-6 right-6 cursor-pointer text-primary-foreground flex justify-center items-start gap-2"
+      >
         Explore more
         <div className="p-1 rounded-full text-secondary-foreground animate-bounce bg-secondary flex items-center">
           <ArrowDown className="w-5 h-5 md:h-4 md:w-4" />

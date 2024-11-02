@@ -1,10 +1,10 @@
 import { ContentTemplate } from "@/components/home/ContentTemplate";
-import React from "react";
+import React, { useRef } from "react";
 import { DestinationsSlider } from "./DestinationsSlider";
 
 export function PopularDestinations() {
   return (
-    <div className="py-20">
+    <div id="top-destinations" className="py-20">
       <ContentTemplate
         title="Top Destinations"
         subtitle="Explore the most popular destinations"
