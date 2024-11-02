@@ -44,10 +44,12 @@ export default function Navbar() {
             {/* HAMBURGER (MOBILE) */}
             <Button
               size="icon"
-              className="lg:hidden rounded-md bg-foreground/40 hover:bg-foreground/50 backdrop-blur-md w-12"
+              variant={"secondary"}
+              // className="lg:hidden rounded-md bg-foreground/40 hover:bg-foreground/50 backdrop-blur-md w-12"
+              className="lg:hidden rounded-md  w-12"
               onClick={toggleNav}
             >
-              <Menu className="text-primary-foreground w-7 h-7" />
+              <Menu className="text-foreground w-7 h-7" />
             </Button>
           </div>
         </div>

@@ -78,10 +78,11 @@ export const OverlayNavMenu = ({ isNavOpen, onClose }: OverlayMenuProps) => {
         {/* //! Close button */}
         <Button
           size="icon"
-          className="rounded-md bg-foreground/40 hover:bg-foreground/50 backdrop-blur-md w-12"
+          variant="secondary"
+          className="rounded-md bg-muted border backdrop-blur-md w-12"
           onClick={onClose}
         >
-          <X className="w-7 h-7 text-primary-foreground" />
+          <X className="w-7 h-7 text-foreground" />
         </Button>
       </div>
 
@@ -95,13 +96,13 @@ export const OverlayNavMenu = ({ isNavOpen, onClose }: OverlayMenuProps) => {
         {currentMenu.map((item: any) => (
           <div
             key={item.label}
-            className="group px-5 py-3 border-y flex justify-between items-center cursor-pointer"
+            className="active:text-muted-foreground px-5 py-3 border-y flex justify-between items-center cursor-pointer"
             onClick={() => handleRouteClick(item)}
           >
             <span>{item.label}</span>
             {/* Show a down arrow icon if this item has nested menus */}
             {(item.menu || item.submenu || item.subsubmenu) && (
-              <ChevronRight className="w-6 h-6 group-hover:rotate-180 group-active:-rotate-90" />
+              <ChevronRight className="w-6 h-6" />
             )}
           </div>
         ))}
