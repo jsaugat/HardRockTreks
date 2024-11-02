@@ -34,14 +34,21 @@ export const SearchbarDialog = () => {
       {/* Trigger Button (Searchbar) */}
       <div
         onClick={() => setIsOpen(true)}
-        className="flex items-center justify-between space-x-2 border rounded-full bg-secondary w-[300px] lg:w-1/2 p-1.5 mx-auto cursor-pointer"
+        className="lg:w-1/2 p-1 mx-auto flex items-center justify-between space-x-2 border rounded-full bg-secondary w-[300px] cursor-pointer"
       >
-        <div className="border p-2 rounded-full bg-gradient-to-br from-primary via-primary to-violet-400 flex items-center justify-center">
-          <LocateFixed className="h-5 w-5 text-secondary" />
+        <div className="flex items-center gap-3">
+          {/* ICON */}
+          <div className="border p-2 rounded-full bg-gradient-to-br from-primary via-primary to-violet-400 flex items-center justify-center">
+            <LocateFixed className="h-5 w-5 text-secondary" />
+          </div>
+          {/* TEXT */}
+          <p className="h-full rounded-full text-muted-foreground flex-1 text-center">
+            Find Your Adventure.
+          </p>
         </div>
-        <p className="flex-1 text-center">Find a trip</p>
+        {/* BUTTON */}
         <button className="px-4 py-2 rounded-full text-white bg-gradient-to-br to-violet-400 via-primary from-primary">
-          Search
+          Get Started
         </button>
       </div>
 
