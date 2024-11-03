@@ -1,7 +1,6 @@
 import { ContentTemplate } from "@/components/home/ContentTemplate";
-import { Card } from "@/components/ui/card";
 import React from "react";
-import { ActivitiesCarousel } from "./ActivitiesCarousel";
+import { ActivitiesCarousel } from "./Carousel";
 
 export function Activites() {
   return (

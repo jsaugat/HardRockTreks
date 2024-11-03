@@ -1,6 +1,6 @@
 import { ContentTemplate } from "@/components/home/ContentTemplate";
 import React, { useRef } from "react";
-import { DestinationsSlider } from "./DestinationsSlider";
+import { DestinationsCarousel } from "./Carousel";
 
 export function PopularDestinations() {
   return (
@@ -12,7 +12,7 @@ export function PopularDestinations() {
         buttonHref="/"
         buttonLabel="View all destinations"
       >
-        <DestinationsSlider />
+        <DestinationsCarousel />
       </ContentTemplate>
     </div>
   );

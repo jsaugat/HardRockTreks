@@ -1,6 +1,6 @@
 import { ContentTemplate } from "@/components/home/ContentTemplate";
 import React from "react";
-import { PackagesCarousel } from "./_components/Carousel";
+import { PackagesCarousel } from "./Carousel";
 
 export function Packages() {
   return (

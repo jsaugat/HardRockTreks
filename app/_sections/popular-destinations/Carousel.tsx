@@ -4,12 +4,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { SliderNavigationButtons } from "./SliderNavigationButtons";
+import { SliderNavigationButtons } from "./CarouselNavigation";
 import { useRef } from "react";
 import Image from "next/image";
 import popularDestinations from "@/data-access/popular-destinations.json";
 
-export const DestinationsSlider = () => {
+export const DestinationsCarousel = () => {
   const swiperContainerRef = useRef(null); // Type swiperContainerRef correctly
 
   return (

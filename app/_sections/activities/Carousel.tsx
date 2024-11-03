@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { CarouselNavigationButtons } from "./CarouselNavigationButtons";
+import { CarouselNavigationButtons } from "./CarouselNavigation";
 import { useRef } from "react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
@@ -26,7 +26,7 @@ export const ActivitiesCarousel = () => {
         autoplay={{
           delay: width && width < 768 ? 3000 : 2500, // Slower autoplay on mobile.
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+          pauseOnMouseEnter: false,
         }}
         navigation={false}
         // pagination={{ clickable: true }}
