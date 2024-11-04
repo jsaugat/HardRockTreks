@@ -7,7 +7,7 @@ export const LargePackageCard = ({ pkg }: { pkg: any }) => {
   const { title, subtitle, description, image, duration, difficulty, price } =
     pkg;
   return (
-    <Card key={title} className="p-3 h-[400px] md:h-[460px] flex rounded-3xl">
+    <Card key={title} className="p-3 h-[400px] md:h-[480px] flex rounded-3xl">
       {/* //? IMAGE SECTION - LEFT */}
       <div className="relative h-full w-3/5 rounded-xl overflow-hidden">
         <Image src={image} alt={title} fill style={{ objectFit: "cover" }} />

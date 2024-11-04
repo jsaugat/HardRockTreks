@@ -43,11 +43,15 @@ export const SearchbarDialog = () => {
           </div>
           {/* TEXT */}
           <p className="h-full rounded-full text-muted-foreground flex-1 text-center">
-            Find Your Adventure.
+            <span className="inline-block lg:hidden">Search Trips</span>
+            <span className="hidden lg:inline-block">Find Your Adventure.</span>
           </p>
         </div>
         {/* BUTTON */}
-        <button className="px-4 py-2 rounded-full text-white bg-gradient-to-br to-violet-400 via-primary from-primary">
+        <button className="px-4 py-2 hidden lg:block rounded-full text-white bg-gradient-to-br to-violet-400 via-primary from-primary">
+          Get Started
+        </button>
+        <button className="px-4 py-2 lg:hidden rounded-full text-white bg-gradient-to-br to-violet-400 via-primary from-primary">
           Get Started
         </button>
       </div>

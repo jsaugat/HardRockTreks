@@ -104,8 +104,13 @@
 /* Swiper Pagination Styles */
 .swiper-pagination-bullet-active {
   background-color: rgb(59, 130, 246) !important;
+  width: 32px;
+  border-radius: 14px;
 }
 .swiper-pagination-bullet {
   background-color: #93c5fd;
+  width: 16px;
+  height: 16px;
   /* background-color: rgb(136, 136, 136)/; */
+  transition: all 0.6s ease-in-out;
 }
