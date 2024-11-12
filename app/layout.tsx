@@ -49,7 +49,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.className} ${neueRegrade.variable}`}>
+      <body
+        className={`${GeistSans.className} ${neueRegrade.variable} bg-[#F1F5F9]`}
+      >
         <TopLoadingBarProvider>
           <NavProvider>
             <div className="min-h-screen bg-secondary relative">

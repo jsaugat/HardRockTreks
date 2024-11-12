@@ -24,10 +24,10 @@ export const NavMenu = () => {
       {routes.map(({ href, label, menu }, idx) => {
         const isActive = pathname === href;
         return (
-          //? NAVIGATION ITEM Button
+          // Main navigation button
           <Button
-            variant={"ghost"}
-            size={"sm"}
+            variant="ghost"
+            size="sm"
             key={idx}
             className={cn(
               "relative hover:bg-primary/10 hover:text-primary text-secondary-foreground font-semibold",
@@ -37,7 +37,7 @@ export const NavMenu = () => {
             onMouseLeave={handleMenuLeave}
           >
             <Link
-              href={href}
+              href={href || "#"}
               className="group rounded capitalize flex items-center justify-between gap-1"
             >
               {label}
@@ -46,42 +46,46 @@ export const NavMenu = () => {
               )}
             </Link>
 
+            {/* Dropdown menu */}
             {menu && openMenu === label && (
               <Card className="absolute top-[85%] mt-1 flex flex-col border p-2">
-                {menu.map(({ label: menuLabel, submenu }, idx) => (
-                  //? MENU ITEM Button
-                  <div
-                    key={idx}
-                    className="relative rounded cursor-pointer hover:bg-primary/10 hover:text-primary p-1.5 px-3"
-                    onMouseEnter={() => handleSubMenuEnter(menuLabel)}
-                    onMouseLeave={handleSubMenuLeave}
-                  >
-                    <Link
-                      href="#"
-                      className="group capitalize text-left flex items-center justify-between gap-4"
+                {menu.map(({ label: menuLabel, submenu, href }, idx) => {
+                  console.log({ dropdownMenuHref: href });
+                  return (
+                    // Menu item with optional submenu
+                    <div
+                      key={idx}
+                      className="relative rounded cursor-pointer hover:bg-primary/10 hover:text-primary p-1.5 px-3"
+                      onMouseEnter={() => handleSubMenuEnter(menuLabel)}
+                      onMouseLeave={handleSubMenuLeave}
                     >
-                      {menuLabel}
-                      {submenu && (
-                        <ChevronDown className="group-hover:-rotate-180 h-4 w-4" />
-                      )}
-                    </Link>
+                      <Link
+                        href={href || "#"}
+                        className="group capitalize text-left flex items-center justify-between gap-4"
+                      >
+                        {menuLabel}
+                        {submenu && (
+                          <ChevronDown className="group-hover:-rotate-180 h-4 w-4" />
+                        )}
+                      </Link>
 
-                    {openSubMenu === menuLabel && submenu && (
-                      <Card className="absolute top-0 left-[100%] flex flex-col p-2">
-                        {submenu.map(({ label: subMenuLabel, href }, idx) => (
-                          //? SUBMENU ITEM Button
-                          <Link
-                            href={href}
-                            key={idx}
-                            className="block p-1.5 px-3 rounded hover:bg-primary/10 hover:text-primary text-left"
-                          >
-                            {subMenuLabel}
-                          </Link>
-                        ))}
-                      </Card>
-                    )}
-                  </div>
-                ))}
+                      {/* Submenu */}
+                      {openSubMenu === menuLabel && submenu && (
+                        <Card className="absolute top-0 left-[100%] flex flex-col p-2">
+                          {submenu.map(({ label: subMenuLabel, href }, idx) => (
+                            <Link
+                              href={href || "#"}
+                              key={idx}
+                              className="block p-1.5 px-3 rounded hover:bg-primary/10 hover:text-primary text-left"
+                            >
+                              {subMenuLabel}
+                            </Link>
+                          ))}
+                        </Card>
+                      )}
+                    </div>
+                  );
+                })}
               </Card>
             )}
           </Button>

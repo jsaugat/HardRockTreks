@@ -6,7 +6,6 @@ import ButtonWithIcon from "@/components/ButtonWithIcon";
 import { Logo } from "@/components/Logo";
 import { Button } from "../ui/button";
 import { useNav } from "@/contexts/Nav";
-import { cn } from "@/lib/utils";
 import { useEffect } from "react";
 import { OverlayNavMenu } from "./OverlayNavMenu";
 

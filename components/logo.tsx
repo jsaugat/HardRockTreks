@@ -3,6 +3,7 @@ import useWindowDimensions from "@/hooks/useWindowDimension";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 export function Logo({ className }: { className?: string }) {
@@ -10,6 +11,7 @@ export function Logo({ className }: { className?: string }) {
   const [lastScrollTop, setLastScrollTop] = useState(0); // Initial scroll position
   const { width } = useWindowDimensions();
   const { isNavOpen } = useNav();
+  const pathname = usePathname();
 
   /**
    *? Logic to Hide/Show logo text on scroll down/up :-
@@ -45,16 +47,18 @@ export function Logo({ className }: { className?: string }) {
           className={cn(
             isVisible ? "opacity-100" : "opacity-0 pointer-events-none",
             "relative flex flex-col items-start justify-start gap-0 p-0 font-semibold text-secondary uppercase text-lg lg:text-2xl leading-none drop-shadow-[0_1px_20px_rgba(59,130,246,1)]",
+            pathname !== "/" && "text-foreground drop-shadow-none",
             className
           )}
         >
           <span
             className={cn(
               "text-primary-foreground tracking-tight",
-              isNavOpen && "text-foreground"
+              isNavOpen && "text-foreground",
+              pathname !== "/" && "text-foreground"
             )}
           >
-            Hard Rock Treks &<br className="md:hidden"/> Expeditions
+            Hard Rock Treks &<br className="md:hidden" /> Expeditions
           </span>
           <span className="hidden lg:block font-normal text-base">
             Since 1993

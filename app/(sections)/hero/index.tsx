@@ -1,11 +1,12 @@
 import { SearchbarDialog } from "@/components/home/Searchbar";
 import Image from "next/image";
 import { Headline } from "./Headline";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Phone } from "lucide-react";
+import ButtonWithIcon from "@/components/ButtonWithIcon";
 
 export default function Hero() {
   return (
-    <div className="hero relative h-[100svh] md:h-screen flex items-center justify-center">
+    <div className="hero relative h-[80svh] md:h-screen flex items-center justify-center">
       {/* HERO IMAGE */}
       <Image
         src="https://images.pexels.com/photos/4360449/pexels-photo-4360449.jpeg"
@@ -29,7 +30,13 @@ export default function Hero() {
             <Link href="/contact">Contact Us</Link>
           </Button>
         </div> */}
-        <SearchbarDialog />
+        <div className="flex flex-col items-center justify-center gap-3">
+          <SearchbarDialog />
+          {/* <ButtonWithIcon
+            icon={<Phone className="w-4 h-4 text-primary-foreground" />}
+            label="Contact Us"
+          /> */}
+        </div>
       </section>
       {/* EXPLORE MORE */}
       <div
