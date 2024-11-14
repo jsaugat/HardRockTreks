@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import activitiesData from "@/data-access/activities.json";
+import activitiesData from "@/data/activities.json";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

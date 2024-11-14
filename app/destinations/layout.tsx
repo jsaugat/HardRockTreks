@@ -8,12 +8,12 @@ export default function DestinationLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="min-h-screen mt-navbarOffset pt-10 border">
+    <main className="min-h-screen mt-navbarOffset pt-10">
       <Title />
       <Row
         justify="between"
         align="start"
-        className="mt-2 mx-auto w-[80%] min-h-screen border"
+        className="mt-2 mx-auto w-[80%] min-h-screen gap-8"
       >
         {children}
         <CountryNav />

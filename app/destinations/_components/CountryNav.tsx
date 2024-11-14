@@ -12,10 +12,10 @@ export function CountryNav() {
   const segment = pathSegments[pathSegments.length - 1];
 
   return (
-    <nav className="w-fit p-6 bg-card rounded-xl">
+    <nav className="min-w-[200px] rounded-xl">
       <ul>
         {/* Header */}
-        <p className="font-bold">Related Destinations</p>
+        <div className="font-semibold block">Related Destinations</div>
         {/* Countries Nav Items */}
         {list.map((country) => (
           <li
@@ -23,7 +23,7 @@ export function CountryNav() {
             className={`${
               country === segment
                 ? "text-primary font-medium"
-                : "text-muted-foreground"
+                : "text-muted-foreground hover:text-foreground"
             } capitalize`}
           >
             <Link className="block" href={`/destinations/${country}`}>

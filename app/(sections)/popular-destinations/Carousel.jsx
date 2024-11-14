@@ -7,7 +7,7 @@ import "swiper/css/scrollbar";
 import { SliderNavigationButtons } from "./CarouselNavigation";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import popularDestinations from "@/data-access/popular-destinations.json";
+import popularDestinations from "@/data/popular-destinations.json";
 
 export const DestinationsCarousel = () => {
   const carouselContainerRef = useRef(null); // Ref for Intersection Observer

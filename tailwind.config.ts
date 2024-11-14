@@ -67,6 +67,7 @@ const config: Config = {
       },
       spacing: {
         navbarOffset: '72px', // it sums up the height of the navbar and the top margin or spacing of the navbar
+        default: '32px'
       },
       keyframes: {
         'accordion-down': {
