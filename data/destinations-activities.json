@@ -1,0 +1,156 @@
+[
+  {
+    "label": "Nepal",
+    "href": "/destinations/nepal",
+    "activities": [
+      {
+        "label": "Trekking in Nepal",
+        "href": "/destinations/nepal/trekking",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Rafting in Nepal",
+        "href": "/destinations/nepal/rafting",
+        "subactivities": [
+          {
+            "label": "Kaligandaki River",
+            "href": "/destinations/nepal/rafting/kaligandaki-river",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+          },
+          {
+            "label": "Arun River",
+            "href": "/destinations/nepal/rafting/arun-river",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+          },
+          {
+            "label": "Sunkoshi River",
+            "href": "/destinations/nepal/rafting/sunkoshi-river",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+          },
+          {
+            "label": "Karnali River",
+            "href": "/destinations/nepal/rafting/karnali-river",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+          },
+          {
+            "label": "Seti River",
+            "href": "/destinations/nepal/rafting/seti-river",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+          },
+          {
+            "label": "Bhotekoshi River",
+            "href": "/destinations/nepal/rafting/bhotekoshi-river",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+          },
+          {
+            "label": "Trisuli River",
+            "href": "/destinations/nepal/rafting/trisuli-river",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+          },
+          {
+            "label": "Marshyandi River",
+            "href": "/destinations/nepal/rafting/marshyandi-river",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+          }
+        ]
+      },
+      {
+        "label": "Tour",
+        "href": "/destinations/nepal/tour",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Expeditions",
+        "href": "/destinations/nepal/expeditions",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Peak Climbing",
+        "href": "/destinations/nepal/peak-climbing",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Jungle Safari",
+        "href": "/destinations/nepal/jungle-safari",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Place to Visit",
+        "href": "/destinations/nepal/places-to-visit",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Adventure Activities",
+        "href": "/destinations/nepal/adventure-activities",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Cultural Tour",
+        "href": "/destinations/nepal/cultural-tour",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Bird Watching Tour",
+        "href": "/destinations/nepal/bird-watching-tour",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Mountain Flight",
+        "href": "/destinations/nepal/mountain-flight",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Paragliding",
+        "href": "/destinations/nepal/paragliding",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Rock Climbing",
+        "href": "/destinations/nepal/rock-climbing",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Bungy Jumping",
+        "href": "/destinations/nepal/bungy-jumping",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Ayurvedic Treatment",
+        "href": "/destinations/nepal/ayurvedic-treatment",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Domestic Flight",
+        "href": "/destinations/nepal/domestic-flights",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      }
+    ]
+  },
+  {
+    "label": "Tibet",
+    "href": "/destinations/tibet",
+    "activities": [
+      {
+        "label": "Tibet Tours",
+        "href": "/destinations/tibet/tours",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      },
+      {
+        "label": "Kailash Tour and Treks",
+        "href": "/destinations/tibet/kailash",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      }
+    ]
+  },
+  {
+    "label": "Bhutan",
+    "href": "/destinations/bhutan",
+    "activities": [
+      {
+        "label": "Bhutan Trekking Packages",
+        "href": "/destinations/bhutan/trekking",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+      }
+    ]
+  }
+]
