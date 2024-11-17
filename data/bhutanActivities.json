@@ -1,0 +1,21 @@
+{
+  "href": "/destinations/bhutan",
+  "activities": [
+    {
+      "label": "Bhutan Trekking",
+      "href": "/destinations/bhutan/trekking",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 3,
+        "data": [
+          {
+            "label": "Historic Central Bhutan",
+            "duration": "12 Days",
+            "grade": "moderate",
+            "description": "Visitors to Bhutan are few enough, but those who have the chance to venture right across the kingdom to its"
+          }
+        ]
+      }
+    }
+  ]
+}

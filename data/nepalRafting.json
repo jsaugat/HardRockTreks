@@ -1,0 +1,71 @@
+{
+  "label": "Rafting in Nepal",
+  "href": "/destinations/nepal/rafting",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+  "packages": [
+    {
+      "label": "Seti River Rafting",
+      "href": "/destinations/nepal/rafting/seti-river",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "duration": "2 Days",
+      "grade": "Easy",
+      "description": "The Seti is an excellent 2-day trip in an isolated area with beautiful jungle, plenty of easy rapids, and serene views."
+    },
+    {
+      "label": "Bhotekoshi River Rafting",
+      "href": "/destinations/nepal/rafting/bhotekoshi-river",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "duration": "0 Days",
+      "grade": null,
+      "description": "The Bhote Kosi / Upper Sun Kosi (during high water) is an action-packed white water experience, perfect for thrill-seekers."
+    },
+    {
+      "label": "Trisuli River Rafting",
+      "href": "/destinations/nepal/rafting/trisuli-river",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "duration": "2 Days",
+      "grade": "Easy",
+      "description": "The Trisuli is Nepal’s most popular rafting river, offering impressive gorges, exciting rapids, and easy accessibility from Kathmandu."
+    },
+    {
+      "label": "Marshyandi River Rafting",
+      "href": "/destinations/nepal/rafting/marshyandi-river",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "duration": "4 Days",
+      "grade": "Easy",
+      "description": "The 'raging river' drains the northern slopes of the Annapurna mountains and offers thrilling rafting since its opening in 1996."
+    },
+    {
+      "label": "Kaligandaki River Rafting",
+      "href": "/destinations/nepal/rafting/kaligandaki-river",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "duration": "3 Days",
+      "grade": "Easy",
+      "description": "The Kali begins its journey high on the Tibetan plateau in Mustang, plunging its way through narrow gorges and stunning landscapes."
+    },
+    {
+      "label": "Arun River Rafting",
+      "href": "/destinations/nepal/rafting/arun-river",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "duration": "7 Days",
+      "grade": "Easy",
+      "description": "For first-time paddlers, the Arun River offers a thrilling rafting experience with class 3 to 4+ rapids and scenic surroundings."
+    },
+    {
+      "label": "Sunkoshi River Rafting",
+      "href": "/destinations/nepal/rafting/sunkoshi-river",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "duration": "10 Days",
+      "grade": "Easy",
+      "description": "The 'River of Gold' is among the top ten river expeditions globally, a dream destination for rafting enthusiasts."
+    },
+    {
+      "label": "Karnali River Rafting",
+      "href": "/destinations/nepal/rafting/karnali-river",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "duration": "10 Days",
+      "grade": "Easy",
+      "description": "The Karnali, Nepal’s longest and largest river, originates at the base of Mt. Kailash and offers an incredible rafting adventure."
+    }
+  ]
+}

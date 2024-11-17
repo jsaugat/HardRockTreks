@@ -1,0 +1,762 @@
+{
+  "label": "Trekking in Nepal",
+  "href": "/destinations/nepal/trekking",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+  "subactivities": [
+    {
+      "label": "Tea House",
+      "href": "/destinations/nepal/trekking/tea-house",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 26,
+        "data": [
+          {
+            "label": "Gosaikunda Lake and Helambu Region",
+            "duration": "12 Days",
+            "grade": "moderate",
+            "startingPrice": 800,
+            "description": "Gosaikund is one of the hindu holy place and is considered to be made by Lord Shiva.Langtang / Gosaikunda The…"
+          },
+          {
+            "label": "Tamang Heritage Trail and Langtang Valley",
+            "duration": "15 Days",
+            "grade": "moderate",
+            "startingPrice": 500,
+            "description": "In order to materialize the rich Tamang culture and associated natural attractions as tourism product in the Tamang areas of…"
+          },
+          {
+            "label": "Tamang Heritage Trail (Langtang valley/ Gosaikund Lake and Helambhu region)",
+            "duration": "21 Days",
+            "grade": "moderate",
+            "startingPrice": 650,
+            "description": "Rasuwa district, situated at about 120-km north (32 nautical miles) of the capital city Kathmandu has a total area of…"
+          },
+          {
+            "label": "Trek Around Kathmandu Valley (Chisopani/ Nagarkot/ Dhulikhel/ Panauti)",
+            "duration": "8 Days",
+            "grade": "easy",
+            "startingPrice": 325,
+            "description": "The shivapuri lekh forms the northern rim of the Kathmandu. valley. The slopes provide much of the city’s drinking water…"
+          },
+          {
+            "label": "Balcony of Annapurna (Kopra Ridge)",
+            "duration": "15 Days",
+            "grade": "moderate",
+            "startingPrice": 600,
+            "description": "Annapurna area is the most popular trekking region in Nepal, every year visited by 70 percent of trekkers, and for…"
+          },
+          {
+            "label": "Upper Mustang Valley Trek",
+            "duration": "19 Days",
+            "grade": "moderate",
+            "startingPrice": 1575,
+            "description": "Mustang valley Trek Mustang valley is situated in the north of Annapurna himal and it is bordering to Tibetan plateau(China).…"
+          },
+          {
+            "label": "Trek to Ghandruk (Ghorepani Circuit and Chitwan)",
+            "duration": "15 Days",
+            "grade": "moderate",
+            "startingPrice": 625,
+            "description": "Annapurna area is the most popular trekking region in Nepal, every year visited by 70 percent of trekkers, and for…"
+          },
+          {
+            "label": "Short Trek Out of Annapurna Region",
+            "duration": " Days",
+            "grade": "moderate",
+            "startingPrice": 425,
+            "description": "Annapurna area is the most popular trekking region in Nepal, every year visited by 70 percent of trekkers, and for…"
+          },
+          {
+            "label": "Langtang Valley and Tsercori peak",
+            "duration": "13 Days",
+            "grade": "moderate",
+            "startingPrice": 400,
+            "description": "The Langtang Himal is a region north part of Kathmandu. valley and it lies just south of Tibetan border. The…"
+          },
+          {
+            "label": "Langtang Valley and Gosainkund Lake (4260m)",
+            "duration": "15 Days",
+            "grade": "moderate",
+            "startingPrice": 475,
+            "description": "The Langtang Himal is a region north part of Kathmandu. valley and it lies just south of Tibetan border. Langtang…"
+          },
+          {
+            "label": "Langtang Valley / Gosainkuda/ Chisopani (Helambhu Region)",
+            "duration": "17 Days",
+            "grade": "moderate",
+            "startingPrice": 600,
+            "description": "The Langtang Himal is a region north part of Kathmandu. valley and it lies just south of Tibetan border. The…"
+          },
+          {
+            "label": "Panorama Annapurna Circuit",
+            "duration": "21 Days",
+            "grade": "moderate",
+            "startingPrice": 775,
+            "description": "Annapurna area is the most popular trekking region in Nepal, every year visited by 70 percent of trekkers, and for…"
+          },
+          {
+            "label": "Gokyo lake and Renjo pass Trekking",
+            "duration": "15 Days",
+            "grade": "moderate",
+            "startingPrice": 975,
+            "description": "The classic walk has clear cut goal to see Mt Everest. Many people find the sights along the way rival…"
+          },
+          {
+            "label": "Hike to Tengboche Monastery",
+            "duration": "12 Days",
+            "grade": "moderate",
+            "startingPrice": 875,
+            "description": "The classic walk has clear cut goal to see Mt Everest. Many people find the sights along the way rival…"
+          },
+          {
+            "label": "Trek to Gokyo Lake /Tengboche Monastery",
+            "duration": "15 Days",
+            "grade": "moderate",
+            "startingPrice": 975,
+            "description": "The classic walk has clear cut goal to see Mt Everest. Many people find the sights along the way rival…"
+          },
+          {
+            "label": "Jiri to Everest Base Camp",
+            "duration": "22 Days",
+            "grade": "moderate",
+            "startingPrice": 1375,
+            "description": "The classic walk has clear cut goal to see Mt Everest. Many people find the sights along the way rival…"
+          },
+          {
+            "label": "Gokyo lake and Everest base camp trekking",
+            "duration": "21 Days",
+            "grade": "moderate",
+            "startingPrice": 1275,
+            "description": "The classic walk has clear cut goal to see Mt Everest. Many people find the sights along the way rival…"
+          },
+          {
+            "label": "Tsum valley and Manaslu",
+            "duration": "22 Days",
+            "grade": "moderate",
+            "startingPrice": 1075,
+            "description": "Tsum Valley was a restricted area until it was opened for trekking in 2008 and there is a little information available…"
+          },
+          {
+            "label": "Manasulu and Annapurna circuit",
+            "duration": "27 Days",
+            "grade": "moderate",
+            "startingPrice": 1375,
+            "description": "Around Manasulu The Manasulu circuit is one of the best remote trekking area in Nepal. The most prominent of the…"
+          },
+          {
+            "label": "Everest Base Camp( with 3 High passes)",
+            "duration": "21 Days",
+            "grade": "moderate",
+            "startingPrice": 1275,
+            "description": "The classic walk has clear cut goal to see Mt Everest. Many people find the sights along the way rival…"
+          },
+          {
+            "label": "Everest base camp with (2 high passes)",
+            "duration": "21 Days",
+            "grade": "moderate",
+            "startingPrice": 1275,
+            "description": "The classic walk has clear cut goal to see Mt Everest. Many people find the sights along the way rival…"
+          },
+          {
+            "label": "Manaslu Circuit ( Lodge) Trek",
+            "duration": "19 Days",
+            "grade": "moderate",
+            "startingPrice": 975,
+            "description": "The Manasulu circuit is one of the best remote trekking area in Nepal. The most prominent of the peaks are…"
+          },
+          {
+            "label": "Classic Annapurna Base Camp (sanctuary) Trek",
+            "duration": "15 Days",
+            "grade": "moderate",
+            "startingPrice": 675,
+            "description": "Trek to Annapurna Sanctuary (Base camp) Beside the Everest region, the area around the Annapurna massif is perhaps the best…"
+          },
+          {
+            "label": "Classic Everest Base Camp and Kalapathar",
+            "duration": "17 Days",
+            "grade": "moderate",
+            "startingPrice": 1050,
+            "description": "The classic walk has clear cut goal to see Mt Everest. Many people find the sights along the way rival…"
+          },
+          {
+            "label": "Kanchenjunga North and South (Tea house Trek)",
+            "duration": "24 Days",
+            "grade": "moderate",
+            "startingPrice": 1275,
+            "description": "Kangchenjunga North and South Nepal’s second highest peak and the third in the world. The kangchenjunga is located in the…"
+          },
+          {
+            "label": "Part of Annapurna Circuit (Dharapani to Jomsom)",
+            "duration": "16 Days",
+            "grade": "moderate",
+            "startingPrice": 700,
+            "description": "Annapurna area is the most popular trekking region in Nepal, every year visited by 70 percent of trekkers, and for…"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Camping Trek",
+      "href": "/destinations/nepal/trekking/camping",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 19,
+        "data": [
+          {
+            "label": "Siklish Trekking",
+            "duration": "17 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Siklish trek is a short and easy trek that offers stunning views of the Annapurna range and the Pokhara valley.",
+            "href": "/destinations/nepal/trekking/camping/siklish"
+          },
+          {
+            "label": "Pach Pokhari Trekking",
+            "duration": "17 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Pach Pokhari is situated to the north east of Kathmandu valley and west of Rolwaling Himal. It is a pilgrimage place.",
+            "href": "/destinations/nepal/trekking/camping/pach-pokhari"
+          },
+          {
+            "label": "Langtang Ganjala Pass and Helambu Circuit Trekking",
+            "duration": "14 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Langtang Ganjala Pass and Helambu Circuit Trekking offers a blend of stunning landscapes and culture, with views of the Langtang range and access to the high-altitude Ganjala Pass.",
+            "href": "/destinations/nepal/trekking/camping/langtang-ganjala-helambu"
+          },
+          {
+            "label": "Hike to Around Kathmandu Valley (Shivapuri)",
+            "duration": "8 Days",
+            "grade": "easy",
+            "startingPrice": null,
+            "description": "The Shivapuri Lekh forms the northern rim of the Kathmandu valley. The slopes provide much of the city’s drinking water, making it a significant trek with beautiful natural surroundings.",
+            "href": "/destinations/nepal/trekking/camping/shivapuri"
+          },
+          {
+            "label": "Dolpa Trekking",
+            "duration": "7 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Dolpa is one of the most isolated areas of Nepal. It lies far behind the Dhaulagiri mountain range and has remained largely unaffected by modern development, offering an authentic trekking experience.",
+            "href": "/destinations/nepal/trekking/camping/dolpa"
+          },
+          {
+            "label": "Royal Trekking",
+            "duration": "14 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Annapurna area is the most popular trekking region in Nepal, visited by 70 percent of trekkers annually. The Royal Trek offers views of the Annapurna range and a chance to experience the cultural heritage of the region.",
+            "href": "/destinations/nepal/trekking/camping/royal"
+          },
+          {
+            "label": "Hike to Shivapuri, Nagarkot, Dhulikhel to Panauti",
+            "duration": "10 Days",
+            "grade": "easy",
+            "startingPrice": null,
+            "description": "The Shivapuri Lekh forms the northern rim of the Kathmandu valley. The slopes provide much of the city’s drinking water, and this hike offers great views of the Kathmandu Valley and beyond.",
+            "href": "/destinations/nepal/trekking/camping/shivapuri-nagarkot-dhulikhel-panauti"
+          },
+          {
+            "label": "Trek to Ganesh Himal and Langtang Valley",
+            "duration": "22 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Ganesh Himal is located to the west of Langtang Himal and east of Manaslu range. It stretches between the two rivers, offering incredible views and diverse trekking experiences.",
+            "href": "/destinations/nepal/trekking/camping/ganesh-himal-langtang"
+          },
+          {
+            "label": "Trek to Ganesh Himal (Singla Pass)",
+            "duration": "0 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "The region is to the west of Langtang Himal and east of Manaslu range. It stretches between the two rivers, providing a unique trekking experience over Singla Pass.",
+            "href": "/destinations/nepal/trekking/camping/ganesh-himal-singla-pass"
+          },
+          {
+            "label": "Trek to Ganesh Himal and Gosaikund Lake",
+            "duration": "19 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Ganesh Himal is located to the west of Langtang Himal and east of Manaslu range. This trek offers beautiful views of the Ganesh Himal and leads to the sacred Gosaikund Lake.",
+            "href": "/destinations/nepal/trekking/camping/ganesh-himal-gosaikund-lake"
+          },
+          {
+            "label": "Helambu and Jugal Himal Trekking",
+            "duration": "13 Days",
+            "grade": "easy",
+            "startingPrice": null,
+            "description": "Jugal Himal is a small region to the west of Rolwaling Himal and southeast of Langtang Himal. It offers a relatively easy trek with fantastic views of the surrounding peaks.",
+            "href": "/destinations/nepal/trekking/camping/helambu-jugal-himal"
+          },
+          {
+            "label": "Hike to Baglung Pani and Ghanpokhara (Lamjung Himal)",
+            "duration": "15 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "The Annapurna region is popular for trekking, with deep valleys and high mountains encircling the giant Annapurna range. This trek takes you to Baglung Pani and Ghanpokhara for scenic views.",
+            "href": "/destinations/nepal/trekking/camping/baglung-pani-ghanpokhara"
+          },
+          {
+            "label": "Dhaulagiri Circuit Trek",
+            "duration": "21 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "The Dhaulagiri Circuit is one of the longest and most challenging treks in Nepal. It circles the sixth-highest mountain in the world, offering stunning high-altitude landscapes.",
+            "href": "/destinations/nepal/trekking/camping/daulagiri-circuit"
+          },
+          {
+            "label": "Upper Dolpo Trekking (Juphal, Sheygompa, Jomsom)",
+            "duration": "29 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Dolpa, located in central-west Nepal, is known for its wild, pristine landscapes. This trek covers remote areas like Juphal, Sheygompa, and Jomsom.",
+            "href": "/destinations/nepal/trekking/camping/upper-dolpo"
+          },
+          {
+            "label": "The Great Himalayan Trail",
+            "duration": "155 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "The Great Himalayan Trail is an extensive network of trekking routes across Nepal, offering a comprehensive experience of trekking, culture, nature, and adventure.",
+            "href": "/destinations/nepal/trekking/camping/great-himalayan-trail"
+          },
+          {
+            "label": "Upper Dolpo Trekking",
+            "duration": "27 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Upper Dolpo offers one of Nepal’s most remote trekking experiences, with dramatic landscapes and high-altitude villages untouched by modern life.",
+            "href": "/destinations/nepal/trekking/camping/upper-dolpo-trekking"
+          },
+          {
+            "label": "Inner Dolpo Trekking",
+            "duration": "20 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "Inner Dolpo has a magical, mythical appeal. Its landscapes are even more desolate than those on the Dolpo Circuit, and the trek offers a unique insight into the region's culture.",
+            "href": "/destinations/nepal/trekking/camping/inner-dolpo"
+          },
+          {
+            "label": "Dolpa Circuit Trekking",
+            "duration": "14 Days",
+            "grade": "moderate",
+            "startingPrice": null,
+            "description": "The Dolpa Circuit is quite strenuous, with some steep climbs. You will cross two high passes, Numa La and Baga La, while exploring the rugged landscape of Dolpa.",
+            "href": "/destinations/nepal/trekking/camping/dolpa-circuit"
+          },
+          {
+            "label": "Mustang Valley Trek",
+            "duration": "19 Days",
+            "grade": "easy to moderate",
+            "startingPrice": null,
+            "description": "Mustang Valley is situated north of Annapurna Himal and borders the Tibetan plateau. It is an ancient kingdom that offers a rich cultural experience along with dramatic landscapes.",
+            "href": "/destinations/nepal/trekking/camping/mustang-valley"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Hiring Personal Trekking Guide and Porter",
+      "href": "/destinations/nepal/trekking/hiring-personal-guide-porter",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 0,
+        "data": []
+      }
+    },
+    {
+      "label": "Everest Region",
+      "href": "/destinations/nepal/trekking/everest-region",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 8,
+        "data": [
+          {
+            "name": "Gokyo Lake and Renjo Pass Trekking",
+            "duration": "15 Days",
+            "grade": "Moderate",
+            "startingPrice": 975,
+            "description": "The classic walk has clear-cut goal to see Mt Everest. Many people find the sights along the way rival.",
+            "href": "/destinations/nepal/trekking/everest-region/gokyo-lake-renjo-pass"
+          },
+          {
+            "name": "Hike to Tengboche Monastery",
+            "duration": "12 Days",
+            "grade": "Moderate",
+            "startingPrice": 875,
+            "description": "The classic walk has clear-cut goal to see Mt Everest. Many people find the sights along the way rival.",
+            "href": "/destinations/nepal/trekking/everest-region/tengboche-monastery"
+          },
+          {
+            "name": "Trek to Gokyo Lake /Tengboche Monastery",
+            "duration": "15 Days",
+            "grade": "Moderate",
+            "startingPrice": 975,
+            "description": "The classic walk has clear-cut goal to see Mt Everest. Many people find the sights along the way rival.",
+            "href": "/destinations/nepal/trekking/everest-region/gokyo-lake-tengboche-monastery"
+          },
+          {
+            "name": "Jiri to Everest Base Camp",
+            "duration": "22 Days",
+            "grade": "Moderate",
+            "startingPrice": 1375,
+            "description": "The classic walk has clear-cut goal to see Mt Everest. Many people find the sights along the way rival.",
+            "href": "/destinations/nepal/trekking/everest-region/jiri-everest-base-camp"
+          },
+          {
+            "name": "Gokyo Lake and Everest Base Camp Trekking",
+            "duration": "21 Days",
+            "grade": "Moderate",
+            "startingPrice": 1275,
+            "description": "The classic walk has clear-cut goal to see Mt Everest. Many people find the sights along the way rival.",
+            "href": "/destinations/nepal/trekking/everest-region/gokyo-lake-everest-base-camp"
+          },
+          {
+            "name": "Everest Base Camp (with 3 High Passes)",
+            "duration": "21 Days",
+            "grade": "Moderate",
+            "startingPrice": 1275,
+            "description": "The classic walk has clear-cut goal to see Mt Everest. Many people find the sights along the way rival.",
+            "href": "/destinations/nepal/trekking/everest-region/everest-base-camp-3-high-passes"
+          },
+          {
+            "name": "Everest Base Camp with (2 High Passes)",
+            "duration": "21 Days",
+            "grade": "Moderate",
+            "startingPrice": 1275,
+            "description": "The classic walk has clear-cut goal to see Mt Everest. Many people find the sights along the way rival.",
+            "href": "/destinations/nepal/trekking/everest-region/everest-base-camp-2-high-passes"
+          },
+          {
+            "name": "Classic Everest Base Camp and Kalapathar",
+            "duration": "17 Days",
+            "grade": "Moderate",
+            "startingPrice": 1050,
+            "description": "The classic walk has clear-cut goal to see Mt Everest. Many people find the sights along the way rival.",
+            "href": "/destinations/nepal/trekking/everest-region/classic-everest-base-camp-kalapathar"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Annapurna Region",
+      "href": "/destinations/nepal/trekking/annapurna-region",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 7,
+        "data": [
+          {
+            "name": "Balcony of Annapurna (Kopra Ridge)",
+            "duration": "15 Days",
+            "grade": "Moderate",
+            "startingPrice": 600,
+            "description": "Annapurna area is the most popular trekking region in Nepal, every year visited by 70 percent of trekkers, and for its stunning views and accessibility.",
+            "href": "/destinations/nepal/trekking/annapurna-region/kopra-ridge"
+          },
+          {
+            "name": "Upper Mustang Valley Trek",
+            "duration": "19 Days",
+            "grade": "Moderate",
+            "startingPrice": 600,
+            "description": "Mustang Valley is situated in the north of Annapurna Himal and borders the Tibetan Plateau (China). The trek offers breathtaking landscapes and cultural experiences.",
+            "href": "/destinations/nepal/trekking/annapurna-region/upper-mustang-valley"
+          },
+          {
+            "name": "Trek to Ghandruk (Ghorepani Circuit and Chitwan)",
+            "duration": "15 Days",
+            "grade": "Moderate",
+            "startingPrice": 600,
+            "description": "Annapurna area is the most popular trekking region in Nepal, every year visited by 70 percent of trekkers. This trek covers Ghandruk, Ghorepani, and Chitwan.",
+            "href": "/destinations/nepal/trekking/annapurna-region/ghandruk-ghorepani-chitwan"
+          },
+          {
+            "name": "Short Trek Out of Annapurna Region",
+            "duration": "12 Days",
+            "grade": "Moderate",
+            "startingPrice": 600,
+            "description": "This short trek provides an opportunity to explore parts of the Annapurna region in a condensed period while experiencing beautiful landscapes.",
+            "href": "/destinations/nepal/trekking/annapurna-region/short-trek"
+          },
+          {
+            "name": "Panorama Annapurna Circuit",
+            "duration": "21 Days",
+            "grade": "Moderate",
+            "startingPrice": 600,
+            "description": "Annapurna area is the most popular trekking region in Nepal, every year visited by 70 percent of trekkers. This trek offers panoramic views of the Annapurna massif and beyond.",
+            "href": "/destinations/nepal/trekking/annapurna-region/panorama-annapurna-circuit"
+          },
+          {
+            "name": "Classic Annapurna Base Camp (Sanctuary) Trek",
+            "duration": "15 Days",
+            "grade": "Moderate",
+            "startingPrice": 600,
+            "description": "Trek to Annapurna Sanctuary (Base Camp). Beside the Everest region, the area around the Annapurna massif is perhaps the best-known trekking area in Nepal.",
+            "href": "/destinations/nepal/trekking/annapurna-region/annapurna-base-camp"
+          },
+          {
+            "name": "Part of Annapurna Circuit (Dharapani to Jomsom)",
+            "duration": "16 Days",
+            "grade": "Moderate",
+            "startingPrice": 600,
+            "description": "This trek covers part of the famous Annapurna Circuit, from Dharapani to Jomsom, offering stunning views and a diverse cultural experience.",
+            "href": "/destinations/nepal/trekking/annapurna-region/dharapani-to-jomsom"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Langtang Region",
+      "href": "/destinations/nepal/trekking/langtang-region",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 6,
+        "data": [
+          {
+            "name": "Gosaikunda Lake and Helambu Region",
+            "duration": "12 Days",
+            "grade": "Moderate",
+            "startingPrice": 400,
+            "description": "Gosaikund is one of the Hindu holy places and is considered to be made by Lord Shiva. Langtang / Gosaikunda offers a serene experience of culture and nature.",
+            "href": "/destinations/nepal/trekking/langtang-region/gosaikunda-helambu"
+          },
+          {
+            "name": "Tamang Heritage Trail and Langtang Valley",
+            "duration": "15 Days",
+            "grade": "Moderate",
+            "startingPrice": 500,
+            "description": "This trek showcases the rich Tamang culture and natural attractions, promoting tourism in the Tamang areas of Langtang Valley.",
+            "href": "/destinations/nepal/trekking/langtang-region/tamang-heritage-trail"
+          },
+          {
+            "name": "Langtang Valley and Tsergo Ri Peak",
+            "duration": "13 Days",
+            "grade": "Moderate",
+            "startingPrice": 400,
+            "description": "The Langtang Himal is a region north of Kathmandu, lying just south of the Tibetan border, offering incredible views and cultural experiences.",
+            "href": "/destinations/nepal/trekking/langtang-region/langtang-valley-tsergo-ri"
+          },
+          {
+            "name": "Langtang Valley and Gosainkund Lake",
+            "duration": "15 Days",
+            "grade": "Moderate",
+            "startingPrice": 475,
+            "description": "The Langtang Himal is a region north of Kathmandu. The valley lies just south of the Tibetan border and features the serene Gosainkund Lake at 4260m.",
+            "href": "/destinations/nepal/trekking/langtang-region/langtang-gosainkund-lake"
+          },
+          {
+            "name": "Langtang Valley, Gosainkunda, and Chisopani (Helambu Region)",
+            "duration": "17 Days",
+            "grade": "Moderate",
+            "startingPrice": 600,
+            "description": "This trek explores the Langtang Valley, Gosainkunda Lake, and Chisopani in the Helambu Region, offering cultural and natural highlights in the Langtang Himal area.",
+            "href": "/destinations/nepal/trekking/langtang-region/langtang-gosainkunda-helambu"
+          },
+          {
+            "name": "Tamang Heritage Trail, Langtang Valley, Gosainkunda Lake, and Helambu Region",
+            "duration": "21 Days",
+            "grade": "Moderate",
+            "startingPrice": 675,
+            "description": "This extensive trek covers Rasuwa district, 120 km north of Kathmandu, combining the Tamang Heritage Trail, Langtang Valley, Gosainkunda Lake, and Helambu Region.",
+            "href": "/destinations/nepal/trekking/langtang-region/tamang-heritage-langtang-gosainkunda-helambu"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Kathmandu Valley",
+      "href": "/destinations/nepal/trekking/kathmandu-valley",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 2,
+        "data": [
+          {
+            "name": "Hike to Shivapuri, Nagarkot, Dhulikhel to Panauti",
+            "duration": "10 Days",
+            "grade": "Easy",
+            "startingPrice": null,
+            "description": "The Shivapuri Lekh forms the northern rim of the Kathmandu Valley. The slopes provide much of the city’s drinking water, making this hike both scenic and vital.",
+            "href": "/destinations/nepal/trekking/kathmandu-valley/shivapuri-nagarkot-dhulikhel-panauti"
+          },
+          {
+            "name": "Trek Around Kathmandu Valley (Chisopani, Nagarkot, Dhulikhel, Panauti)",
+            "duration": "8 Days",
+            "grade": "Easy",
+            "startingPrice": 325,
+            "description": "This trek explores the northern rim of the Kathmandu Valley, including Chisopani, Nagarkot, Dhulikhel, and Panauti, offering easy access to natural and cultural attractions.",
+            "href": "/destinations/nepal/trekking/kathmandu-valley/kathmandu-rim-trek"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Manaslu Region",
+      "href": "/destinations/nepal/trekking/manaslu-region",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 3,
+        "data": [
+          {
+            "name": "Tsum Valley and Manaslu",
+            "duration": "22 Days",
+            "grade": "Moderate",
+            "startingPrice": 1075,
+            "description": "Tsum Valley was a restricted area until 2008 and remains a lesser-known trekking destination, offering a remote and culturally rich experience.",
+            "href": "/destinations/nepal/trekking/manaslu-region/tsum-valley-manaslu"
+          },
+          {
+            "name": "Manaslu and Annapurna Circuit",
+            "duration": "27 Days",
+            "grade": "Moderate",
+            "startingPrice": 1375,
+            "description": "The Manaslu Circuit is one of the best remote trekking areas in Nepal, offering stunning views and a connection to the famous Annapurna Circuit.",
+            "href": "/destinations/nepal/trekking/manaslu-region/manaslu-annapurna-circuit"
+          },
+          {
+            "name": "Manaslu Circuit (Lodge) Trek",
+            "duration": "19 Days",
+            "grade": "Moderate",
+            "startingPrice": 975,
+            "description": "The Manaslu Circuit is a remarkable remote trekking area in Nepal, featuring prominent peaks and a well-supported lodge trekking experience.",
+            "href": "/destinations/nepal/trekking/manaslu-region/manaslu-circuit-lodge"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Kanchanjunga Region",
+      "href": "/destinations/nepal/trekking/kanchanjunga-region",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 1,
+        "data": [
+          {
+            "name": "Kanchenjunga North and South (Tea House Trek)",
+            "duration": "24 Days",
+            "grade": "Moderate",
+            "startingPrice": 1275,
+            "description": "Kanchenjunga North and South explores Nepal's second highest peak and the third highest in the world. The trek offers stunning views of Kanchenjunga, located in the eastern Himalayas.",
+            "href": "/destinations/nepal/trekking/kanchenjunga-region/kanchenjunga-north-south-teahouse"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Non Touristic Area",
+      "href": "/destinations/nepal/trekking/non-touristic-area",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 6,
+        "data": [
+          {
+            "name": "Trek to Ganesh Himal and Langtang Valley",
+            "duration": "22 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "Ganesh Himal is located to the west of Langtang Himal and east of the Manaslu range. This trek stretches between two rivers, offering a unique cultural and natural experience.",
+            "href": "/destinations/nepal/trekking/ganesh-himal/ganesh-himal-langtang-valley"
+          },
+          {
+            "name": "Trek to Ganesh Himal (Singla Pass)",
+            "duration": "0 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "The Ganesh Himal region, situated west of Langtang Himal and east of Manaslu, stretches between two rivers. Singla Pass provides a gateway to explore its stunning landscapes.",
+            "href": "/destinations/nepal/trekking/ganesh-himal/singla-pass"
+          },
+          {
+            "name": "Trek to Ganesh Himal and Gosaikund Lake",
+            "duration": "19 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "Explore the Ganesh Himal and Gosaikund Lake region, located west of Langtang Himal and east of Manaslu, known for its scenic trails and sacred lakes.",
+            "href": "/destinations/nepal/trekking/ganesh-himal/ganesh-himal-gosaikund"
+          },
+          {
+            "name": "Helambu and Jugal Himal Trekking",
+            "duration": "13 Days",
+            "grade": "Easy",
+            "startingPrice": null,
+            "description": "Jugal Himal, a small region west of Rolwaling Himal and southeast of Langtang Himal, offers an easy trek with magnificent mountain views and cultural richness.",
+            "href": "/destinations/nepal/trekking/helambu-jugal-himal"
+          },
+          {
+            "name": "Hike to Baglung Pani and Ghanpokhara (Lamjung Himal)",
+            "duration": "15 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "This trek in the Annapurna area explores deep valleys and high mountains encircling the majestic Lamjung Himal, providing stunning vistas and cultural insights.",
+            "href": "/destinations/nepal/trekking/lamjung-himal/baglung-pani-ghanpokhara"
+          },
+          {
+            "name": "Dhaulagiri Circuit Trek",
+            "duration": "21 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "The Dhaulagiri Circuit Trek is a challenging journey around the world's sixth-highest mountain. Known for its remote and rugged trails, this trek is ideal for adventure enthusiasts.",
+            "href": "/destinations/nepal/trekking/dhaulagiri-circuit"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Restricted Area",
+      "href": "/destinations/nepal/trekking/restricted-area",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 6,
+        "data": [
+          {
+            "name": "Upper Dolpo Trekking (Juphal, Sheygompa, Jomsom)",
+            "duration": "29 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "Located in central west Nepal, Upper Dolpo offers a wild and pristine landscape, making it a unique and adventurous trekking experience.",
+            "href": "/destinations/nepal/trekking/dolpo-region/upper-dolpo-juphal-sheygompa-jomsom"
+          },
+          {
+            "name": "The Great Himalayan Trail",
+            "duration": "155 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "The Great Himalayan Trail is a network of trails stretching across Nepal, offering a blend of trekking, culture, nature, and adventure on an epic scale.",
+            "href": "/destinations/nepal/trekking/great-himalayan-trail"
+          },
+          {
+            "name": "Upper Dolpo Trekking",
+            "duration": "27 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "Upper Dolpo is renowned for its wild and pristine landscapes, located in the central west region of Nepal, perfect for adventure seekers.",
+            "href": "/destinations/nepal/trekking/dolpo-region/upper-dolpo"
+          },
+          {
+            "name": "Inner Dolpo Trekking",
+            "duration": "20 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "Inner Dolpo is a magical and mythical trekking destination, offering desolate and rugged landscapes with a truly remote appeal.",
+            "href": "/destinations/nepal/trekking/dolpo-region/inner-dolpo"
+          },
+          {
+            "name": "Dolpa Circuit Trekking",
+            "duration": "14 Days",
+            "grade": "Moderate",
+            "startingPrice": null,
+            "description": "The Dolpa Circuit Trek is a challenging adventure involving steep climbs and crossing two high passes, Numa La (5318m) and Baga La.",
+            "href": "/destinations/nepal/trekking/dolpo-region/dolpa-circuit"
+          },
+          {
+            "name": "Mustang Valley Trek",
+            "duration": "19 Days",
+            "grade": "Easy to Moderate",
+            "startingPrice": null,
+            "description": "The Mustang Valley is located north of the Annapurna range, bordering the Tibetan plateau. This trek offers stunning landscapes and cultural richness.",
+            "href": "/destinations/nepal/trekking/mustang-valley"
+          }
+        ]
+      }
+    }
+  ]
+}

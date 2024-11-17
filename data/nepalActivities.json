@@ -1,0 +1,68 @@
+{
+  "href": "/destinations/nepal",
+  "allActivities": [
+    "Trekking in Nepal",
+    "Rafting in Nepal",
+    "Tour",
+    "Expeditions",
+    "Peak Climbing",
+    "Jungle Safari",
+    "Place to Visit",
+    "Adventure Activities",
+    "Cultural Tour",
+    "Bird Watching Tour",
+    "Mountain Flight",
+    "Paragliding",
+    "Rock Climbing",
+    "Bungy Jumping",
+    "Ayurvedic Treatment",
+    "Domestic Flight"
+  ],
+  "additionalActivities": [
+    {
+      "label": "Adventure Activities",
+      "href": "/destinations/nepal/adventure-activities",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+    },
+    {
+      "label": "Cultural Tour",
+      "href": "/destinations/nepal/cultural-tour",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+    },
+    {
+      "label": "Bird Watching Tour",
+      "href": "/destinations/nepal/bird-watching-tour",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+    },
+    {
+      "label": "Mountain Flight",
+      "href": "/destinations/nepal/mountain-flight",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+    },
+    {
+      "label": "Paragliding",
+      "href": "/destinations/nepal/paragliding",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+    },
+    {
+      "label": "Rock Climbing",
+      "href": "/destinations/nepal/rock-climbing",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+    },
+    {
+      "label": "Bungy Jumping",
+      "href": "/destinations/nepal/bungy-jumping",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+    },
+    {
+      "label": "Ayurvedic Treatment",
+      "href": "/destinations/nepal/ayurvedic-treatment",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+    },
+    {
+      "label": "Domestic Flight",
+      "href": "/destinations/nepal/domestic-flights",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"
+    }
+  ]
+}

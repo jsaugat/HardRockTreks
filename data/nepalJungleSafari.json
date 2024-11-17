@@ -1,0 +1,45 @@
+{
+  "label": "Jungle Safari",
+  "href": "/destinations/nepal/jungle-safari",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+  "packages": {
+    "number": 5,
+    "data": [
+      {
+        "label": "Koshi Tappu Wildlife Reserve",
+        "duration": "0 Days",
+        "grade": "Moderate",
+        "description": "Koshi Tappu Wildlife Reserve stands today as a successful testimony of nature conservation in South Asia. It is the first of its kind.",
+        "startingPrice": null
+      },
+      {
+        "label": "Bardiya National Park (2 nights 3 days Jungle Safari)",
+        "duration": "3 Days",
+        "grade": "Easy",
+        "description": "The Royal Bardiya National Park, situated in the mid-far Western region, is the largest and most unspoiled wilderness area in Nepal.",
+        "startingPrice": null
+      },
+      {
+        "label": "Bardiya National Park (3 nights 4 days Jungle Safari)",
+        "duration": "4 Days",
+        "grade": "Easy",
+        "description": "The Royal Bardiya National Park, situated in the mid-far Western region, is the largest and most unspoiled wilderness area in Nepal.",
+        "startingPrice": null
+      },
+      {
+        "label": "Chitwan National Park (4 days outside park Safari)",
+        "duration": "4 Days",
+        "grade": null,
+        "description": "The Royal Chitwan National Park stands today as a successful testimony of nature conservation in South Asia. It is the first of its kind.",
+        "startingPrice": null
+      },
+      {
+        "label": "Chitwan National Park (3 days outside park safari)",
+        "duration": "3 Days",
+        "grade": "Easy",
+        "description": "The Royal Chitwan National Park stands today as a successful testimony of nature conservation in South Asia. It is the first of its kind.",
+        "startingPrice": null
+      }
+    ]
+  }
+}

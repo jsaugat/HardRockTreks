@@ -1,0 +1,38 @@
+{
+  "label": "Tour",
+  "href": "/destinations/nepal/tour",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+  "packages": {
+    "number": 4,
+    "data": [
+      {
+        "label": "Nepal Panorama Tour (Royal trek)",
+        "duration": "15 Days",
+        "grade": "Easy",
+        "description": "Nepal Panorama Tour (Royal trek) offers a spectacular experience of Nepal's natural beauty and culture.",
+        "startingPrice": 1150
+      },
+      {
+        "label": "Nepal Heritage",
+        "duration": "11 Days",
+        "grade": "Easy",
+        "description": "Nepal Heritage tour showcases the rich cultural and historical sites of Nepal.",
+        "startingPrice": 1000
+      },
+      {
+        "label": "Images of Nepal",
+        "duration": "15 Days",
+        "grade": "Easy",
+        "description": "Annapurna area is the most popular trekking region in Nepal, visited by 70 percent of trekkers annually.",
+        "startingPrice": 1200
+      },
+      {
+        "label": "Himalayan Dream (Highlight of Nepal)",
+        "duration": "15 Days",
+        "grade": "Easy",
+        "description": "Himalayan Dream (Highlight of Nepal) offers an unforgettable journey through Nepal's stunning landscapes and highlights.",
+        "startingPrice": 1350
+      }
+    ]
+  }
+}

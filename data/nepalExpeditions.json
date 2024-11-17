@@ -1,0 +1,52 @@
+{
+  "label": "Expeditions",
+  "href": "/destinations/nepal/expeditions",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+  "packages": {
+    "number": 6,
+    "data": [
+      {
+        "label": "Everest Expedition",
+        "duration": "60 Days",
+        "grade": "Very Difficult",
+        "description": "Even though the highest mountain in the world has been conquered many times in these forty-six years since the first ascent, it remains a daunting challenge.",
+        "startingPrice": null
+      },
+      {
+        "label": "Lhotse Expedition",
+        "duration": "40 Days",
+        "grade": "Very Difficult",
+        "description": "Lhotse, which means 'south peaks,' is part of the Everest massif, located 3km south of Mount Everest.",
+        "startingPrice": null
+      },
+      {
+        "label": "Manaslu Expedition",
+        "duration": "23 Days",
+        "grade": "Very Difficult",
+        "description": "This trek was officially opened to tourists in 1991, but mountaineering expeditions have had long access to the area. Manaslu offers a challenging yet rewarding experience.",
+        "startingPrice": null
+      },
+      {
+        "label": "Annapurna Expedition",
+        "duration": "38 Days",
+        "grade": "Very Difficult",
+        "description": "Annapurna is a Sanskrit word meaning 'Sustenance' and 'filled with,' symbolizing the mountain's grandeur and abundance.",
+        "startingPrice": null
+      },
+      {
+        "label": "Pumari Expedition",
+        "duration": "32 Days",
+        "grade": "Very Difficult",
+        "description": "To the Northwest of Nepal lies the fascinating land of the legendary Sherpas. In this land of mountains, Pumori stands as a beautiful and challenging peak.",
+        "startingPrice": null
+      },
+      {
+        "label": "Amadablam Expedition",
+        "duration": "28 Days",
+        "grade": "Very Difficult",
+        "description": "Ama Dablam has long been considered the prettiest mountain in the world. High on her Southwest face hangs a glacier resembling a jewel box.",
+        "startingPrice": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "label": "Places to Visit",
+  "href": "/destinations/nepal/places-to-visit",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+  "packages": {
+    "number": 6,
+    "data": [
+      {
+        "label": "Kathmandu City",
+        "duration": "0 Days",
+        "grade": "Easy",
+        "description": "Kathmandu Valley is situated at an altitude of 1,336 m above sea level and covers an area of 218 square kilometers.",
+        "startingPrice": null
+      },
+      {
+        "label": "Patan",
+        "duration": "0 Days",
+        "grade": "Easy",
+        "description": "The ancient city of Patan, lying 5 km southwest of Kathmandu, is known as the city of fine arts, showcasing a rich cultural heritage.",
+        "startingPrice": null
+      },
+      {
+        "label": "Bhaktapur",
+        "duration": "0 Days",
+        "grade": "Easy",
+        "description": "Situated at an altitude of 1,401m, Bhaktapur covers an area of four square miles. Known as the city of Devotees, it is rich in history and culture.",
+        "startingPrice": null
+      },
+      {
+        "label": "Pokhara",
+        "duration": "0 Days",
+        "grade": "Easy",
+        "description": "Pokhara is a remarkable place of natural beauty, situated at an altitude of 827m above sea level and 200km west of Kathmandu.",
+        "startingPrice": null
+      },
+      {
+        "label": "Hill Resort",
+        "duration": "0 Days",
+        "grade": "Easy",
+        "description": "Nagarkot is a popular tourist resort in Nepal, located 32 km east of Kathmandu at an altitude of 2,175m, offering stunning views of the Himalayas.",
+        "startingPrice": null
+      },
+      {
+        "label": "Lumbini Tour",
+        "duration": "0 Days",
+        "grade": "Easy",
+        "description": "Lumbini is the birthplace of Siddhartha Gautam, the Shakya prince and ultimate Buddha, known as the enlightened one.",
+        "startingPrice": null
+      }
+    ]
+  }
+}

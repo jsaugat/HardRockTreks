@@ -1,13 +1,12 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
-import activitiesData from "@/data/destinations-activities.json";
+import activitiesData from "@/data/nepalActivities.json";
 import { ActivitiesGrid } from "../_components/ActivitiesGrid";
 
 export default function Page() {
   const nepalActivities =
-    activitiesData
-      .find((destination) => destination.label === "Nepal")
-      ?.activities?.filter((activity) => activity.image) ?? [];
+    activitiesData.activities?.filter((activity) => activity.image) ?? [];
+    
   console.log({ nepalActivities });
 
   return (

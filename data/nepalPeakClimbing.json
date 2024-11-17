@@ -1,0 +1,38 @@
+{
+  "label": "Peak Climbing",
+  "href": "/destinations/nepal/peak-climbing",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+  "packages": {
+    "number": 4,
+    "data": [
+      {
+        "label": "Mera Peak Climbing",
+        "duration": "21 Days",
+        "grade": "Difficult",
+        "description": "To stand on a Himalayan summit with a sense of great achievement, Mera Peak climbing trip offers the best opportunity to experience the thrill of high-altitude climbing.",
+        "startingPrice": 2450
+      },
+      {
+        "label": "Island Peak Climbing",
+        "duration": "23 Days",
+        "grade": "Difficult",
+        "description": "Island Peak climbing trip fulfills the dream of every amateur and serious climber seeking the thrill of Himalayan adventure.",
+        "startingPrice": 2500
+      },
+      {
+        "label": "Pisang Peak Climbing",
+        "duration": "22 Days",
+        "grade": "Difficult",
+        "description": "The Pisang Peaks in the Manang Himal range offer excellent opportunities for exploration and adventure, with a challenging western flank for climbers.",
+        "startingPrice": null
+      },
+      {
+        "label": "Yala Peak Climbing",
+        "duration": "0 Days",
+        "grade": "Difficult",
+        "description": "Yala Peak is situated north of Kathmandu near the border of Tibet (China). It is one of the easier, lower trekking peaks, ideal for those starting their climbing journey.",
+        "startingPrice": null
+      }
+    ]
+  }
+}

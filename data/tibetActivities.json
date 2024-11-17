@@ -1,0 +1,27 @@
+{
+  "href": "/destinations/tibet",
+  "activities": [
+    {
+      "label": "Tibet Tours",
+      "href": "/destinations/tibet/tours",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 6,
+        "data": [
+          {
+            "label": "Overland Tour",
+            "duration": "8 Days",
+            "grade": "easy",
+            "description": "Tibet: For thousands of years, Tibet lay under the ancient Sea of Tethys."
+          },
+          {
+            "label": "Fly inn Drive out tour",
+            "duration": "13 Days",
+            "grade": "easy",
+            "description": "For thousands of years, Tibet lay under the ancient Sea of Tethys."
+          }
+        ]
+      }
+    }
+  ]
+}
