@@ -12,13 +12,43 @@
             "label": "Overland Tour",
             "duration": "8 Days",
             "grade": "easy",
-            "description": "Tibet: For thousands of years, Tibet lay under the ancient Sea of Tethys."
+            "description": "Tibet: For thousands of years, Tibet lay under the ancient Sea of Tethys.",
+            "startingPrice": null
           },
           {
             "label": "Fly inn Drive out tour",
             "duration": "13 Days",
             "grade": "easy",
-            "description": "For thousands of years, Tibet lay under the ancient Sea of Tethys."
+            "description": "For thousands of years, Tibet lay under the ancient Sea of Tethys.",
+            "startingPrice": 900
+          },
+          {
+            "label": "Forbidden Lhasa and Everest Base Camp",
+            "duration": "9 Days",
+            "grade": "Moderate",
+            "description": "For thousands of years, Tibet lay under the ancient Sea of Tethys. Eighty million years ago, India crashed into Asia,…",
+            "startingPrice": null
+          },
+          {
+            "label": "A pilgrimage tour to Mt. Kailash via Simikot in Nepal",
+            "duration": "18 Days",
+            "grade": "Easy",
+            "description": "Mt. Kailash, at 6714 m also known as Tise, Kailasa & Kang Rinpoche(Jewel of the Snows), has since time immemorial…",
+            "startingPrice": null
+          },
+          {
+            "label": "Lhasa and Everest Tour",
+            "duration": "12 Days",
+            "grade": "Moderate",
+            "description": "Definitely, one of the best & the most popular of our Tibet tours, the trip includes visits to all the…",
+            "startingPrice": 1775
+          },
+          {
+            "label": "Pilgrimage tour to Mt. Kailash and Lake Manasorovar",
+            "duration": "14 Days",
+            "grade": "Easy",
+            "description": "Mt. Kailash, at 6714 m also known as Tise, Kailasa & Kang Rinpoche(Jewel of the Snows), has since time immemorial…",
+            "startingPrice": null
           }
         ]
       }
