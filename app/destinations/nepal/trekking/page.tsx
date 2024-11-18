@@ -1,1 +1,3 @@
-export default function Page() { return <div>trekking</div> }
+export default function Page() {
+  return <div>trekking</div>;
+}

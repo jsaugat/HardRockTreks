@@ -52,6 +52,37 @@
           }
         ]
       }
+    },
+    {
+      "label": "Kailash Tour and Treks",
+      "href": "/activities/kailash-tour-and-treks",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png",
+      "packages": {
+        "number": 5,
+        "data": [
+          {
+            "label": "A pilgrimage tour to Mt. Kailash via Simikot in Nepal",
+            "duration": "18 Days",
+            "grade": "Easy",
+            "description": "Mt. Kailash, at 6714 m also known as Tise, Kailasa & Kang Rinpoche(Jewel of the Snows), has since time immemorial…",
+            "startingPrice": null
+          },
+          {
+            "label": "Tibet Holy Mt Kailash Tour",
+            "duration": "14 Days",
+            "grade": "Difficult",
+            "description": "Mt Kailash Tour is the most visited sacred destination in far-west inTibet and Hindus believe Mt Kailash to be the…",
+            "startingPrice": null
+          },
+          {
+            "label": "Pilgrimage tour to Mt. Kailash and Lake Manasorovar (20 Days Kailash Yatra )",
+            "duration": "20 Days",
+            "grade": "Moderate",
+            "description": "Mt. Kailash, at 6714 m also known as Tise, Kailasa & Kang Rinpoche(Jewel of the Snows), has since time immemorial…",
+            "startingPrice": null
+          }
+        ]
+      }
     }
   ]
 }

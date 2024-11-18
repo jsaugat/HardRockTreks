@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "label": "Nepal",
+    "href": "/destinations/nepal",
+    "image": "https://www.hardrocktreks.com/uploads/category/nepal.jpeg",
+    "packagesCount": 117
+  },
+  {
+    "id": 2,
+    "label": "Tibet",
+    "href": "/destinations/tibet",
+    "image": "https://www.hardrocktreks.com/uploads/category/tibet.jpeg",
+    "packagesCount": 9
+  },
+  {
+    "id": 3,
+    "label": "Bhutan",
+    "href": "/destinations/bhutan",
+    "image": "https://www.hardrocktreks.com/uploads/category/bhutan.jpeg",
+    "packagesCount": 3
+  }
+]
