@@ -6,7 +6,7 @@ import ButtonWithIcon from "@/components/ButtonWithIcon";
 
 export default function Hero() {
   return (
-    <div className="hero relative h-[80svh] md:h-screen flex items-center justify-center">
+    <div className="hero relative h-[100svh] md:h-screen flex items-center justify-center">
       {/* HERO IMAGE */}
       <Image
         src="https://images.pexels.com/photos/4360449/pexels-photo-4360449.jpeg"
