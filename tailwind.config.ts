@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         neueRegrade: ["var(--font-neueRegrade)"],
+        konkhmer: ['Konkhmer Sleokchher', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
