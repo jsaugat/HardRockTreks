@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import { useNav } from "@/contexts/Nav";
 import { useEffect } from "react";
 import { OverlayNavMenu } from "./OverlayNavMenu";
+import Link from "next/link";
 
 export default function Navbar() {
   const { isNavOpen, toggleNav } = useNav();
@@ -34,17 +35,18 @@ export default function Navbar() {
             <Logo />
             <section className="flex items-center gap-2">
               <NavMenu />
-              <ButtonWithIcon
-                icon={<PhoneCall className="w-4 h-4 text-background" />}
-                label="Contact us"
-                className="hidden lg:flex"
-              />
+              <Link href="/contact">
+                <ButtonWithIcon
+                  icon={<PhoneCall className="w-4 h-4 text-background" />}
+                  label="Contact us"
+                  className="hidden lg:flex"
+                />
+              </Link>
             </section>
             {/* HAMBURGER (MOBILE) */}
             <Button
               size="icon"
               variant={"secondary"}
-              // className="lg:hidden rounded-md bg-foreground/40 hover:bg-foreground/50 backdrop-blur-md w-12"
               className="lg:hidden rounded-md  w-12"
               onClick={toggleNav}
             >

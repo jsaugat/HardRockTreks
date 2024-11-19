@@ -66,7 +66,9 @@ const config: Config = {
         },
       },
       spacing: {
-        navbarOffset: '72px', // it sums up the height of the navbar and the top margin or spacing of the navbar
+        // it sums up the height of the navbar, top margin or spacing of the navbar and extra 10px
+        smallNavbarOffset: '72px',
+        navbarOffset: 'calc(72px + 10px)',
         default: '32px'
       },
       keyframes: {

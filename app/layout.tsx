@@ -54,11 +54,11 @@ export default function RootLayout({
       >
         <TopLoadingBarProvider>
           <NavProvider>
-            <div className="min-h-screen bg-secondary relative">
+            <main className="bg-secondary relative">
               <Navbar />
-              <main className="container mx-auto relative z-0">{children}</main>
+              <main className="container mx-auto">{children}</main>
               <Footer />
-            </div>
+            </main>
             <Toaster />
           </NavProvider>
         </TopLoadingBarProvider>
