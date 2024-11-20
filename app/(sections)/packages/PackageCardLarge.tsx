@@ -18,11 +18,11 @@ export const LargePackageCard = ({ pkg }: { pkg: any }) => {
         <div className="space-y-4">
           <header>
             {/* TITLE */}
-            <h2 className="text-3xl lg:text-4xl font-neueRegrade font-semibold">
+            <h2 className="text-3xl lg:text-4xl font-familjenGrotesk font-semibold">
               {title}
             </h2>
             {/* SUBTITLE */}
-            <h3 className="text-xl lg:text-2xl font-neueRegrade font-normal text-muted-foreground">
+            <h3 className="text-xl lg:text-2xl font-familjenGrotesk font-normal text-muted-foreground">
               {subtitle}
             </h3>
           </header>
@@ -40,7 +40,7 @@ export const LargePackageCard = ({ pkg }: { pkg: any }) => {
         </div>
         <div className="space-y-4">
           {/* PRICE */}
-          <p className="font-neueRegrade">
+          <p className="font-familjenGrotesk">
             <span className="text-2xl lg:text-3xl font-normal mr-3 text-muted-foreground">
               Starting from
             </span>

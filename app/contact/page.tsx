@@ -12,20 +12,57 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { ToastAction } from "@/components/ui/toast";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", { name, email, message });
-    // Reset form fields
-    setName("");
-    setEmail("");
-    setMessage("");
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevent default form submission
+
+    // Create form data object
+    const formData = { name, email, message };
+
+    try {
+      // Send a POST request to your API route
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        console.error("Failed to send email:", response.statusText);
+        toast({
+          title: "Uh oh! Something went wrong.",
+          description: "There was a problem with your request.",
+          action: <ToastAction altText="Try again">Try again</ToastAction>,
+        });
+      }
+
+      // Clear form
+      setName("");
+      setEmail("");
+      setMessage("");
+      toast({
+        description: "Your message has been sent.",
+      });
+
+    } catch (error) {
+      console.error("An error occurred while sending the email:", error);
+      toast({
+        title: "Uh oh! Something went wrong.",
+        description: "There was a problem with your request.",
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
+    }
   };
 
   return (
@@ -36,10 +73,10 @@ export default function ContactPage() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.156478631798!2d85.3085936751713!3d27.71245452526669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191412b0f06d%3A0x4d7c12aedab6bf6e!2sHard%20Rock%20Treks%20%26%20Expedition%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1732029486799!5m2!1sen!2snp"
           width="100%"
           height="100%"
-          style={{ border: 0 }}
+          // style={{ border: "1px solid black", }}
           allowFullScreen={false}
           loading="lazy"
-          className="absolute inset-0"
+          className="absolute inset-0 border rounded-xl shadow-md"
         ></iframe>
       </div>
 
@@ -152,7 +189,7 @@ export default function ContactPage() {
                     rows={4}
                   />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full rounded-full">
                   Send Message
                 </Button>
               </form>

@@ -13,7 +13,7 @@ export default function page() {
       className="mt-2 mx-auto md:w-[80%] gap-8"
     >
       <section className="mt-default">
-        <h1 className="text-3xl sm:text-4xl lg:text-4xl lg:mb-2 text-primary font-neueRegrade font-semibold capitalize">
+        <h1 className="text-3xl sm:text-4xl lg:text-4xl lg:mb-2 text-primary font-familjenGrotesk font-semibold capitalize">
           Destinations
         </h1>
         <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

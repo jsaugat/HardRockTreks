@@ -10,8 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        neueRegrade: ["var(--font-neueRegrade)"],
-        konkhmer: ['Konkhmer Sleokchher', 'sans-serif']
+        neueRegrade: ["var(--font-familjenGrotesk)"],
+        konkhmer: ['Konkhmer Sleokchher', 'sans-serif'],
+        familjenGrotesk: ["Familjen Grotesk", "sans-serif"]
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

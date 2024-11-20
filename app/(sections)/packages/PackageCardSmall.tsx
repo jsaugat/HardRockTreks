@@ -18,7 +18,7 @@ export const SmallPackageCard = ({ pkg }: { pkg: any }) => {
       />
       {/* Price and Button */}
       <div className="relative z-20 m-2 self-end">
-        <div className="px-2 p-0 pt-1 font-neueRegrade border border-border/50 bg-foreground/30 text-primary-foreground w-fit rounded-full">
+        <div className="px-2 p-0 pt-1 font-familjenGrotesk border border-border/50 bg-foreground/30 text-primary-foreground w-fit rounded-full">
           {/* <span className="text-xl font-normal mr-3 text-foreground">
             Starting from
           </span> */}
@@ -48,7 +48,7 @@ export const SmallPackageCard = ({ pkg }: { pkg: any }) => {
         </div>
         {/* Title, Subtitle, and Description */}
         <div className="my-3">
-          <h2 className="text-2xl font-semibold font-neueRegrade leading-none">
+          <h2 className="text-2xl font-semibold font-familjenGrotesk leading-none">
             {pkg.title}
           </h2>
           <p className="text-lg leading-tight">{pkg.subtitle}</p>

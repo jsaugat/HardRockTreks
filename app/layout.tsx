@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 // import { GeistMono } from 'geist/font/mono';
 import Navbar from "@/components/header/Navbar";
-import { Toaster } from "@/components/ui/sonner";
 import { TopLoadingBarProvider } from "@/contexts/TopLoadingBar";
 import Footer from "@/components/footer";
 import localFont from "next/font/local";
 import { NavProvider } from "@/contexts/Nav";
+import { Toaster } from "@/components/ui/toaster";
 
 // const inter = Inter({ subsets: ['latin'] });
 // Local Font

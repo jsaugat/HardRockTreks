@@ -22,9 +22,9 @@ export default function NepalInfoPage() {
 
   return (
     <div className="pt-navbarOffset pb-5 sm:pb-7 lg:pb-9 min-h-screen">
-      <Card className="max-w-6xl mx-auto bg-white shadow-xl">
+      <Card className="max-w-6xl mx-auto bg-white shadow-xl rounded-xl">
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl sm:text-4xl font-semibold font-neueRegrade text-foreground">
+          <CardTitle className="mx-auto text-3xl sm:text-4xl font-semibold font-familjenGrotesk bg-gradient-to-br from-primary to-purple-500 w-fit bg-clip-text text-transparent">
             Nepal: A Land of Diversity
           </CardTitle>
           <CardDescription className="text-sm sm:text-lg text-gray-600 mt-2">
@@ -33,7 +33,7 @@ export default function NepalInfoPage() {
         </CardHeader>
         <CardContent className="px-4 sm:px-6">
           <Select onValueChange={setSelectedCategory} defaultValue="overview">
-            <SelectTrigger className="w-full mb-6 ring-1 ring-primary text-primary">
+            <SelectTrigger className="w-full mb-6 ring-1 ring-primary text-primary font-semibold">
               <SelectValue placeholder="Select a category" />
             </SelectTrigger>
             <SelectContent className="">
@@ -146,7 +146,7 @@ export default function NepalInfoPage() {
                 </p>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-xl font-semibold text-primary mb-2">
+                    <h4 className="text-xl font-semibold mb-2">
                       1. Himalayan Region
                     </h4>
                     <p className="text-gray-600">
@@ -157,7 +157,7 @@ export default function NepalInfoPage() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-primary mb-2">
+                    <h4 className="text-xl font-semibold mb-2">
                       2. Mountain Region
                     </h4>
                     <p className="text-gray-600">
@@ -167,7 +167,7 @@ export default function NepalInfoPage() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-primary mb-2">
+                    <h4 className="text-xl font-semibold mb-2">
                       3. Terai Region
                     </h4>
                     <p className="text-gray-600">

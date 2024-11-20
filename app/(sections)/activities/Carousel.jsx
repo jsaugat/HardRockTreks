@@ -75,7 +75,7 @@ export const ActivitiesCarousel = () => {
                 fill
                 style={{ objectFit: "cover" }}
               />
-              <h2 className="absolute z-10 left-4 bottom-4 text-4xl text-primary-foreground font-semibold font-neueRegrade uppercase">
+              <h2 className="absolute z-10 left-4 bottom-4 text-4xl text-primary-foreground font-semibold font-familjenGrotesk uppercase">
                 {act.title}
               </h2>
               <div className="absolute top-2 right-2 bg-foreground/30 text-secondary backdrop-blur-sm px-2 py-1 rounded-full">

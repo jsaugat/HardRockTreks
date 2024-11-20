@@ -9,14 +9,16 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="p-8 min-h-screen md:mt-navbarOffset bg-background text-foreground rounded-xl">
-      <main className="container mx-auto rounded-xl">
+    // Background
+    <div className="min-h-screen pt-navbarOffset">
+      {/* About Card */}
+      <main className="container mb-4 p-default mx-auto bg-background text-foreground rounded-xl">
         {/* Company Overview */}
         <section className="mb-12">
-          <h1 className="text-4xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-6">
             About Hard Rock Treks and Expedition
           </h1>
-          <div className="space-y-4">
+          <div className="space-y-4 text-justify">
             <p>
               Hard Rock Treks and Expedition is one of the most popular trekking
               and travel agencies in Nepal, offering unobtrusively personalized
@@ -45,7 +47,7 @@ export default function AboutPage() {
 
         {/* Why Choose Hard Rock Treks */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
             Why Choose Hard Rock Treks?
           </h2>
           <Accordion type="single" collapsible className="w-full">
@@ -128,7 +130,9 @@ export default function AboutPage() {
 
         {/* Our Services */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
+            Our Services
+          </h2>
           <Tabs defaultValue="trekking" className="w-full">
             <TabsList>
               <TabsTrigger value="trekking">
@@ -159,7 +163,9 @@ export default function AboutPage() {
 
         {/* Our Team */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Team</h2>
+          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradbrent-to-r from via-primary-tovia-purplenge-500 text-transparent bg-clip-text mb-4">
+            Our Team
+          </h2>
           <Card className="mb-6">
             <CardHeader>
               <CardTitle>Mr. Bharat Shahi Thakuri "Om"</CardTitle>
@@ -190,7 +196,9 @@ export default function AboutPage() {
 
         {/* Our Mission */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
+            Our Mission
+          </h2>
           <p>
             To provide a highly innovative, quality, and personalized service to
             your clients to ensure a memorable and trouble-free holiday
@@ -200,7 +208,9 @@ export default function AboutPage() {
 
         {/* What We Do */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">What We Do</h2>
+          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
+            What We Do
+          </h2>
           <h3 className="text-2xl font-semibold mb-2">
             Personalized Travel Services for Tour Operators
           </h3>
@@ -236,7 +246,9 @@ export default function AboutPage() {
 
         {/* Social Involvement */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Social Commitment</h2>
+          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
+            Our Social Commitment
+          </h2>
           <Card>
             <CardHeader>
               <CardTitle>
@@ -265,7 +277,9 @@ export default function AboutPage() {
 
         {/* Media Mentions */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">In the Media</h2>
+          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
+            In the Media
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
@@ -302,7 +316,9 @@ export default function AboutPage() {
 
         {/* YouTube Videos */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Adventures on YouTube</h2>
+          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
+            Our Adventures on YouTube
+          </h2>
           <div className="flex gap-2">
             {/* <div className="aspect-w-16 aspect-h-9">
               <iframe

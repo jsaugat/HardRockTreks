@@ -74,7 +74,7 @@ export default function Footer() {
 // Title: Contact Us To Get Started
 const Title = () => {
   return (
-    <h1 className="text-4xl md:text-6xl font-medium tracking-tight font-neueRegrade">
+    <h1 className="text-4xl md:text-6xl font-medium tracking-tight font-familjenGrotesk">
       Contact us now
       <br /> to get started.
     </h1>

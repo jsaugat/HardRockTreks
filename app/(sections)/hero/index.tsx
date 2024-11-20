@@ -12,12 +12,12 @@ export default function Hero() {
         src="https://images.pexels.com/photos/4360449/pexels-photo-4360449.jpeg"
         alt="Hero Image"
         fill
-        className="-z-10"
+        className="z-[8]"
         style={{ objectFit: "cover" }}
       />
       {/* OVERLAY GRADIENT */}
-      <div className="absolute top-0 left-0 -z-[10] w-full h-full bg-gradient-to-b from-foreground/20 via-foreground/40 to-foreground" />
-      <section className="relative -top-20 md:static text-center space-y-4">
+      <div className="absolute top-0 left-0 z-[9] w-full h-full bg-gradient-to-b from-foreground/20 via-foreground/40 to-foreground" />
+      <section className="relative z-10 -top-20 md:static text-center space-y-4">
         <Headline />
         {/* <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
           Discover amazing destinations and plan your next adventure with us.

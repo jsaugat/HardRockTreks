@@ -25,7 +25,7 @@ export function ContentTemplate({
       <section className="flex items-end justify-between w-full">
         <header>
           {/* Title */}
-          <h1 className="text-[2.8rem] sm:text-4xl lg:text-6xl font-semibold font-neueRegrade  bg-gradient-to-r from-[#0030bd] via-purple-400 to-primary bg-clip-text text-transparent">
+          <h1 className="pb-1 text-[2.8rem] sm:text-4xl lg:text-6xl font-medium font-familjenGrotesk  bg-gradient-to-r from-[#0030bd] via-purple-400 to-primary bg-clip-text text-transparent">
             {title}
           </h1>
           {/* Subtitle */}

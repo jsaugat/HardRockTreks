@@ -87,7 +87,7 @@ export const DestinationsCarousel = () => {
               {/* OVERLAY GRADIENT */}
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-50% via-foreground/50 to-foreground/50 opacity-80 rounded-xl" />
               {/* TITLE */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary-foreground text-center text-4xl w-full p-4 lg:text-6xl font-semibold font-neueRegrade uppercase">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary-foreground text-center text-4xl w-full p-4 lg:text-6xl font-semibold font-familjenGrotesk uppercase">
                 <span className="drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r via-secondary from-secondary to-secondary/50">
                   {destination.title}
                 </span>
