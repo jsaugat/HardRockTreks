@@ -12,9 +12,10 @@ export async function POST(request: NextRequest) {
 
     // Send the email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      // from: 'onboarding@resend.dev',
+      from: 'Hard Rock Treks <info@jsaugat.tech>',
       to: ["jsaugat.dev@gmail.com"],
-      subject: "New customer inquiry from 'HARD ROCK TREKS & EXPEDITIONS' website.",
+      subject: "New customer inquiry from 'https://hardrocktreks.com' website.",
       react: EmailTemplate({ name, email, message }), // Use the parsed data in the email template
     });
 

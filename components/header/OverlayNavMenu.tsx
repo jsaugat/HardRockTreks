@@ -4,6 +4,7 @@ import { ChevronDown, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { routes } from "@/routes";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 // Define the properties the OverlayNavMenu component will receive
 type OverlayMenuProps = {
@@ -78,8 +79,8 @@ export const OverlayNavMenu = ({ isNavOpen, onClose }: OverlayMenuProps) => {
         {/* //! Close button */}
         <Button
           size="icon"
-          variant="secondary"
-          className="rounded-md bg-muted border backdrop-blur-md w-12"
+          variant="ghost"
+          className="rounded-md w-12"
           onClick={onClose}
         >
           <X className="w-7 h-7 text-foreground" />
@@ -96,14 +97,18 @@ export const OverlayNavMenu = ({ isNavOpen, onClose }: OverlayMenuProps) => {
         {currentMenu.map((item: any) => (
           <div
             key={item.label}
-            className="active:text-muted-foreground px-5 py-3 border-y flex justify-between items-center cursor-pointer"
-            onClick={() => handleRouteClick(item)}
+            className="active:text-muted-foreground py-0 px-5 border-y flex justify-between items-center cursor-pointer"
           >
-            <span>{item.label}</span>
-            {/* Show a down arrow icon if this item has nested menus */}
-            {(item.menu || item.submenu || item.subsubmenu) && (
-              <ChevronRight className="w-6 h-6" />
-            )}
+            <Link href={item.href ?? ""} className="py-3">{item.label}</Link>
+            <div
+              className="h-full rounded-full p-1"
+              onClick={() => handleRouteClick(item)}
+            >
+              {/* Show a down arrow icon if this item has nested menus */}
+              {(item.menu || item.submenu || item.subsubmenu) && (
+                <ChevronRight className="w-6 h-6" />
+              )}
+            </div>
           </div>
         ))}
       </nav>

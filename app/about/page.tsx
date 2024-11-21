@@ -12,7 +12,7 @@ export default function AboutPage() {
     // Background
     <div className="min-h-screen pt-navbarOffset">
       {/* About Card */}
-      <main className="container mb-4 p-default mx-auto bg-background text-foreground rounded-xl">
+      <main className="container mb-4 p-2 px-1 sm:p-6 lg:p-default mx-auto bg-background text-foreground rounded-xl">
         {/* Company Overview */}
         <section className="mb-12">
           <h1 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-6">
@@ -130,31 +130,37 @@ export default function AboutPage() {
 
         {/* Our Services */}
         <section className="mb-12">
-          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
             Our Services
           </h2>
           <Tabs defaultValue="trekking" className="w-full">
-            <TabsList>
-              <TabsTrigger value="trekking">
+            <TabsList className="flex flex-col sm:flex-row h-auto">
+              <TabsTrigger value="trekking" className="flex-grow text-left sm:text-center py-2 px-3 text-sm sm:text-base w-full">
                 Trekking & Mountaineering
               </TabsTrigger>
-              <TabsTrigger value="tours">Tours</TabsTrigger>
-              <TabsTrigger value="accommodation">Accommodation</TabsTrigger>
-              <TabsTrigger value="transport">Transport</TabsTrigger>
+              <TabsTrigger value="tours" className="flex-grow text-left sm:text-center py-2 px-3 text-sm sm:text-base w-full">
+                Tours
+              </TabsTrigger>
+              <TabsTrigger value="accommodation" className="flex-grow text-left sm:text-center py-2 px-3 text-sm sm:text-base w-full">
+                Accommodation
+              </TabsTrigger>
+              <TabsTrigger value="transport" className="flex-grow text-left sm:text-center py-2 px-3 text-sm sm:text-base w-full">
+                Transport
+              </TabsTrigger>
             </TabsList>
-            <TabsContent value="trekking">
+            <TabsContent value="trekking" className="mt-4 p-3 sm:p-4">
               We specialize in trekking tours, white water river rafting tours,
               and peak climbing throughout Nepal, Bhutan, and Tibet.
             </TabsContent>
-            <TabsContent value="tours">
+            <TabsContent value="tours" className="mt-4 p-3 sm:p-4">
               We offer wildlife excursions, cultural tours, and organize special
               events in Nepal, Bhutan, and Tibet.
             </TabsContent>
-            <TabsContent value="accommodation">
+            <TabsContent value="accommodation" className="mt-4 p-3 sm:p-4">
               From mid-range value accommodations to five-star luxuries, we
               provide complete hotel packages to suit your needs.
             </TabsContent>
-            <TabsContent value="transport">
+            <TabsContent value="transport" className="mt-4 p-3 sm:p-4">
               Our services include domestic air ticketing, chauffeur-driven
               limousines, and coach tours for all your transportation needs.
             </TabsContent>
@@ -163,10 +169,10 @@ export default function AboutPage() {
 
         {/* Our Team */}
         <section className="mb-12">
-          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradbrent-to-r from via-primary-tovia-purplenge-500 text-transparent bg-clip-text mb-4">
+          <h2 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-r from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-4">
             Our Team
           </h2>
-          <Card className="mb-6">
+          <Card className="mb-6 p-0">
             <CardHeader>
               <CardTitle>Mr. Bharat Shahi Thakuri "Om"</CardTitle>
             </CardHeader>

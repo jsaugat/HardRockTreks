@@ -40,15 +40,15 @@ export const PackagesCarousel = () => {
   }, []);
 
   // Pause/Resume autoplay based on visibility
-  useEffect(() => {
-    if (swiperInstance) {
-      if (isInView) {
-        swiperInstance.autoplay.resume();
-      } else {
-        swiperInstance.autoplay.pause();
-      }
-    }
-  }, [isInView, swiperInstance]);
+  // useEffect(() => {
+  //   if (swiperInstance) {
+  //     if (isInView) {
+  //       swiperInstance.autoplay.resume();
+  //     } else {
+  //       swiperInstance.autoplay.pause();
+  //     }
+  //   }
+  // }, [isInView, swiperInstance]);
   return (
     <>
       <Swiper
@@ -57,11 +57,11 @@ export const PackagesCarousel = () => {
         spaceBetween={50}
         slidesPerView={1}
         loop={true}
-        autoplay={{
-          delay: 8000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
+        // autoplay={{
+        //   delay: 8000,
+        //   disableOnInteraction: false,
+        //   pauseOnMouseEnter: true,
+        // }}
         navigation={false}
         // pagination={{ clickable: width && width < 768 ? false : true }}
         pagination={{ clickable: true }}

@@ -9,9 +9,12 @@ import { useNav } from "@/contexts/Nav";
 import { useEffect } from "react";
 import { OverlayNavMenu } from "./OverlayNavMenu";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const { isNavOpen, toggleNav } = useNav();
+
   useEffect(() => {
     //! Disable scrolling when nav is open
     if (isNavOpen) {
@@ -26,9 +29,13 @@ export default function Navbar() {
     };
   }, [isNavOpen]);
 
+  useEffect(() => {
+    toggleNav();
+  }, [pathname])
+
   return (
     <>
-      <header className="navbar fixed lg:top-2 z-20 w-full">
+      <header className="navbar fixed lg:py-1 z-20 w-full bg-background/90 backdrop-blur-lg md:backdrop-blur-2xl md:bg-transparent">
         <div className="container pt-1 h-16 flex items-center md:bg-transparent">
           {/* Justify Between */}
           <div className="mx-0 flex justify-between w-full">
@@ -46,7 +53,7 @@ export default function Navbar() {
             {/* HAMBURGER (MOBILE) */}
             <Button
               size="icon"
-              variant={"secondary"}
+              variant="ghost"
               className="lg:hidden rounded-md  w-12"
               onClick={toggleNav}
             >

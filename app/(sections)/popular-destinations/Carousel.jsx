@@ -19,7 +19,7 @@ export const DestinationsCarousel = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsInView(entry.isIntersecting);
-        console.log({ isIntersecting: entry.isIntersecting });
+        // console.log({ isIntersecting: entry.isIntersecting });
       },
       { threshold: 1 } // Trigger when 100% of the carousel is in view
     );
@@ -36,15 +36,15 @@ export const DestinationsCarousel = () => {
   }, []);
 
   // Start/Stop autoplay based on visibility
-  useEffect(() => {
-    if (swiperInstance) {
-      if (isInView) {
-        swiperInstance.autoplay.start(); // Start autoplay
-      } else {
-        swiperInstance.autoplay.stop(); // Stop autoplay
-      }
-    }
-  }, [isInView, swiperInstance]);
+  // useEffect(() => {
+  //   if (swiperInstance) {
+  //     if (isInView) {
+  //       swiperInstance.autoplay.start(); // Start autoplay
+  //     } else {
+  //       swiperInstance.autoplay.stop(); // Stop autoplay
+  //     }
+  //   }
+  // }, [isInView, swiperInstance]);
 
   return (
     <div ref={carouselContainerRef}> {/* Observe this container */}
@@ -53,11 +53,11 @@ export const DestinationsCarousel = () => {
         spaceBetween={50}
         slidesPerView={1}
         loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: false,
-        }}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        //   pauseOnMouseEnter: false,
+        // }}
         navigation={false}
         // Capture the Swiper instance here
         onSwiper={(swiper) => setSwiperInstance(swiper)}

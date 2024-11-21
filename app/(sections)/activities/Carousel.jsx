@@ -21,7 +21,7 @@ export const ActivitiesCarousel = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsInView(entry.isIntersecting);
-        console.log({ isIntersecting: entry.isIntersecting, isInView });
+        // console.log({ isIntersecting: entry.isIntersecting, isInView });
 
       },
       { threshold: 1 } // Trigger when at least 50% of the carousel is in view
@@ -39,15 +39,15 @@ export const ActivitiesCarousel = () => {
   }, []);
 
   // Pause/Resume autoplay based on visibility
-  useEffect(() => {
-    if (swiperInstance) {
-      if (isInView) {
-        swiperInstance.autoplay.resume();
-      } else {
-        swiperInstance.autoplay.pause();
-      }
-    }
-  }, [isInView, swiperInstance]);
+  // useEffect(() => {
+  //   if (swiperInstance) {
+  //     if (isInView) {
+  //       swiperInstance.autoplay.resume();
+  //     } else {
+  //       swiperInstance.autoplay.pause();
+  //     }
+  //   }
+  // }, [isInView, swiperInstance]);
 
   return (
     <div ref={activitiesSwiperContainerRef}>
@@ -56,11 +56,11 @@ export const ActivitiesCarousel = () => {
         spaceBetween={20}
         slidesPerView={width && width < 768 ? 1 : 3}
         loop={true}
-        autoplay={{
-          delay: width && width < 768 ? 3000 : 2500,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: false,
-        }}
+        // autoplay={{
+        //   delay: width && width < 768 ? 3000 : 2500,
+        //   disableOnInteraction: false,
+        //   pauseOnMouseEnter: false,
+        // }}
         navigation={false}
         onSwiper={(swiper) => setSwiperInstance(swiper)} // Capture Swiper instance
         onSlideChange={() => console.log("Activity slide changed.")}

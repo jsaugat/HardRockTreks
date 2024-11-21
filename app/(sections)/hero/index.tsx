@@ -48,7 +48,7 @@ export default function Hero() {
             behavior: "smooth",
           });
         }}
-        className="absolute bottom-6 right-6 cursor-pointer text-primary-foreground flex justify-center items-start gap-2"
+        className="absolute z-10 bottom-6 right-6 cursor-pointer text-primary-foreground flex justify-center items-start gap-2"
       >
         Explore more
         <div className="p-1 rounded-full text-secondary-foreground animate-bounce bg-secondary flex items-center">

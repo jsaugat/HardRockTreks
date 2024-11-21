@@ -34,7 +34,7 @@ export function Logo({ className }: { className?: string }) {
 
   return (
     <Link href="/" className="">
-      <main className="flex items-center gap-3 relative">
+      <main className={cn("flex items-center gap-3 relative", className)}>
         {/* LOGO ICON */}
         <Image
           src="/logo.png"
@@ -45,17 +45,16 @@ export function Logo({ className }: { className?: string }) {
         {/* LOGO TEXT */}
         <div
           className={cn(
-            isVisible ? "opacity-100" : "opacity-0 pointer-events-none",
-            "relative flex flex-col items-start justify-start gap-0 p-0 font-semibold text-secondary uppercase text-lg lg:text-2xl leading-none drop-shadow-[0_1px_20px_rgba(59,130,246,1)]",
+            isVisible ? "opacity-100" : "md:opacity-0 pointer-events-none",
+            "relative flex flex-col items-start justify-start gap-0 p-0 font-familjenGrotesk font-bold md:font-semibold text-secondary uppercase text-xl lg:text-2xl leading-none md:drop-shadow-[0_1px_20px_rgba(59,130,246,1)]",
             pathname !== "/" && "text-foreground drop-shadow-none",
             className
           )}
         >
           <span
             className={cn(
-              "text-primary-foreground tracking-tight",
-              isNavOpen && "text-foreground",
-              pathname !== "/" && "text-foreground"
+              "bg-clip-text text-transparent bg-gradient-to-br from-[#2427ff] to-[#ff7300] md:text-primary-foreground tracking-tight",
+              pathname !== "/" && "md:text-foreground"
             )}
           >
             Hard Rock Treks &<br className="md:hidden" /> Expeditions

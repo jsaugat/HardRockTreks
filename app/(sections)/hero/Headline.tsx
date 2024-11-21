@@ -19,11 +19,11 @@ export const Headline = () => {
 // MOBILE
 const SmallHeadline = () => {
   return (
-    <h1 className="text-5xl text-center font-familjenGrotesk uppercase text-primary-foreground font-bold drop-shadow-md">
+    <h1 className="text-5xl sm:text-6xl text-center font-familjenGrotesk uppercase text-primary-foreground font-bold drop-shadow-md">
       <span className="bg-clip-text text-transparent bg-gradient-to-br from-primary-foreground via-primary-foreground to-[#ffbd87]">
-        From Trails to Summits
+        From Trails<br className="sm:hidden" /> to Summits
       </span>
-      <span className="text-xl block">Your Next Adventure Awaits</span>
+      <span className="text-xl font-semibold block">Your Next Adventure Awaits</span>
     </h1>
   );
 };
