@@ -13,7 +13,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const { isNavOpen, toggleNav } = useNav();
+  const { isNavOpen, toggleNav, closeNav } = useNav();
 
   useEffect(() => {
     //! Disable scrolling when nav is open
@@ -30,8 +30,8 @@ export default function Navbar() {
   }, [isNavOpen]);
 
   useEffect(() => {
-    toggleNav();
-  }, [pathname])
+    closeNav(); // Explicitly close nav when pathname changes
+  }, [pathname]);
 
   return (
     <>

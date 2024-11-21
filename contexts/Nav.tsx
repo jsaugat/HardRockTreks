@@ -7,6 +7,7 @@ import { createContext, useContext, useState, ReactNode } from "react";
 interface NavContextType {
   isNavOpen: boolean;
   toggleNav: () => void;
+  closeNav: () => void;
 }
 
 // Create context with an undefined initial state
@@ -21,10 +22,12 @@ interface NavProviderProps {
 export const NavProvider = ({ children }: NavProviderProps) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
+  // Allow toggleNav to explicitly set the value
   const toggleNav = () => setIsNavOpen((prev) => !prev);
+  const closeNav = () => setIsNavOpen(false);
 
   return (
-    <NavContext.Provider value={{ isNavOpen, toggleNav }}>
+    <NavContext.Provider value={{ isNavOpen, toggleNav, closeNav }}>
       {children}
     </NavContext.Provider>
   );

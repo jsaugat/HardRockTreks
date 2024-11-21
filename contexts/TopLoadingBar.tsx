@@ -36,7 +36,7 @@ export const TopLoadingBarProvider = ({ children }: { children: ReactNode }) => 
   // Render the loading bar and the children
   return (
     <TopLoadingBarContext.Provider value={{ triggerLoading }}>
-      <LoadingBar color="skyblue" progress={progress} onLoaderFinished={() => setProgress(0)} />
+      <LoadingBar color="#3B82F6" progress={progress} onLoaderFinished={() => setProgress(0)} />
       {children}
     </TopLoadingBarContext.Provider>
   );
