@@ -37,7 +37,7 @@ export const SliderNavigationButtons = ({ packagesSwiperContainerRef }) => {
   }, [packagesSwiperContainerRef]);
 
   return (
-    <div className="hidden lg:flex items-center gap-2 mx-auto justify-center">
+    <div className="hidden lg:flex items-center gap-2 mt-3 mx-auto justify-center">
       <Button
         variant={"outline"}
         size={"icon"}
@@ -50,7 +50,9 @@ export const SliderNavigationButtons = ({ packagesSwiperContainerRef }) => {
       <Button
         variant={"outline"}
         size={"icon"}
-        onClick={() => packagesSwiperContainerRef.current?.swiper?.slideNext()}
+        onClick={() => {
+          packagesSwiperContainerRef.current?.swiper?.slideNext()
+        }}
         className={`border-muted-foreground/50 hover:bg-primary hover:border-primary hover:text-primary-foreground ${rightPressed ? "bg-primary text-primary-foreground" : ""
           }`}
       >

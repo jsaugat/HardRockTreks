@@ -70,10 +70,18 @@ export const PackagesCarousel = () => {
         className="h-[440px] md:h-[520px]"
       >
         {packagesData.map((pkg) => (
-          <SwiperSlide key={pkg.title} className='overflow-visible'>
-            {width < 768 ? <SmallPackageCard pkg={pkg} /> : <LargePackageCard pkg={pkg} />}
+          <SwiperSlide key={pkg.title} className="overflow-visible">
+            <div className="block lg:hidden">
+              {/* Small Package Card for smaller screens */}
+              <SmallPackageCard pkg={pkg} />
+            </div>
+            <div className="hidden lg:block">
+              {/* Large Package Card for larger screens */}
+              <LargePackageCard pkg={pkg} />
+            </div>
           </SwiperSlide>
         ))}
+
       </Swiper>
       <SliderNavigationButtons packagesSwiperContainerRef={packagesSwiperContainerRef} />
     </>

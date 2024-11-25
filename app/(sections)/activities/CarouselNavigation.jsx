@@ -6,7 +6,7 @@ export const CarouselNavigationButtons = ({
   activitiesSwiperContainerRef,
 }) => {
   return (
-    <div className="hidden lg:flex items-center gap-2 mx-auto mt-3 justify-center">
+    <div className="hidden lg:flex items-center gap-2 mx-auto justify-center">
       <Button
         variant={"outline"}
         size={"icon"}
@@ -18,7 +18,11 @@ export const CarouselNavigationButtons = ({
       <Button
         variant={"outline"}
         size={"icon"}
-        onClick={() => activitiesSwiperContainerRef.current?.swiper?.slideNext()}
+        onClick={() => {
+          console.log("Activites right nav clicked.")
+          activitiesSwiperContainerRef.current?.swiper?.slideNext()
+        }
+        }
         className="border-muted-foreground/50 hover:bg-primary hover:border-primary hover:text-primary-foreground"
       >
         <ChevronRight className="w-5 h-5" />

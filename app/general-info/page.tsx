@@ -59,7 +59,7 @@ export default function NepalInfoPage() {
                   />
                   <InfoItem
                     title="Currency"
-                    content="Nepali Rupee (approx. US$ 1 = Rs. 71.24)"
+                    content="Nepali Rupee (approx. US$ 1 = Rs. 135)"
                   />
                   <InfoItem
                     title="Political System"

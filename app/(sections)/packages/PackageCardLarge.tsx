@@ -45,7 +45,7 @@ export const LargePackageCard = ({ pkg }: { pkg: any }) => {
               Starting from
             </span>
             <span className="text-2xl lg:text-3xl font-medium">
-              USD {price}
+              ${price} USD
             </span>
           </p>
           {/* BOOK BUTTON */}

@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "@/components/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 
 export default function ContactPage() {

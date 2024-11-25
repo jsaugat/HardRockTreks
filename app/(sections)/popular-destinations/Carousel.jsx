@@ -10,7 +10,7 @@ import Image from "next/image";
 import popularDestinations from "@/data/popular-destinations.json";
 
 export const DestinationsCarousel = () => {
-  const carouselContainerRef = useRef(null); // Ref for Intersection Observer
+  const destinationsSwiperRef = useRef(null); // Ref for Intersection Observer
   const [swiperInstance, setSwiperInstance] = useState(null); // Store Swiper instance
   const [isInView, setIsInView] = useState(false);
 
@@ -24,13 +24,13 @@ export const DestinationsCarousel = () => {
       { threshold: 1 } // Trigger when 100% of the carousel is in view
     );
 
-    if (carouselContainerRef.current) {
-      observer.observe(carouselContainerRef.current);
+    if (destinationsSwiperRef.current) {
+      observer.observe(destinationsSwiperRef.current);
     }
 
     return () => {
-      if (carouselContainerRef.current) {
-        observer.unobserve(carouselContainerRef.current);
+      if (destinationsSwiperRef.current) {
+        observer.unobserve(destinationsSwiperRef.current);
       }
     };
   }, []);
@@ -47,8 +47,9 @@ export const DestinationsCarousel = () => {
   // }, [isInView, swiperInstance]);
 
   return (
-    <div ref={carouselContainerRef}> {/* Observe this container */}
+    <>
       <Swiper
+        ref={destinationsSwiperRef}
         modules={[Navigation, Pagination, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
@@ -59,10 +60,11 @@ export const DestinationsCarousel = () => {
         //   pauseOnMouseEnter: false,
         // }}
         navigation={false}
+        pagination={{ clickable: true }}
         // Capture the Swiper instance here
         onSwiper={(swiper) => setSwiperInstance(swiper)}
         onSlideChange={() => console.log("Destination slide changed")}
-        className="lg:h-[440px] mb-5"
+        className="h-[440px] lg:h-[480px] mb-5"
       >
         {popularDestinations.map((destination) => (
           <SwiperSlide key={destination.id}>
@@ -96,7 +98,7 @@ export const DestinationsCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <SliderNavigationButtons swiperRef={swiperInstance} />
-    </div>
+      <SliderNavigationButtons swiperRef={destinationsSwiperRef} />
+    </>
   );
 };

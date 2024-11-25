@@ -53,8 +53,8 @@ export const SmallPackageCard = ({ pkg }: { pkg: any }) => {
             Starting from
           </span> */}
           <p className="text-2xl font-medium">
-            USD
             <span className="font-semibold ml-1">${pkg.price}</span>
+            USD
           </p>
         </div>
         {/* <Button className="mt-3 pr-1 bg-gradient-to-r from-primary to-purple-500 hover:from-primary transition-all flex justify-between items-center">

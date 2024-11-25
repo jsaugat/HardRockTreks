@@ -6,7 +6,7 @@ export const SliderNavigationButtons = ({
   swiperRef,
 }) => {
   return (
-    <div className="hidden lg:flex items-center gap-2 mx-auto justify-center">
+    <div className="hidden lg:flex items-center gap-2 mt-3 mx-auto justify-center">
       <Button
         variant={"outline"}
         size={"icon"}

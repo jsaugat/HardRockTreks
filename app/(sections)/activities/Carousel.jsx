@@ -17,26 +17,26 @@ export const ActivitiesCarousel = () => {
   const [isInView, setIsInView] = useState(false);
 
   // Set up IntersectionObserver to observe the carousel component
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-        // console.log({ isIntersecting: entry.isIntersecting, isInView });
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       setIsInView(entry.isIntersecting);
+  //       // console.log({ isIntersecting: entry.isIntersecting, isInView });
 
-      },
-      { threshold: 1 } // Trigger when at least 50% of the carousel is in view
-    );
+  //     },
+  //     { threshold: 1 } // Trigger when at least 50% of the carousel is in view
+  //   );
 
-    if (activitiesSwiperContainerRef.current) {
-      observer.observe(activitiesSwiperContainerRef.current);
-    }
+  //   if (activitiesSwiperContainerRef.current) {
+  //     observer.observe(activitiesSwiperContainerRef.current);
+  //   }
 
-    return () => {
-      if (activitiesSwiperContainerRef.current) {
-        observer.unobserve(activitiesSwiperContainerRef.current);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (activitiesSwiperContainerRef.current) {
+  //       observer.unobserve(activitiesSwiperContainerRef.current);
+  //     }
+  //   };
+  // }, []);
 
   // Pause/Resume autoplay based on visibility
   // useEffect(() => {
@@ -50,11 +50,12 @@ export const ActivitiesCarousel = () => {
   // }, [isInView, swiperInstance]);
 
   return (
-    <div ref={activitiesSwiperContainerRef}>
+    <>
       <Swiper
+        ref={activitiesSwiperContainerRef}
         modules={[Navigation, Pagination, A11y, Autoplay]}
         spaceBetween={20}
-        slidesPerView={width && width < 768 ? 1 : 3}
+        slidesPerView={width && (width < 768 ? 1 : width > 1024 ? 3 : 2)}
         loop={true}
         // autoplay={{
         //   delay: width && width < 768 ? 3000 : 2500,
@@ -62,9 +63,10 @@ export const ActivitiesCarousel = () => {
         //   pauseOnMouseEnter: false,
         // }}
         navigation={false}
+        pagination={{ clickable: true }}
         onSwiper={(swiper) => setSwiperInstance(swiper)} // Capture Swiper instance
         onSlideChange={() => console.log("Activity slide changed.")}
-        className="h-[360px] md:h-[400px] mb-5"
+        className="h-[400px] md:h-[440px] mb-5"
       >
         {activitiesData.map((act) => (
           <SwiperSlide key={act.title} className="rounded-3xl">
@@ -89,6 +91,6 @@ export const ActivitiesCarousel = () => {
       <CarouselNavigationButtons
         activitiesSwiperContainerRef={activitiesSwiperContainerRef}
       />
-    </div>
+    </>
   );
 };
