@@ -84,7 +84,7 @@ export default function ReviewList() {
       </div>
       {/* Review List */}
       {reviews.map((review, i) => (
-        <div key={review.id}>
+        <div key={review.id} className="">
           <Card>
             <CardContent className="p-6">
               <div className="flex gap-4">
@@ -124,7 +124,7 @@ export default function ReviewList() {
               </div>
             </CardContent>
           </Card>
-          {i < reviews.length - 1 && <Separator className="my-6" />}
+          {i < reviews.length - 1 && <Separator className="hidden md:block my-6" />}
         </div>
       ))}
     </div>

@@ -13,6 +13,61 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Main destination model
+model Destination {
+  id            String     @id @default(cuid())
+  name          String
+  slug          String     @unique // For dynamic routing
+  image         String
+  packagesCount Int        @default(0)
+  description   String
+  activities    Activity[]
+}
+
+// Activity model (like Trekking, Rafting, Tour)
+model Activity {
+  id            String        @id @default(cuid())
+  name          String
+  slug          String        @unique // For dynamic routing
+  image         String
+  packagesCount Int           @default(0)
+  destination   Destination   @relation(fields: [destinationId], references: [id])
+  destinationId String
+  subactivities Subactivity[]
+  packages      Package[]
+}
+
+// Subactivity model (like Camping Trek, Everest Region)
+model Subactivity {
+  id            String    @id @default(cuid())
+  name          String
+  slug          String    @unique // For dynamic routing
+  image         String
+  description   String
+  packagesCount Int       @default(0)
+  activity      Activity  @relation(fields: [activityId], references: [id])
+  activityId    String
+  packages      Package[]
+}
+
+// Package model 
+model Package {
+  id            String       @id @default(cuid())
+  name          String
+  slug          String       @unique
+  description   String
+  startingPrice Float
+  duration      Int // Days
+  difficulty    String // Easy, Moderate, Challenging
+  activity      Activity?    @relation(fields: [activityId], references: [id])
+  activityId    String?
+  subactivity   Subactivity? @relation(fields: [subactivityId], references: [id])
+  subactivityId String?
+  highlights    String[]
+  includedItems String[]
+  excludedItems String[]
+}
+
 model Review {
   id            String   @id @default(cuid())
   name          String
