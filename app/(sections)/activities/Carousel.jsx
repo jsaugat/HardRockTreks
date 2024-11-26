@@ -55,7 +55,7 @@ export const ActivitiesCarousel = () => {
         ref={activitiesSwiperContainerRef}
         modules={[Navigation, Pagination, A11y, Autoplay]}
         spaceBetween={20}
-        slidesPerView={width && (width < 768 ? 1 : width > 1024 ? 3 : 2)}
+        slidesPerView={width < 768 ? 1 : width > 1024 ? 3 : 2}
         loop={true}
         // autoplay={{
         //   delay: width && width < 768 ? 3000 : 2500,

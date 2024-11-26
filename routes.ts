@@ -78,10 +78,6 @@ export const routes: Route[] = [
   { href: "/general-info", label: "Info" },
   {
     href: "/reviews",
-    label: "Reviews",
-    menu: [
-      { href: "/reviews/read", label: "Read Review" },
-      { href: "/reviews/write", label: "Write a Review" },
-    ],
+    label: "Reviews"
   },
 ];

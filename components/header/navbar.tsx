@@ -35,7 +35,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="navbar fixed lg:py-1 z-20 w-full bg-background/90 backdrop-blur-lg md:backdrop-blur-2xl md:bg-transparent">
+      <header className="navbar fixed top-0 lg:py-1 z-20 w-full bg-background/90 backdrop-blur-lg md:backdrop-blur-2xl md:bg-transparent">
         <div className="container pt-1 h-16 flex items-center md:bg-transparent">
           {/* Justify Between */}
           <div className="mx-0 flex justify-between w-full">

@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import localFont from "next/font/local";
 import { NavProvider } from "@/contexts/Nav";
 import { Toaster } from "@/components/ui/toaster";
+import QueryProvider from "@/providers/query-provider"
 
 // const inter = Inter({ subsets: ['latin'] });
 // Local Font
@@ -52,16 +53,18 @@ export default function RootLayout({
       <body
         className={`${GeistSans.className} ${neueRegrade.variable} bg-[#F1F5F9]`}
       >
-        <TopLoadingBarProvider>
-          <NavProvider>
-            <main className="bg-secondary relative">
-              <Navbar />
-              <main className="container mx-auto">{children}</main>
-              <Footer />
-            </main>
-            <Toaster />
-          </NavProvider>
-        </TopLoadingBarProvider>
+        <QueryProvider>
+          <TopLoadingBarProvider>
+            <NavProvider>
+              <main className="bg-secondary relative">
+                <Navbar />
+                <main className="container mx-auto">{children}</main>
+                <Footer />
+              </main>
+              <Toaster />
+            </NavProvider>
+          </TopLoadingBarProvider>
+        </QueryProvider>
       </body>
     </html>
   );
