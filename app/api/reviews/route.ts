@@ -1,6 +1,6 @@
 // app/api/reviews/route.ts
 import { NextResponse } from 'next/server'
-import { createReview, getApprovedReviews } from '@/lib/db/reviews'
+import { createReview, getApprovedReviews } from '@/prisma/repositories/reviews'
 import { ReviewSchema } from '@/lib/zod/review'
 
 export async function GET() {

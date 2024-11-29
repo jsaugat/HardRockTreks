@@ -8,7 +8,7 @@ import Footer from "@/components/footer";
 import localFont from "next/font/local";
 import { NavProvider } from "@/contexts/Nav";
 import { Toaster } from "@/components/ui/toaster";
-import QueryProvider from "@/providers/query-provider"
+import QueryProvider from "@/lib/providers/query-provider"
 
 // const inter = Inter({ subsets: ['latin'] });
 // Local Font

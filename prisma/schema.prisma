@@ -28,6 +28,7 @@ model Destination {
 model Activity {
   id            String        @id @default(cuid())
   name          String
+  description   String
   slug          String        @unique // For dynamic routing
   image         String
   packagesCount Int           @default(0)
