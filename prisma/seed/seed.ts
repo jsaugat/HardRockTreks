@@ -70,7 +70,6 @@ async function seedDestination(destinationData: Destination) {
       slug: getSlug(destinationData.slug),
       image: destinationData.image || 'https://example.com/default-destination.jpg',
       description: destinationData.description || 'No description available',
-      packagesCount: calculatePackagesCount(destinationData),
       activities: {
         create: destinationData.activities.map(activityData => ({
           name: activityData.name,

@@ -1,4 +1,4 @@
-import { prisma } from '@/prisma'
+import prisma from '@/prisma'
 import { Status } from '@prisma/client'
 
 export async function getApprovedReviews() {

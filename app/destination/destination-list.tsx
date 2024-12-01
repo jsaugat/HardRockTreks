@@ -38,7 +38,7 @@ export function DestinationsList({
                 {destination.name}
               </h2>
               <p className="text-white/90">
-                {destination.packagesCount} packages available
+                10 packages available
               </p>
             </div>
           </div>

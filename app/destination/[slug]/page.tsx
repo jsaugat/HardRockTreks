@@ -1,13 +1,15 @@
-import { notFound } from 'next/navigation'
-import { getDestinationBySlug } from '@/prisma/repositories/destinations'
-import { DestinationView } from './destination-view'
+import { notFound } from 'next/navigation';
+import { getDestinationBySlug } from '@/prisma/repositories/destinations';
+import { DestinationView } from './destination-view';
 
 export default async function DestinationPage({
-  params
+  params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const destination = await getDestinationBySlug(params.slug)
+  const slug = (await params).slug;
+  const destination = await getDestinationBySlug(slug);
+  console.log({ destination })
 
   if (!destination) {
     notFound()

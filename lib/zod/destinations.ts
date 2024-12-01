@@ -5,7 +5,6 @@ export const destinationSchema = z.object({
   name: z.string(),
   slug: z.string(),
   image: z.string(),
-  packagesCount: z.number(),
   description: z.string()
 })
 
@@ -15,7 +14,6 @@ export const activitySchema = z.object({
   description: z.string(),
   slug: z.string(),
   image: z.string(),
-  packagesCount: z.number(),
   destinationId: z.string()
 })
 

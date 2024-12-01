@@ -57,7 +57,7 @@ export function DestinationView({
                 {activity.name}
               </h3>
               <p className="text-sm text-gray-600">
-                {activity.packagesCount} packages
+                10 packages
               </p>
             </Link>
           ))}

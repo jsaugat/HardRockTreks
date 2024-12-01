@@ -24,6 +24,16 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      spacing: {
+        smallNavbarOffset: '72px',
+        // it sums up the height of the navbar, top margin or spacing of the navbar and extra 10px
+        navbarOffset: 'calc(72px + 10px)',
+        default: '32px'
+      },
+      backdropBlur: {
+        xs: '2px',
+        xss: '1px'
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -66,12 +76,6 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
-      },
-      spacing: {
-        // it sums up the height of the navbar, top margin or spacing of the navbar and extra 10px
-        smallNavbarOffset: '72px',
-        navbarOffset: 'calc(72px + 10px)',
-        default: '32px'
       },
       keyframes: {
         'accordion-down': {

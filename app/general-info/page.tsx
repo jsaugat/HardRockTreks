@@ -22,7 +22,7 @@ export default function NepalInfoPage() {
 
   return (
     <div className="pt-navbarOffset pb-5 sm:pb-7 lg:pb-9 min-h-screen">
-      <Card className="max-w-6xl mx-auto bg-white shadow-xl rounded-xl">
+      <Card className=" mx-auto bg-white shadow-xl rounded-xl">
         <CardHeader className="text-center">
           <CardTitle className="mx-auto text-3xl sm:text-4xl font-semibold font-familjenGrotesk bg-gradient-to-br from-primary to-purple-500 w-fit bg-clip-text text-transparent">
             Nepal: A Land of Diversity
