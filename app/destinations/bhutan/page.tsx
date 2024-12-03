@@ -18,7 +18,7 @@ export default function Bhutan() {
   const bhutanActivities =
     bhutanData.activities?.filter((activity) => activity.image) ?? [];
 
-  console.log({ bhutanActivities });
+  // console.log({ bhutanActivities });
 
   return (
     <Col

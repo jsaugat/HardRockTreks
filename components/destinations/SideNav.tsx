@@ -35,9 +35,8 @@ export function SideNav({
   const defaultRenderItem = (item: NavItem, isActive: boolean) => (
     <Link className="block" href={`${baseUrl}/${item.href}`}>
       <span
-        className={`${
-          isActive ? activeClassName : inactiveClassName
-        } capitalize`}
+        className={`${isActive ? activeClassName : inactiveClassName
+          } capitalize`}
       >
         {item.label}
       </span>

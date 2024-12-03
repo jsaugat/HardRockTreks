@@ -19,7 +19,7 @@ export default function Nepal() {
     nepalActivitiesData.allActivities?.filter((activity) => activity.image) ??
     [];
 
-  console.log({ nepalActivities });
+  // console.log({ nepalActivities });
 
   return (
     <Col

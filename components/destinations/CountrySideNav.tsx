@@ -11,7 +11,7 @@ export const CountrySideNav = () => {
     <SideNav
       title="Related Destinations"
       items={countryItems}
-      baseUrl="/destinations"
+      baseUrl="/destination"
     />
   );
 };

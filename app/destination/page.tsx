@@ -18,7 +18,7 @@ export default async function DestinationsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {destinations.map((destination) => (
           <Link
-            href={`/destinations/${destination.slug}`}
+            href={`/destination/${destination.slug}`}
             key={destination.slug}
             className="group"
           >
