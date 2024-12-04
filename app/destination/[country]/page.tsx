@@ -1,13 +1,13 @@
 import React from "react";
 import { notFound } from 'next/navigation';
-import { getDestinationBySlug } from '@/prisma/repositories/destinations';
+import { getActivitiesByDestination, getDestinationBySlug } from '@/prisma/repositories/destinations';
 import nepalActivitiesData from "@/data/nepalActivities.json";
 import { ActivitiesGrid } from "../../../components/destinations/ActivitiesGrid";
 import { CountrySideNav } from "@/components/destinations/CountrySideNav";
 import { Col } from "@/components/flex-layouts";
 import { DescriptionCard } from "@/components/destinations/DescriptionCard";
 import { CountryTitle } from "@/components/destinations/CountryTitle";
-import { DestinationBreadcrumb } from './_components/DestinationBreadcrumb';
+import { DestinationBreadcrumb } from '../../../components/destinations/DestinationBreadcrumb';
 // Import packages for fetching destination content from Markdown files
 import fs from "fs";
 import matter from "gray-matter";
@@ -20,31 +20,39 @@ function getDestinationContent(slug: string) {
   const content = fs.readFileSync(file, 'utf8')
 
   const matterResult = matter(content)
-  console.log({ matterResult })
+  // console.log({ matterResult })
   return matterResult
 }
 
-// Main component for the destination page
+//? Main component for the destination page
 export default async function DestinationPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ country: string }>
 }) {
-  const slug = (await params).slug; // Extract slug from params
-  const destination = await getDestinationBySlug(slug); // Fetch destination by slug
+  const country = (await params).country; // Extract slug from params
+  const currentDestination = await getDestinationBySlug(country); // Fetch destination by slug
+  const currentDestinationId = currentDestination?.id; // Extract destination ID
+  let activities;
+  if (currentDestinationId) {
+    // Fetch activities by destination ID
+    activities = await getActivitiesByDestination(currentDestinationId);
+    console.log({ activities })
+  }
+  const transformedActivities = activities?.map(activity => ({
+    id: activity.id,
+    name: activity.name,
+    slug: activity.slug,
+    image: activity.image,
+  }))
 
-  // Filter Nepal activities with images
-  const nepalActivities =
-    nepalActivitiesData.allActivities?.filter((activity) => activity.image) ??
-    [];
-
-  // Handle 404 error if destination not found
-  if (!destination) {
+  //! Handle 404 error if destination not found
+  if (!currentDestination) {
     notFound()
   }
 
   // Fetch destination content
-  const currentDestinationContent = getDestinationContent(slug).content
+  const currentDestinationContent = getDestinationContent(country).content;
   return (
     <main className="mx-auto p-0">
       <Col
@@ -54,9 +62,9 @@ export default async function DestinationPage({
       >
         <div className="w-full">
           {/* Destination breadcrumb */}
-          <DestinationBreadcrumb destination={slug} />
+          <DestinationBreadcrumb destination={country} />
           {/* Country title */}
-          <CountryTitle text={`${slug.charAt(0).toUpperCase() + slug.slice(1)}`} />
+          <CountryTitle text={`${country.charAt(0).toUpperCase() + country.slice(1)}`} />
           <DescriptionCard>
             <Markdown
               options={{
@@ -74,7 +82,11 @@ export default async function DestinationPage({
             </Markdown>
           </DescriptionCard>
           {/* Activities grid */}
-          <ActivitiesGrid activities={nepalActivities} />
+          {transformedActivities ? (
+            <ActivitiesGrid activities={transformedActivities} destination={country} />
+          ) : (
+            <p>No activities found for this destination.</p>
+          )}
         </div>
         {/* Country side navigation */}
         <CountrySideNav />

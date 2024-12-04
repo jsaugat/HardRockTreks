@@ -63,7 +63,7 @@ model Package {
   description   String
   startingPrice Float
   duration      Int // Duration in days
-  difficulty    String // Easy, Moderate, Challenging
+  difficulty    Difficulty // Easy, Moderate, Challenging
   activity      Activity?    @relation(fields: [activityId], references: [id])
   activityId    String?
   subactivity   Subactivity? @relation(fields: [subactivityId], references: [id])
@@ -73,6 +73,12 @@ model Package {
   excludedItems String[] // Items not included in the package
   createdAt     DateTime     @default(now())
   // updatedAt     DateTime     @updatedAt
+}
+
+enum Difficulty {
+  EASY
+  MODERATE
+  CHALLENGING
 }
 
 // Review model

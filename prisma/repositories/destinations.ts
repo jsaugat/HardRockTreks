@@ -1,8 +1,7 @@
 import { PrismaClient } from '@prisma/client';
-
 const prisma = new PrismaClient();
 
-// Get 
+// Get all destinations
 export async function getDestinations() {
   return prisma.destination.findMany({
     include: {
@@ -59,6 +58,26 @@ export async function getActivitiesByDestination(destinationId: string) {
     },
   });
 }
+
+export async function getActivityByDestinationAndSlug(destinationId: string, slug: string) {
+  return prisma.activity.findUnique({
+    where: {
+      slug,
+      destinationId // Using destinationId to filter by country
+    },
+    include: {
+      subactivities: {
+        include: {
+          _count: { select: { packages: true } }, // Counting packages in subactivities
+          packages: true, // Include actual packages in subactivities
+        },
+      },
+      _count: { select: { packages: true } }, // Count packages directly in activity
+      packages: true, // Include actual packages in activity
+    },
+  });
+}
+
 
 /**
  * Fetch subactivities for a specific activity with package counts.
