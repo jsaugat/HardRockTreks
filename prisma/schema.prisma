@@ -16,14 +16,16 @@ datasource db {
 
 // Main destination model
 model Destination {
-  id          String     @id @default(cuid())
+  id          String        @id @default(cuid())
   name        String
-  slug        String     @unique // For dynamic routing
+  slug        String        @unique // For dynamic routing
   image       String
   description String
   activities  Activity[]
-  createdAt   DateTime   @default(now())
+  createdAt   DateTime      @default(now())
   // updatedAt   DateTime   @updatedAt
+  Subactivity Subactivity[]
+  Package     Package[]
 }
 
 // Activity model (like Trekking, Rafting, Tour)
@@ -43,15 +45,17 @@ model Activity {
 
 // Subactivity model (like Camping Trek, Everest Region)
 model Subactivity {
-  id          String    @id @default(cuid())
-  name        String
-  slug        String    @unique // For dynamic routing
-  image       String
-  description String
-  activity    Activity  @relation(fields: [activityId], references: [id])
-  activityId  String
-  packages    Package[]
-  createdAt   DateTime  @default(now())
+  id            String      @id @default(cuid())
+  name          String
+  slug          String      @unique // For dynamic routing
+  image         String
+  description   String
+  destination   Destination @relation(fields: [destinationId], references: [id])
+  destinationId String
+  activity      Activity    @relation(fields: [activityId], references: [id])
+  activityId    String
+  packages      Package[]
+  createdAt     DateTime    @default(now())
   // updatedAt   DateTime  @updatedAt
 }
 
@@ -64,6 +68,8 @@ model Package {
   startingPrice Float
   duration      Int // Duration in days
   difficulty    Difficulty // Easy, Moderate, Challenging
+  destination   Destination  @relation(fields: [destinationId], references: [id])
+  destinationId String
   activity      Activity?    @relation(fields: [activityId], references: [id])
   activityId    String?
   subactivity   Subactivity? @relation(fields: [subactivityId], references: [id])

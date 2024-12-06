@@ -1,7 +1,6 @@
 import React from "react";
 import { notFound } from 'next/navigation';
 import { getActivitiesByDestination, getDestinationBySlug } from '@/prisma/repositories/destinations';
-import nepalActivitiesData from "@/data/nepalActivities.json";
 import { ActivitiesGrid } from "../../../components/destinations/ActivitiesGrid";
 import { CountrySideNav } from "@/components/destinations/CountrySideNav";
 import { Col } from "@/components/flex-layouts";
@@ -45,6 +44,7 @@ export default async function DestinationPage({
     slug: activity.slug,
     image: activity.image,
   }))
+  console.log({ transformedActivities })
 
   //! Handle 404 error if destination not found
   if (!currentDestination) {
@@ -83,7 +83,10 @@ export default async function DestinationPage({
           </DescriptionCard>
           {/* Activities grid */}
           {transformedActivities ? (
-            <ActivitiesGrid activities={transformedActivities} destination={country} />
+            <ActivitiesGrid
+              destination={country}
+              activities={transformedActivities}
+            />
           ) : (
             <p>No activities found for this destination.</p>
           )}

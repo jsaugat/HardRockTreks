@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
-// Get all destinations
+// Destinations
 export async function getDestinations() {
   return prisma.destination.findMany({
     include: {
@@ -22,7 +22,6 @@ export async function getDestinations() {
     },
   });
 }
-
 export async function getDestinationBySlug(slug: string) {
   const destination = prisma.destination.findUnique({
     where: { slug },
@@ -41,10 +40,7 @@ export async function getDestinationBySlug(slug: string) {
   });
   return destination;
 }
-
-/**
- * Fetch activities for a specific destination with subactivities and package counts.
- */
+// Activities
 export async function getActivitiesByDestination(destinationId: string) {
   return prisma.activity.findMany({
     where: { destinationId },
@@ -58,7 +54,6 @@ export async function getActivitiesByDestination(destinationId: string) {
     },
   });
 }
-
 export async function getActivityByDestinationAndSlug(destinationId: string, slug: string) {
   return prisma.activity.findUnique({
     where: {
@@ -77,23 +72,46 @@ export async function getActivityByDestinationAndSlug(destinationId: string, slu
     },
   });
 }
-
-
-/**
- * Fetch subactivities for a specific activity with package counts.
- */
-export async function getSubactivitiesByActivity(activityId: string) {
-  return prisma.subactivity.findMany({
-    where: { activityId },
+// Subactivities
+export async function getRelevantSubactivities(destinationId: string, activityId: string) {
+  const subactivities = await prisma.subactivity.findMany({
+    where: {
+      activityId,
+      destinationId,
+    },
     include: {
+      packages: true,
+      activity: true,
+      destination: {
+        include: {
+          activities: true, // Include activities if needed
+        },
+      },
+      _count: {
+        select: {
+          packages: true,
+        },
+      },
+    }
+  });
+
+  return subactivities;
+}
+export async function getSubactivity(destinationId: string, activityId: string, slug: string) {
+  return prisma.subactivity.findUnique({
+    where: {
+      slug,
+      destinationId,
+      activityId,
+    },
+    include: {
+      packages: true,
+      activity: true,
       _count: { select: { packages: true } },
     },
   });
 }
-
-/**
- * Fetch packages associated with a destination, whether directly through activities or subactivities.
- */
+// Packages
 export async function getPackagesByDestination(destinationId: string) {
   return prisma.package.findMany({
     where: {
@@ -104,33 +122,22 @@ export async function getPackagesByDestination(destinationId: string) {
     },
   });
 }
-
-/**
- * Fetch packages directly or indirectly associated with an activity.
- */
-export async function getPackagesByActivity(activityId: string) {
+export async function getRelevantPackages(destinationId: string, activityId: string) {
   return prisma.package.findMany({
     where: {
+      destinationId, // Ensures the packages belong to the specified destination
       OR: [
-        { activityId },
-        { subactivity: { activityId } },
+        { activityId }, // Directly related to the activity
+        { subactivity: { activityId } }, // Related to a subactivity of the activity
       ],
     },
   });
 }
-
-/**
- * Fetch packages associated with a specific subactivity.
- */
 export async function getPackagesBySubactivity(subactivityId: string) {
   return prisma.package.findMany({
     where: { subactivityId },
   });
 }
-
-/**
- * Fetch total package count for a destination.
- */
 export async function getTotalPackageCountByDestination(destinationId: string) {
   const result = await prisma.package.aggregate({
     where: {
@@ -143,4 +150,13 @@ export async function getTotalPackageCountByDestination(destinationId: string) {
   });
 
   return result._count;
+}
+export async function getPackageBySlug(slug: string) {
+  return prisma.package.findUnique({
+    where: { slug },
+    include: {
+      activity: true,
+      subactivity: true,
+    },
+  });
 }

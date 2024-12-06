@@ -29,9 +29,14 @@ export type Subactivity = {
   slug: string;
   image: string;
   description: string;
-  activityId: string;
+  destination: Destination;
+  destinationId: string;
   activity: Activity;
+  activityId: string;
   packages: Package[];
+  _count: {
+    packages: number; // count of associated packages
+  };
   createdAt: Date;
 };
 

@@ -11,15 +11,15 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({
   destination,
   activities,
 }) => {
-  console.log({
-    "received-activites": activities
-  })
+  // console.log({
+  //   "receivedActivites": activities
+  // })
   return (
     <section className="my-default">
       <h1 className="text-2xl font-medium">Activities</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-2">
         {activities.map((activity, index) => (
-          <Link key={index} href={`${destination}/${activity.slug}`}>
+          <Link key={index} href={`/destination/${destination}/${activity.slug}`}>
             <div className="relative w-full h-full rounded-2xl aspect-square cursor-pointer overflow-hidden border">
               {activity.image ? (
                 <Image
