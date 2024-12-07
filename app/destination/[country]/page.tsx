@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { notFound } from 'next/navigation';
 import { getActivitiesByDestination, getDestinationBySlug } from '@/prisma/repositories/destinations';
 import { ActivitiesGrid } from "../../../components/destinations/ActivitiesGrid";
@@ -11,6 +11,7 @@ import { DestinationBreadcrumb } from '../../../components/destinations/Destinat
 import fs from "fs";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx"
+import { GridSkeleton } from "@/components/destinations/GridSkeleton";
 
 // Function to fetch destination content from Markdown files
 function getDestinationContent(slug: string) {
@@ -82,14 +83,16 @@ export default async function DestinationPage({
             </Markdown>
           </DescriptionCard>
           {/* Activities grid */}
-          {transformedActivities ? (
-            <ActivitiesGrid
-              destination={country}
-              activities={transformedActivities}
-            />
-          ) : (
-            <p>No activities found for this destination.</p>
-          )}
+          <Suspense fallback={<GridSkeleton />}>
+            {transformedActivities ? (
+              <ActivitiesGrid
+                destination={country}
+                activities={transformedActivities}
+              />
+            ) : (
+              <p>No activities found for this destination.</p>
+            )}
+          </Suspense>
         </div>
         {/* Country side navigation */}
         <CountrySideNav />

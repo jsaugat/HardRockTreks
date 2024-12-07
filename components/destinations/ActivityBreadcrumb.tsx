@@ -6,6 +6,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator
 } from '@/components/ui/breadcrumb'
+import { beautifySlug } from '@/lib/utils';
 import React from 'react'
 
 interface BreadCrumbProps {
@@ -30,7 +31,7 @@ export const ActivityBreadcrumb = ({ country, activity }: BreadCrumbProps) => {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage>{activity.charAt(0).toUpperCase() + activity.slice(1)}</BreadcrumbPage>
+          <BreadcrumbPage>{beautifySlug(activity)}</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

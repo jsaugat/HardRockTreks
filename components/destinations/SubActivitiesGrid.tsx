@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Subactivity } from "@/types/destination";
 
 type SubActivitiesGridProps = {
@@ -42,8 +42,8 @@ export const SubActivitiesGrid: React.FC<SubActivitiesGridProps> = ({
               <div className="absolute top-2 left-2 w-fit mx-auto border border-border/50 text-white bg-foreground/30 rounded-full p-2 py-0.5 text-sm flex items-center gap-1">
                 {subactivity._count.packages} Packages
               </div>
-              <div className="absolute top-2 right-2 p-1 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-100 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center">
-                <ArrowUpRight className="h-6 w-6 text-white" />
+              <div className="absolute top-2 right-2 p-1 backdrop-blur-sm flex items-center justify-center">
+                <ArrowRight className="h-6 w-6 text-white group-hover:-rotate-45 transition-transform ease-in-out" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
             </div>

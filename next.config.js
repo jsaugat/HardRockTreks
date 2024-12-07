@@ -4,6 +4,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
-};
+  // experimental: {
+  //   dynamicIO: true,
+  // },
+}
 
 module.exports = nextConfig;

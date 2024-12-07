@@ -6,6 +6,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator
 } from '@/components/ui/breadcrumb'
+import { beautifySlug } from '@/lib/utils';
 import React from 'react'
 
 interface BreadCrumbProps {
@@ -15,14 +16,6 @@ interface BreadCrumbProps {
 }
 
 export const SubActivityBreadcrumb = ({ country, activity, subactivity }: BreadCrumbProps) => {
-  // Function to turn 'everest-base-camp' into 'Everest Base Camp'
-  function beautifySlug(slug: string) {
-    return slug
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  }
-
   return (
     <Breadcrumb className="">
       <BreadcrumbList>

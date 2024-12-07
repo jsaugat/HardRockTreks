@@ -5,8 +5,10 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 interface NavItem {
-  label: string;
-  href: string;
+  label?: string;
+  href?: string;
+  name?: string;
+  slug?: string;
 }
 
 interface SideNavProps {
@@ -29,31 +31,34 @@ export function SideNav({
   renderItem,
 }: SideNavProps) {
   const pathname = usePathname();
-  const pathSegments = pathname.split("/").filter(Boolean);
-  const currentSegment = pathSegments[pathSegments.length - 1];
+  const currentSegment = pathname.split("/").filter(Boolean).pop();
+
+  const getLabel = (item: NavItem) => item.label || item.name || "Unnamed";
+  const getHref = (item: NavItem) => item.href || item.slug || "#";
 
   const defaultRenderItem = (item: NavItem, isActive: boolean) => (
-    <Link className="block" href={`${baseUrl}/${item.href}`}>
+    <Link className="block" href={`${baseUrl}/${getHref(item)}`}>
       <span
-        className={`${isActive ? activeClassName : inactiveClassName
-          } capitalize`}
+        className={`${isActive ? activeClassName : inactiveClassName} capitalize`}
       >
-        {item.label}
+        {getLabel(item)}
       </span>
     </Link>
   );
 
   return (
     <nav className={className}>
+      {title && <div className="font-semibold block">{title}</div>}
       <ul>
-        {title && <div className="font-semibold block">{title}</div>}
-        {items.map((item) => (
-          <li key={item.href}>
-            {renderItem
-              ? renderItem(item, item.href === currentSegment)
-              : defaultRenderItem(item, item.href === currentSegment)}
-          </li>
-        ))}
+        {items.map((item) => {
+          const href = getHref(item);
+          const isActive = href === currentSegment;
+          return (
+            <li key={href}>
+              {renderItem ? renderItem(item, isActive) : defaultRenderItem(item, isActive)}
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

@@ -1,20 +1,23 @@
+// "use cache"
+
+import React, { Suspense } from 'react'
 import { CountryTitle } from '@/components/destinations/CountryTitle'
 import { DescriptionCard } from '@/components/destinations/DescriptionCard'
-import React from 'react'
 import { Col } from '@/components/flex-layouts'
-import { CountrySideNav } from '@/components/destinations/CountrySideNav'
 import { ActivityBreadcrumb } from '@/components/destinations/ActivityBreadcrumb'
 import {
   getActivityByDestinationAndSlug,
   getDestinationBySlug,
-  getRelevantPackages,
   getRelevantSubactivities
 } from '@/prisma/repositories/destinations'
 import { PackagesGrid } from '@/components/destinations/PackagesGrid'
 import { SubActivitiesGrid } from '@/components/destinations/SubActivitiesGrid'
+import { LoaderCircle } from 'lucide-react'
+import { GridSkeleton } from '@/components/destinations/GridSkeleton'
+import { ActivitiesSideNav } from '@/components/destinations/ActivitiesSideNav'
 
 export default async function ActivityPage({
-  params,
+  params
 }: {
   params: Promise<{ activity: string, country: string }>
 }) {
@@ -24,15 +27,11 @@ export default async function ActivityPage({
   if (!countryData) {
     return <p>Country not found</p>;
   }
+
   const activityData = await getActivityByDestinationAndSlug(countryData.id, activity);
   if (!activityData) {
     return <p>Activity not found</p>;
   }
-
-  const subactivityData = await getRelevantSubactivities(countryData.id, activityData.id);
-
-  // Fetch packages only if there are no subactivities.
-  const packagesData = activityData.packages;
 
   return (
     <main className="mx-auto p-0">
@@ -44,8 +43,10 @@ export default async function ActivityPage({
         <div className="w-full">
           {/* Activity Breadcrumb */}
           <ActivityBreadcrumb country={country} activity={activity} />
+
           {/* Country title */}
-          <CountryTitle text={`${activityData.name}`} />
+          <CountryTitle text={activityData.name} />
+
           <DescriptionCard>
             {activityData.description || (
               <p className="text-muted-foreground">
@@ -53,29 +54,79 @@ export default async function ActivityPage({
               </p>
             )}
           </DescriptionCard>
-          {/* Render SubActivitiesGrid or PackagesGrid */}
-          {subactivityData.length > 0 ? (
-            <SubActivitiesGrid
-              destination={country}
+
+          {/* Suspense wrapper for SubActivities/Packages */}
+          <Suspense fallback={<GridSkeleton />}>
+            <SubActivitiesOrPackagesGridSection
+              countryId={countryData.id}
+              activityId={activityData.id}
+              country={country}
               activity={activity}
-              subactivities={subactivityData}
+              initialPackagesData={activityData.packages}
             />
-          ) : packagesData.length > 0 ? (
-            <PackagesGrid
-              packages={packagesData}
-              destination={country}
-              activity={activity}
-              subactivity={null} // Pass null for subactivity since it's activity-based packages (subactivityData is absent)
-            />
-          ) : (
-            <p className="mt-10 p-3 border-2 rounded text-muted-foreground bg-muted w-full flex content-center">
-              No packages or subactivities found.
-            </p>
-          )}
+          </Suspense>
         </div>
+
         {/* Country side navigation */}
-        <CountrySideNav />
+        <Suspense fallback={
+          <div className="min-w-[200px] flex items-center justify-center bg-gray-200 p-2 rounded">
+            <LoaderCircle className='animate-spin text-muted-foreground' />
+          </div>
+        }>
+          <ActivitiesSideNav
+            destination={country}
+            destinationId={countryData.id}
+          />
+        </Suspense>
       </Col>
-    </main>
+    </main >
+  );
+}
+
+// New component for fetching and rendering SubActivities or Packages
+async function SubActivitiesOrPackagesGridSection({
+  countryId,
+  activityId,
+  country,
+  activity,
+  initialPackagesData
+}: {
+  countryId: string,
+  activityId: string,
+  country: string,
+  activity: string,
+  initialPackagesData: any[]
+}) {
+  const subactivityData = await getRelevantSubactivities(countryId, activityId);
+
+  return (
+    <>
+      {subactivityData.length > 0 ? (
+        <SubActivitiesGrid
+          destination={country}
+          activity={activity}
+          subactivities={subactivityData}
+        />
+      ) : initialPackagesData.length > 0 ? (
+        <PackagesGrid
+          packages={initialPackagesData}
+          destination={country}
+          activity={activity}
+          subactivity={null}
+        />
+      ) : (
+        <p className="mt-10 p-3 border-2 rounded text-muted-foreground bg-muted w-full flex content-center">
+          No packages or subactivities found.
+        </p>
+      )}
+    </>
+  );
+}
+// Loading component for Suspense
+function SubActivitiesFallback() {
+  return (
+    <div className="flex justify-center items-center w-full my-10">
+      <LoaderCircle className="animate-spin" size={32} />
+    </div>
   );
 }

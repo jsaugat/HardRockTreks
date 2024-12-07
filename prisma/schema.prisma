@@ -61,23 +61,27 @@ model Subactivity {
 
 // Package model 
 model Package {
-  id            String       @id @default(cuid())
-  name          String
-  slug          String       @unique // For dynamic routing
-  description   String
-  startingPrice Float
-  duration      Int // Duration in days
-  difficulty    Difficulty // Easy, Moderate, Challenging
-  destination   Destination  @relation(fields: [destinationId], references: [id])
-  destinationId String
-  activity      Activity?    @relation(fields: [activityId], references: [id])
-  activityId    String?
-  subactivity   Subactivity? @relation(fields: [subactivityId], references: [id])
-  subactivityId String?
-  highlights    String[] // Key highlights of the package
-  includedItems String[] // Items included in the package
-  excludedItems String[] // Items not included in the package
-  createdAt     DateTime     @default(now())
+  id              String       @id @default(cuid())
+  name            String
+  slug            String       @unique // For dynamic routing
+  description     String
+  image           String
+  startingPrice   Float
+  duration        Int // Duration in days
+  difficulty      Difficulty // Easy, Moderate, Challenging
+  destination     Destination  @relation(fields: [destinationId], references: [id])
+  destinationId   String
+  activity        Activity?    @relation(fields: [activityId], references: [id])
+  activityId      String?
+  subactivity     Subactivity? @relation(fields: [subactivityId], references: [id])
+  subactivityId   String?
+  tripType        String? // Group, Private
+  accomodation    String? // Hotel, Lodge, Camping
+  transportation  String? // Bus, Jeep, Flight
+  seasons         String? // Spring, Autumn, Winter
+  highestAltitude Float?
+  maxGroupSize    Int?
+  createdAt       DateTime     @default(now())
   // updatedAt     DateTime     @updatedAt
 }
 
