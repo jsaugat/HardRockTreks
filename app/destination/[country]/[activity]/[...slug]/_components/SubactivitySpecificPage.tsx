@@ -5,7 +5,8 @@ import { PackagesGrid } from '@/components/destinations/PackagesGrid';
 import { SubActivityBreadcrumb } from '@/components/destinations/SubActivityBreadcrumb';
 import { SubactivitiesSideNav } from '@/components/destinations/SubactivitiesSideNav';
 import { Col } from '@/components/flex-layouts';
-import { Frown, LoaderCircle } from 'lucide-react';
+import { CircleX, Frown, LoaderCircle } from 'lucide-react';
+import { NotFoundIndicator } from '@/components/NotFoundIndicator';
 
 interface SubactivitySpecificPageProps {
   country: string;
@@ -84,10 +85,11 @@ const RenderPackagesGrid = ({ country, activity, subactivity, packagesData }: {
         packages={packagesData}
       />
     ) : (
-      <p className="mt-10 p-3 border-2 rounded text-muted-foreground bg-gray-200 w-full flex items-center justify-center gap-2">
-        <Frown className='w-5 h-5' />
-        Unfortunately, there are no packages available for this activity at the moment.
-      </p>
+      <NotFoundIndicator
+        icon={<CircleX className='w-5 h-5' />}
+        message="Unfortunately, there are no packages available for this activity at the moment."
+        className='mt-3 flex-row bg-[#edf0f5]'
+      />
     )
   );
 }

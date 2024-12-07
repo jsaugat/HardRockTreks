@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, startTransition, useTransition } from "react";
 import { useRouter } from 'next/navigation';
 import { LocateFixed, Search, X, Clock, MapPin, Compass, Mountain, Package } from 'lucide-react';
 import {
@@ -12,6 +12,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { searchItems, SearchResult } from "@/actions/search";
+import { LoadingIndicator } from "../LoadingIndicator";
+import { NotFoundIndicator } from "../NotFoundIndicator";
 
 // Component to render the search bar dialog
 export const SearchbarDialog = () => {
@@ -30,6 +32,7 @@ export const SearchbarDialog = () => {
     packages: [],
   });
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [isPending, startTransition] = useTransition();
   const router = useRouter();
 
   // Categories for search
@@ -51,8 +54,13 @@ export const SearchbarDialog = () => {
   const handleSearch = async (query: string) => {
     setSearchQuery(query);
     if (query.length > 2) {
-      const searchResults = await searchItems(query);
-      setResults(searchResults);
+      startTransition(() => {
+        const fetchSearchResults = async () => {
+          const searchResults = await searchItems(query);
+          setResults(searchResults);
+        };
+        fetchSearchResults();
+      });
     } else {
       setResults({ destinations: [], activities: [], subactivities: [], packages: [] });
     }
@@ -63,32 +71,14 @@ export const SearchbarDialog = () => {
     setIsOpen(false);
     addToRecentSearches(item.name);
     console.log({ item });
-    // Initialize an array to hold the path segments
     let path: string[] = [];
-
-    // If destination is available, add its id to the path
-    if (item.destination) {
-      path.push(item.destination.slug);
-    }
-    // If activity is available, add its id to the path
-    if (item.activity) {
-      path.push(item.activity.slug);
-    }
-    // If subactivity is available, add its id to the path
-    if (item.subactivity) {
-      path.push(item.subactivity.slug);
-    }
-    // If slug is available, add it to the path
-    if (item.slug) {
-      path.push(item.slug);
-    }
-    // Filter out any undefined or null values, then join the path with '/'
+    if (item.destination) path.push(item.destination.slug);
+    if (item.activity) path.push(item.activity.slug);
+    if (item.subactivity) path.push(item.subactivity.slug);
+    if (item.slug) path.push(item.slug);
     const fullPath = path.filter(Boolean).join('/');
-
-    // Navigate to the constructed path
     router.push(`/destination/${fullPath}`);
   };
-
 
   // Add a search to the recent searches list
   const addToRecentSearches = (search: string) => {
@@ -136,8 +126,11 @@ export const SearchbarDialog = () => {
               className="pl-10 py-6"
             />
           </div>
+
+          {isPending && <LoadingIndicator className="animate-pulse">Searching...</LoadingIndicator>}
+
           {/* Search Results */}
-          {searchQuery.length > 2 && (
+          {searchQuery.length > 2 && !isPending && (
             <div className="space-y-4 max-h-[300px] overflow-y-auto">
               {/* Destinations Result */}
               {results.destinations.length > 0 && (
@@ -156,6 +149,7 @@ export const SearchbarDialog = () => {
                   ))}
                 </div>
               )}
+
               {/* Activities Result */}
               {results.activities.length > 0 && (
                 <div>
@@ -173,6 +167,7 @@ export const SearchbarDialog = () => {
                   ))}
                 </div>
               )}
+
               {/* Subactivities Results */}
               {results.subactivities.length > 0 && (
                 <div>
@@ -190,6 +185,7 @@ export const SearchbarDialog = () => {
                   ))}
                 </div>
               )}
+
               {/* Packages Results */}
               {results.packages.length > 0 && (
                 <div>
@@ -207,8 +203,19 @@ export const SearchbarDialog = () => {
                   ))}
                 </div>
               )}
+
+              {/* Single Not Found Indicator */}
+              {results.destinations.length === 0 &&
+                results.activities.length === 0 &&
+                results.subactivities.length === 0 &&
+                results.packages.length === 0 ? (
+                <NotFoundIndicator message="Sorry, no matches found" />
+              ) : null}
             </div>
           )}
+
+
+
           {/* Recent Searches */}
           {searchQuery.length <= 2 && (
             <div className="space-y-4">
@@ -228,6 +235,7 @@ export const SearchbarDialog = () => {
               </div>
             </div>
           )}
+
           {/* Trending Searches */}
           {searchQuery.length <= 2 && (
             <div className="space-y-4">
@@ -246,6 +254,7 @@ export const SearchbarDialog = () => {
               </div>
             </div>
           )}
+
           <Button
             className="absolute right-4 top-4"
             variant="ghost"
@@ -261,4 +270,3 @@ export const SearchbarDialog = () => {
 };
 
 export default SearchbarDialog;
-
