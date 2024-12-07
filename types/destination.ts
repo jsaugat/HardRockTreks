@@ -45,18 +45,25 @@ export type Package = {
   name: string;
   slug: string;
   description: string;
+  image: string;
   startingPrice: number;
   duration: number; // Duration in days
-  difficulty: string; // Easy, Moderate, Challenging
-  activityId: string | null; // Allow null
-  subactivityId: string | null;
-  activity?: Activity;
-  subactivity?: Subactivity;
-  highlights: string[];
-  includedItems: string[];
-  excludedItems: string[];
-  createdAt: Date;
+  difficulty: 'EASY' | 'MODERATE' | 'CHALLENGING'; // Enum for Difficulty
+  destinationId: string; // Foreign key to Destination
+  activityId: string | null; // Allow null if not tied to a specific activity
+  subactivityId: string | null; // Allow null if not tied to a specific subactivity
+  tripType?: string | null; // Optional: Group, Private
+  accomodation?: string | null; // Optional: Hotel, Lodge, Camping
+  transportation?: string | null; // Optional: Bus, Jeep, Flight
+  seasons?: string | null; // Optional: Spring, Autumn, Winter
+  highestAltitude?: number | null; // Optional: Highest altitude in meters
+  maxGroupSize?: number | null; // Optional: Maximum group size
+  createdAt: Date; // Creation timestamp
+  activity?: Activity; // Optional relationship to Activity
+  subactivity?: Subactivity; // Optional relationship to Subactivity
+  destination?: Destination; // Optional relationship to Destination
 };
+
 
 export type Review = {
   id: string;
