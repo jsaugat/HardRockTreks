@@ -88,7 +88,7 @@ export default function ReviewList() {
           <Card className="shadow-md rounded-xl">
             <CardContent className="p-6">
               <div className="flex gap-4">
-                <Avatar>
+                <Avatar className="hidden md:block">
                   <AvatarImage src={review.avatar} alt={review.name} />
                   <AvatarFallback>
                     <UserRound className="h-6 w-6 text-muted-foreground" />

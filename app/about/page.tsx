@@ -12,7 +12,7 @@ export default function AboutPage() {
     // Background
     <div className="min-h-screen pt-navbarOffset">
       {/* About Card */}
-      <main className="mb-4 first-letter:w-full lg:max-w-7xl mx-auto bg-background text-foreground">
+      <main className="mb-4 first-letter:w-full lg:max-w-7xl mx-auto text-foreground">
         {/* Company Overview */}
         <section className="mb-12">
           <h1 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-6">
@@ -134,7 +134,7 @@ export default function AboutPage() {
             Our Services
           </h2>
           <Tabs defaultValue="trekking" className="w-full">
-            <TabsList className="flex flex-col sm:flex-row h-auto">
+            <TabsList className="flex flex-col sm:flex-row h-auto border shadow-md">
               <TabsTrigger value="trekking" className="flex-grow text-left sm:text-center py-2 px-3 text-sm sm:text-base w-full">
                 Trekking & Mountaineering
               </TabsTrigger>

@@ -51,12 +51,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.className} ${neueRegrade.variable} bg-background`}
+        className={`${GeistSans.className} ${neueRegrade.variable} bg-antiFlashWhite`}
       >
         <QueryProvider>
           <TopLoadingBarProvider>
             <NavProvider>
-              <main className="bg-background relative">
+              <main className="bg-antiFlashWhite relative">
                 <Navbar />
                 <main className="container mx-auto">{children}</main>
                 <Footer />

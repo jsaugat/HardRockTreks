@@ -35,6 +35,7 @@ const config: Config = {
         xss: '1px'
       },
       colors: {
+        antiFlashWhite: "#f7f9fa",
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ReviewsPage() {
   return (
-    <main className="my-navbarOffset pb-5 sm:pb-7 lg:pb-9 min-h-screen bg-white rounded-xl mx-auto">
+    <main className="my-navbarOffset pb-5 sm:pb-7 lg:pb-9 min-h-screen rounded-xl mx-auto">
       <div className="text-center mx-auto my-10 px-4">
         <h1 className="mx-auto text-3xl sm:text-4xl font-semibold font-familjenGrotesk bg-gradient-to-br from-primary to-purple-500 w-fit bg-clip-text text-transparent">
           Client Reviews
@@ -20,13 +20,12 @@ export default function ReviewsPage() {
         </p>
       </div>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <ReviewList />
           </div>
           <div className="lg:col-span-1">
-            {/* <div className="sticky top-8"> */}
             <div className="">
               <ReviewForm />
             </div>

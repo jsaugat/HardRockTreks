@@ -69,7 +69,7 @@ export default async function ActivityPage({
 
         {/* Country side navigation */}
         <Suspense fallback={
-          <div className="min-w-[200px] flex items-center justify-center bg-gray-200 p-2 rounded">
+          <div className="min-w-[200px] flex items-center justify-center bg-gray-100 animte-pulse p-2 rounded">
             <LoaderCircle className='animate-spin text-muted-foreground' />
           </div>
         }>

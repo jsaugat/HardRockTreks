@@ -8,14 +8,16 @@ export default async function DestinationsPage() {
   const destinations = await getDestinations()
 
   return (
-    <main className="">
+    <main className="max-w-7xl mx-auto pt-navbarOffset md:pt-0">
+      {/* Header Section */}
       <h1 className="text-3xl sm:text-4xl lg:text-4xl mb-4 font-familjenGrotesk font-semibold capitalize bg-gradient-to-br from-primary to-purple-500 w-fit bg-clip-text text-transparent flex items-center gap-2">
         Explore Destinations
         {/* <span className='text-xl sm:text-2xl lg:text-2xl rounded-full border border-black/50 text-muted-foreground w-12 flex items-center justify-center'>
           {destinations.length}
         </span> */}
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {/* Grid Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {destinations.map((destination) => (
           <Link
             href={`/destinations/${destination.slug}`}
