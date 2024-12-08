@@ -15,7 +15,7 @@ export const SubactivitiesSideNav = async ({ destination, activity, activityId }
     <SideNav
       title="Related Subactivities"
       items={activities}
-      baseUrl={`/destination/${destination}/${activity}`}
+      baseUrl={`/destinations/${destination}/${activity}`}
     />
   );
 };

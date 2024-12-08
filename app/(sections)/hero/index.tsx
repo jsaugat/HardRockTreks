@@ -24,7 +24,7 @@ export default function Hero() {
         </p>
         <div className="flex justify-center gap-4">
           <Button asChild size="lg" className='rounded-full bg-gradient-to-br from-indigo-500 via-primary to-secondary'>
-            <Link href="/destination">Explore Now</Link>
+            <Link href="/destinations">Explore Now</Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
             <Link href="/contact">Contact Us</Link>

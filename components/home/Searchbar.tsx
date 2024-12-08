@@ -77,7 +77,7 @@ export const SearchbarDialog = () => {
     if (item.subactivity) path.push(item.subactivity.slug);
     if (item.slug) path.push(item.slug);
     const fullPath = path.filter(Boolean).join('/');
-    router.push(`/destination/${fullPath}`);
+    router.push(`/destinations/${fullPath}`);
   };
 
   // Add a search to the recent searches list

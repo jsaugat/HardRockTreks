@@ -22,7 +22,7 @@ export const SubActivitiesGrid: React.FC<SubActivitiesGridProps> = ({
       <h1 className="text-2xl font-medium">Variations</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-2">
         {subactivities.map((subactivity, index) => (
-          <Link key={index} href={`/destination/${destination}/${activity}/${subactivity.slug}`} className="group">
+          <Link key={index} href={`/destinations/${destination}/${activity}/${subactivity.slug}`} className="group">
             <div className="relative w-full h-full rounded-2xl aspect-square cursor-pointer overflow-hidden border">
               {subactivity.image ? (
                 <Image

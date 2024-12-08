@@ -23,11 +23,11 @@ export const ActivityBreadcrumb = ({ country, activity }: BreadCrumbProps) => {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/destination">Destinations</BreadcrumbLink>
+          <BreadcrumbLink href="/destinations">Destinations</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href={`/destination/${country}/`}>{country.charAt(0).toUpperCase() + country.slice(1)}</BreadcrumbLink>
+          <BreadcrumbLink href={`/destinations/${country}/`}>{country.charAt(0).toUpperCase() + country.slice(1)}</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>

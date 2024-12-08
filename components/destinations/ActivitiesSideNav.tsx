@@ -14,7 +14,7 @@ export const ActivitiesSideNav = async ({ destination, destinationId }: Activiti
     <SideNav
       title="Related Actvities"
       items={activities}
-      baseUrl={`/destination/${destination}`}
+      baseUrl={`/destinations/${destination}`}
     />
   );
 };

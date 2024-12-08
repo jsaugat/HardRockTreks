@@ -10,7 +10,7 @@ import { Headphones, PhoneCall, Send } from "lucide-react";
 // Declare the menuLinks array outside the component
 const menuLinks = [
   { href: "/", label: "Home" },
-  { href: "/destination", label: "Destination" },
+  { href: "/destinations", label: "Destination" },
   { href: "/best-sellers", label: "Best Sellers" },
   { href: "/hot-deals", label: "Hot Deals" },
   { href: "/about-us", label: "About Us" },

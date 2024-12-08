@@ -23,8 +23,8 @@ export const PackagesGrid: React.FC<PackagesGridProps> = ({
             key={index}
             href={
               subactivity
-                ? `/destination/${destination}/${activity}/${subactivity}/${pkg.slug}-package`
-                : `/destination/${destination}/${activity}/${pkg.slug}-package`
+                ? `/destinations/${destination}/${activity}/${subactivity}/${pkg.slug}-package`
+                : `/destinations/${destination}/${activity}/${pkg.slug}-package`
             }
           >
             <div className="relative w-full h-full rounded-2xl aspect-square cursor-pointer overflow-hidden border">

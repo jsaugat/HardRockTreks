@@ -24,16 +24,16 @@ export const SubActivityBreadcrumb = ({ country, activity, subactivity }: BreadC
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/destination">Destinations</BreadcrumbLink>
+          <BreadcrumbLink href="/destinations">Destinations</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href={`/destination/${country}/`}>
+          <BreadcrumbLink href={`/destinations/${country}/`}>
             {country.charAt(0).toUpperCase() + country.slice(1)}
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
-        <BreadcrumbLink href={`/destination/${country}/${activity}/`}>
+        <BreadcrumbLink href={`/destinations/${country}/${activity}/`}>
           {activity.charAt(0).toUpperCase() + activity.slice(1)}
         </BreadcrumbLink>
         <BreadcrumbSeparator />
