@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { searchItems, SearchResult } from "@/actions/search";
+import { searchItemsDebounced, SearchResult } from "@/actions/search";
 import { LoadingIndicator } from "../LoadingIndicator";
 import { NotFoundIndicator } from "../NotFoundIndicator";
 
@@ -51,13 +51,22 @@ export const SearchbarDialog = () => {
   }, []);
 
   // Handle search query change and fetch results
+  // Handle search query change and fetch results
   const handleSearch = async (query: string) => {
     setSearchQuery(query);
     if (query.length > 2) {
       startTransition(() => {
         const fetchSearchResults = async () => {
-          const searchResults = await searchItems(query);
-          setResults(searchResults);
+          // Ensure results are not undefined by providing a default value
+          const searchResults = await searchItemsDebounced(query);
+
+          // If searchResults is undefined, use an empty structure
+          setResults({
+            destinations: searchResults?.destinations ?? [],
+            activities: searchResults?.activities ?? [],
+            subactivities: searchResults?.subactivities ?? [],
+            packages: searchResults?.packages ?? [],
+          });
         };
         fetchSearchResults();
       });
@@ -80,12 +89,24 @@ export const SearchbarDialog = () => {
     router.push(`/destinations/${fullPath}`);
   };
 
+  // Load recent searches from localStorage on component mount
+  useEffect(() => {
+    const storedSearches = localStorage.getItem('recentSearches');
+    if (storedSearches) {
+      setRecentSearches(JSON.parse(storedSearches));
+    }
+  }, []);
+
   // Add a search to the recent searches list
   const addToRecentSearches = (search: string) => {
-    const updatedSearches = [search, ...recentSearches.filter(s => s !== search).slice(0, 3)];
-    setRecentSearches(updatedSearches);
-    localStorage.setItem('recentSearches', JSON.stringify(updatedSearches));
+    // Use functional state update to ensure correct state update
+    setRecentSearches(prevSearches => {
+      const updatedSearches = [search, ...prevSearches.filter(s => s !== search)].slice(0, 5);
+      localStorage.setItem('recentSearches', JSON.stringify(updatedSearches));  // Save to localStorage
+      return updatedSearches;
+    });
   };
+
 
   // Render the search bar dialog
   return (

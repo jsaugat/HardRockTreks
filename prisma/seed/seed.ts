@@ -1,7 +1,6 @@
 import { Difficulty, PrismaClient, Status } from '@prisma/client'
 import { seedData } from './data'
-
-const prisma = new PrismaClient()
+import prisma from '..'
 
 async function main() {
   // Clear existing data to prevent duplicates

@@ -1,8 +1,8 @@
 'use server'
 
+import prisma from '@/prisma';
 import { Activity, Destination, PrismaClient, Subactivity } from '@prisma/client'
-
-const prisma = new PrismaClient()
+import { debounce } from 'lodash';
 
 export type SearchResult = {
   id: string;
@@ -13,14 +13,10 @@ export type SearchResult = {
   subactivity?: Subactivity;
 };
 
-// Asynchronous function that returns a Promise resolving to an object with four keys: destinations, activities, subactivities, and packages
-export async function searchItems(query: string): Promise<{
-  destinations: SearchResult[];
-  activities: SearchResult[];
-  subactivities: SearchResult[];
-  packages: SearchResult[];
-}> {
-  const destinations = await prisma.destination.findMany({
+// Refactor searchItems with debouncing applied
+export const searchItemsDebounced = debounce(async (query: string) => {
+  // Fetch data for all models simultaneously
+  const destinationsPromise = prisma.destination.findMany({
     where: {
       OR: [
         { name: { contains: query, mode: 'insensitive' } },
@@ -28,8 +24,10 @@ export async function searchItems(query: string): Promise<{
       ],
     },
     select: { id: true, name: true, slug: true },
-  })
-  const activities = await prisma.activity.findMany({
+    cacheStrategy: { ttl: 60 },
+  });
+
+  const activitiesPromise = prisma.activity.findMany({
     where: {
       OR: [
         { name: { contains: query, mode: 'insensitive' } },
@@ -37,8 +35,10 @@ export async function searchItems(query: string): Promise<{
       ],
     },
     select: { id: true, name: true, slug: true, destination: true },
-  })
-  const subactivities = await prisma.subactivity.findMany({
+    cacheStrategy: { ttl: 60 },
+  });
+
+  const subactivitiesPromise = prisma.subactivity.findMany({
     where: {
       OR: [
         { name: { contains: query, mode: 'insensitive' } },
@@ -46,8 +46,10 @@ export async function searchItems(query: string): Promise<{
       ],
     },
     select: { id: true, name: true, slug: true, destination: true, activity: true },
-  })
-  const packages = await prisma.package.findMany({
+    cacheStrategy: { ttl: 60 },
+  });
+
+  const packagesPromise = prisma.package.findMany({
     where: {
       OR: [
         { name: { contains: query, mode: 'insensitive' } },
@@ -60,9 +62,18 @@ export async function searchItems(query: string): Promise<{
       slug: true,
       destination: true,
       activity: true,
-      subactivity: true
+      subactivity: true,
     },
-  })
+    cacheStrategy: { ttl: 60 },
+  });
+
+  // Execute all promises simultaneously
+  const [destinations, activities, subactivities, packages] = await Promise.all([
+    destinationsPromise,
+    activitiesPromise,
+    subactivitiesPromise,
+    packagesPromise,
+  ]);
 
   return {
     destinations,
@@ -70,9 +81,10 @@ export async function searchItems(query: string): Promise<{
     subactivities,
     packages: packages.map(pkg => ({
       ...pkg,
-      destination: pkg.destination ?? undefined,
+      destination: pkg.destination ?? "undefined",
       activity: pkg.activity ?? undefined,
-      subactivity: pkg.subactivity ?? undefined
-    }))
-  }
-}
+      subactivity: pkg.subactivity ?? undefined,
+    })),
+  };
+}, 100); // Debounced for 300ms
+
