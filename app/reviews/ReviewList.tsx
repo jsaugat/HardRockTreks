@@ -85,7 +85,7 @@ export default function ReviewList() {
       {/* Review List */}
       {reviews.map((review, i) => (
         <div key={review.id} className="">
-          <Card>
+          <Card className="shadow-md rounded-xl">
             <CardContent className="p-6">
               <div className="flex gap-4">
                 <Avatar>

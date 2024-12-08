@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ReviewsPage() {
   return (
-    <Card className="my-navbarOffset pb-5 sm:pb-7 lg:pb-9 min-h-screen bg-white rounded-xl">
+    <main className="my-navbarOffset pb-5 sm:pb-7 lg:pb-9 min-h-screen bg-white rounded-xl mx-auto">
       <div className="text-center mx-auto my-10 px-4">
         <h1 className="mx-auto text-3xl sm:text-4xl font-semibold font-familjenGrotesk bg-gradient-to-br from-primary to-purple-500 w-fit bg-clip-text text-transparent">
           Client Reviews
@@ -33,7 +33,7 @@ export default function ReviewsPage() {
           </div>
         </div>
       </main>
-    </Card>
+    </main>
   )
 }
 

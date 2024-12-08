@@ -12,7 +12,7 @@ export default function AboutPage() {
     // Background
     <div className="min-h-screen pt-navbarOffset">
       {/* About Card */}
-      <main className="container mb-4 p-2 px-1 sm:p-6 lg:p-default mx-auto bg-background text-foreground rounded-xl">
+      <main className="mb-4 first-letter:w-full lg:max-w-7xl mx-auto bg-background text-foreground">
         {/* Company Overview */}
         <section className="mb-12">
           <h1 className="text-3xl sm:text-4xl font-familjenGrotesk font-bold w-fit bg-gradient-to-br from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-6">

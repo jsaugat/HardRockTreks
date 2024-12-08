@@ -22,8 +22,8 @@ export default function NepalInfoPage() {
 
   return (
     <div className="pt-navbarOffset pb-5 sm:pb-7 lg:pb-9 min-h-screen">
-      <Card className=" mx-auto bg-white shadow-xl rounded-xl">
-        <CardHeader className="text-center">
+      <Card className="max-w-7xl mx-auto border-none shadow-none">
+        <CardHeader className="text-center p-0">
           <CardTitle className="mx-auto text-3xl sm:text-4xl font-semibold font-familjenGrotesk bg-gradient-to-br from-primary to-purple-500 w-fit bg-clip-text text-transparent">
             Nepal: A Land of Diversity
           </CardTitle>
@@ -31,7 +31,7 @@ export default function NepalInfoPage() {
             Discover the rich biodiversity, culture, and geography of Nepal
           </CardDescription>
         </CardHeader>
-        <CardContent className="px-4 sm:px-6">
+        <CardContent className="px-0 sm:px-2 md:px-6">
           <Select onValueChange={setSelectedCategory} defaultValue="overview">
             <SelectTrigger className="w-full mb-6 ring-1 ring-primary text-primary font-semibold">
               <SelectValue placeholder="Select a category" />
@@ -43,9 +43,9 @@ export default function NepalInfoPage() {
               <SelectItem value="culture">Culture & History</SelectItem>
             </SelectContent>
           </Select>
-          <div className="mt-6">
+          <section className="mt-6">
             {selectedCategory === "overview" && (
-              <div className="rounded-md border p-4">
+              <div className="p-2 sm:p-4 md:p-6 rounded-2xl border shadow-md">
                 <h3 className="text-2xl font-semibold text-blue-700 mb-4">
                   Nepal at a Glance
                 </h3>
@@ -243,7 +243,7 @@ export default function NepalInfoPage() {
                 </ul>
               </div>
             )}
-          </div>
+          </section>
         </CardContent>
       </Card>
     </div>

@@ -127,7 +127,7 @@ export const SearchbarDialog = () => {
             />
           </div>
 
-          {isPending && <LoadingIndicator className="animate-pulse">Searching...</LoadingIndicator>}
+          {isPending && <LoadingIndicator className="">Searching...</LoadingIndicator>}
 
           {/* Search Results */}
           {searchQuery.length > 2 && !isPending && (

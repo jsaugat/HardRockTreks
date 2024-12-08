@@ -72,8 +72,8 @@ export default function ReviewForm() {
   }
 
   return (
-    <Card>
-      <CardHeader>
+    <Card className="rounded-3xl shadow-md">
+      <CardHeader className="">
         <CardTitle>Write a Review</CardTitle>
         <CardDescription>
           Share your experience to help others plan their adventure
@@ -185,7 +185,7 @@ export default function ReviewForm() {
             />
             <Button
               type="submit"
-              className="w-full rounded"
+              className="w-full rounded-full"
               disabled={isPending}
             >
               {isPending ? "Submitting..." : "Submit Review"}
