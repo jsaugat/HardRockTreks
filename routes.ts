@@ -73,6 +73,7 @@ export const routes: Route[] = [
       },
     ],
   },
+  { href: "/booking", label: "Booking" },
   { href: "/about", label: "About" },
   // { href: "/profile", label: "Profile" },
   { href: "/general-info", label: "Info" },

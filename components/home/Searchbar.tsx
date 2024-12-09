@@ -107,6 +107,12 @@ export const SearchbarDialog = () => {
     });
   };
 
+  // Handle search when recent search is clicked
+  const handleRecentSearch = (search: string) => {
+    setSearchQuery(search);  // Update the search query with the recent search
+    handleSearch(search);    // Trigger the search logic
+  };
+
 
   // Render the search bar dialog
   return (
@@ -138,14 +144,21 @@ export const SearchbarDialog = () => {
           </DialogHeader>
 
           {/* Search Box */}
-          <div className="relative">
+          <div className="relative flex items-center">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             <Input
               placeholder="Where would you like to go?"
               value={searchQuery}
-              onChange={(e) => handleSearch(e.target.value)}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10 py-6"
             />
+            <Button
+              variant="outline"
+              className="ml-2"
+              onClick={() => handleSearch(searchQuery)}  // Manually trigger the search
+            >
+              Search
+            </Button>
           </div>
 
           {isPending && <LoadingIndicator className="">Searching...</LoadingIndicator>}
@@ -235,8 +248,6 @@ export const SearchbarDialog = () => {
             </div>
           )}
 
-
-
           {/* Recent Searches */}
           {searchQuery.length <= 2 && (
             <div className="space-y-4">
@@ -247,7 +258,7 @@ export const SearchbarDialog = () => {
                     key={index}
                     variant="outline"
                     className="rounded-full"
-                    onClick={() => handleSearch(search)}
+                    onClick={() => handleRecentSearch(search)} // Use the handleRecentSearch
                   >
                     <Clock className="mr-2 h-4 w-4" />
                     {search}
@@ -267,7 +278,7 @@ export const SearchbarDialog = () => {
                     key={index}
                     variant="outline"
                     className="justify-start h-12"
-                    onClick={() => handleSearch(trendingItem)}
+                    onClick={() => handleSearch(trendingItem)}  // Use handleSearch for trending places
                   >
                     {trendingItem}
                   </Button>
@@ -288,6 +299,7 @@ export const SearchbarDialog = () => {
       </Dialog>
     </>
   );
+
 };
 
 export default SearchbarDialog;
