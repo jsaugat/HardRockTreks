@@ -1,9 +1,12 @@
-// Importing necessary modules and components
 import React from 'react';
-import { getActivityByDestinationAndSlug, getDestinationBySlug, getPackageBySlug, getPackagesBySubactivity, getSubactivity } from '@/prisma/repositories/destinations';
 import { notFound } from 'next/navigation';
-import { PackageSpecificPage } from './_components/PackageSpecificPage';
-import { SubactivitySpecificPage } from './_components/SubactivitySpecificPage';
+import { PackageSpecificPage } from './pages/PackageSpecificPage';
+import { SubactivitySpecificPage } from './pages/SubactivitySpecificPage';
+// import prisma repos
+import { getDestinationBySlug } from '@/prisma/repositories/destinations';
+import { getActivityByDestinationAndSlug } from '@/prisma/repositories/activities';
+import { getSubactivity } from "@/prisma/repositories/subactivities";
+import { getPackageBySlug, getPackagesBySubactivity } from '@/prisma/repositories/packages';
 
 // Exporting a default async function for the PackagePage
 export default async function PackagePage({

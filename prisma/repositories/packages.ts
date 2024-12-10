@@ -5,6 +5,7 @@ export async function getPackageBySlug(slug: string) {
   return prisma.package.findUnique({
     where: { slug },
     include: {
+      destination: true,
       activity: true,
       subactivity: true,
     },

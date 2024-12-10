@@ -5,11 +5,9 @@ import { CountryTitle } from '@/components/destinations/CountryTitle'
 import { DescriptionCard } from '@/components/destinations/DescriptionCard'
 import { Col } from '@/components/flex-layouts'
 import { ActivityBreadcrumb } from '@/components/destinations/ActivityBreadcrumb'
-import {
-  getActivityByDestinationAndSlug,
-  getDestinationBySlug,
-  getRelevantSubactivities
-} from '@/prisma/repositories/destinations'
+import { getDestinationBySlug } from '@/prisma/repositories/destinations'
+import { getActivityByDestinationAndSlug, } from '@/prisma/repositories/activities'
+import { getRelevantSubactivities } from '@/prisma/repositories/subactivities'
 import { PackagesGrid } from '@/components/destinations/PackagesGrid'
 import { SubActivitiesGrid } from '@/components/destinations/SubActivitiesGrid'
 import { LoaderCircle } from 'lucide-react'

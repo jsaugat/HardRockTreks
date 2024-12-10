@@ -66,7 +66,7 @@ const routes = [
 ]
 export function MainNavMenu() {
   return (
-    <div className="p-1 flex items-center border justify-end w-fit rounded-full bg-background">
+    <div className="p-1 w-fit rounded-full bg-background hidden md:flex items-center border shadow-md justify-end">
       <NavigationMenu className="max-w-full w-full justify-start">
         <NavigationMenuList className="flex-wrap">
           {routes.map((route) => (
