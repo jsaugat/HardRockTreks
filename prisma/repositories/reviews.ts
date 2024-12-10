@@ -17,7 +17,8 @@ export async function getApprovedReviews() {
       review: true,
       avatar: true,
       createdAt: true
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   })
 }
 
@@ -44,7 +45,8 @@ export async function getPendingReviews() {
     },
     orderBy: {
       createdAt: 'desc'
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   })
 }
 

@@ -19,6 +19,7 @@ export async function getDestinations() {
         },
       },
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getDestinationBySlug(slug: string) {
@@ -36,6 +37,7 @@ export async function getDestinationBySlug(slug: string) {
         },
       },
     },
+    cacheStrategy: { ttl: 60 }
   });
   return destination;
 }
@@ -51,6 +53,7 @@ export async function getActivitiesByDestination(destinationId: string) {
       },
       _count: { select: { packages: true } },
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getActivityByDestinationAndSlug(destinationId: string, slug: string) {
@@ -69,6 +72,7 @@ export async function getActivityByDestinationAndSlug(destinationId: string, slu
       _count: { select: { packages: true } }, // Count packages directly in activity
       packages: true, // Include actual packages in activity
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 // Subactivities
@@ -91,7 +95,8 @@ export async function getRelevantSubactivities(destinationId: string, activityId
           packages: true,
         },
       },
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   });
 
   return subactivities;
@@ -108,6 +113,7 @@ export async function getSubactivity(destinationId: string, activityId: string, 
       activity: true,
       _count: { select: { packages: true } },
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 // Packages
@@ -119,6 +125,7 @@ export async function getPackagesByDestination(destinationId: string) {
         { subactivity: { activity: { destinationId } } },
       ],
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getRelevantPackages(destinationId: string, activityId: string) {
@@ -130,11 +137,13 @@ export async function getRelevantPackages(destinationId: string, activityId: str
         { subactivity: { activityId } }, // Related to a subactivity of the activity
       ],
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getPackagesBySubactivity(subactivityId: string) {
   return prisma.package.findMany({
     where: { subactivityId },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getTotalPackageCountByDestination(destinationId: string) {
@@ -146,6 +155,7 @@ export async function getTotalPackageCountByDestination(destinationId: string) {
       ],
     },
     _count: true,
+    cacheStrategy: { ttl: 60 }
   });
 
   return result._count;
@@ -157,5 +167,6 @@ export async function getPackageBySlug(slug: string) {
       activity: true,
       subactivity: true,
     },
+    cacheStrategy: { ttl: 60 }
   });
 }

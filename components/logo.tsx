@@ -18,19 +18,19 @@ export function Logo({ className }: { className?: string }) {
    * Scroll down = Hide logo text
    * Scroll up = Show logo text
    */
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollTop = document.documentElement.scrollTop;
-      setIsVisible(currentScrollTop <= lastScrollTop);
-      setLastScrollTop(currentScrollTop);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollTop = document.documentElement.scrollTop;
+  //     setIsVisible(currentScrollTop <= lastScrollTop);
+  //     setLastScrollTop(currentScrollTop);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollTop]);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [lastScrollTop]);
 
   return (
     <Link href="/" className="">
@@ -46,19 +46,21 @@ export function Logo({ className }: { className?: string }) {
         <div
           className={cn(
             isVisible ? "opacity-100" : "md:opacity-0 pointer-events-none",
-            "relative flex flex-col items-start justify-start gap-0 p-0 font-familjenGrotesk font-bold md:font-semibold text-secondary uppercase text-xl lg:text-2xl leading-none md:drop-shadow-[0_1px_20px_rgba(59,130,246,1)]",
+            "relative flex flex-col items-start justify-start gap-0 p-0 font-familjenGrotesk font-bold md:font-semibold text-secondary uppercase text-xl lg:text-2xl leading-none",
+            // "md:drop-shadow-[0_1px_20px_rgba(59,130,246,1)] ",
             pathname !== "/" && "text-foreground drop-shadow-none",
             className
           )}
         >
-          <span
+          <p
             className={cn(
-              "bg-clip-text text-transparent bg-gradient-to-br from-[#2427ff] to-[#ff7300] md:text-primary-foreground tracking-tight",
+              // "bg-clip-text text-transparent bg-gradient-to-br from-[#2427ff] to-[#ff7300] md:text-primary-foreground tracking-tight",
+              "md:text-primary-foreground md:mix-blend-difference",
               pathname !== "/" && "md:text-foreground"
             )}
           >
             Hard Rock Treks &<br className="md:hidden" /> Expeditions
-          </span>
+          </p>
           <span className="hidden lg:block font-normal text-base">
             Since 1993
           </span>

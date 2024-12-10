@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
 import { useToast } from "@/components/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -118,14 +119,14 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center space-x-2">
                 <Globe className="text-gray-500" />
-                <a
+                <Link
                   href="http://www.hardrocktreks.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
                 >
                   www.hardrocktreks.com
-                </a>
+                </Link>
               </div>
             </CardContent>
           </Card>

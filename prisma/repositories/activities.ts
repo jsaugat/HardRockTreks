@@ -10,8 +10,9 @@ export async function getActivitiesByDestination(destinationId: string) {
           _count: { select: { packages: true } },
         },
       },
-      _count: { select: { packages: true } },
+      _count: { select: { packages: true } }
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getActivityByDestinationAndSlug(destinationId: string, slug: string) {
@@ -30,5 +31,6 @@ export async function getActivityByDestinationAndSlug(destinationId: string, slu
       _count: { select: { packages: true } }, // Count packages directly in activity
       packages: true, // Include actual packages in activity
     },
+    cacheStrategy: { ttl: 60 }
   });
 }

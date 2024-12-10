@@ -1,7 +1,7 @@
 "use client";
 
 import { Menu, PhoneCall, X } from "lucide-react";
-import { NavMenu } from "@/components/header/NavMenu";
+import { NavMenu } from "@/components/navbar/NavMenu";
 import ButtonWithIcon from "@/components/ButtonWithIcon";
 import { Logo } from "@/components/Logo";
 import { Button } from "../ui/button";
@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { OverlayNavMenu } from "./OverlayNavMenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MainNavMenu } from "./MainNavMenu";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -41,7 +42,7 @@ export default function Navbar() {
           <div className="mx-0 flex justify-between w-full">
             <Logo />
             <section className="flex items-center gap-2">
-              <NavMenu />
+              <MainNavMenu />
               <Link href="/contact">
                 <ButtonWithIcon
                   icon={<PhoneCall className="w-4 h-4 text-background" />}

@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 // import { GeistMono } from 'geist/font/mono';
-import Navbar from "@/components/header/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import { TopLoadingBarProvider } from "@/contexts/TopLoadingBar";
 import Footer from "@/components/footer";
 import localFont from "next/font/local";

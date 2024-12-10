@@ -21,7 +21,7 @@ export const DestinationBreadcrumb = ({ destination }: BreadCrumbProps) => {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/destination">Destinations</BreadcrumbLink>
+          <BreadcrumbLink href="/destinations">Destinations</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>

@@ -20,7 +20,8 @@ export async function getRelevantSubactivities(destinationId: string, activityId
           packages: true,
         },
       },
-    }
+    },
+    cacheStrategy: { ttl: 60 }
   });
 
   return subactivities;
@@ -37,5 +38,6 @@ export async function getSubactivity(destinationId: string, activityId: string, 
       activity: true,
       _count: { select: { packages: true } },
     },
+    cacheStrategy: { ttl: 60 }
   });
 }

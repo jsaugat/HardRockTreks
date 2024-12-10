@@ -8,6 +8,7 @@ export async function getPackageBySlug(slug: string) {
       activity: true,
       subactivity: true,
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getRelevantPackages(destinationId: string, activityId: string) {
@@ -19,6 +20,7 @@ export async function getRelevantPackages(destinationId: string, activityId: str
         { subactivity: { activityId } }, // Related to a subactivity of the activity
       ],
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getPackagesByDestination(destinationId: string) {
@@ -29,11 +31,13 @@ export async function getPackagesByDestination(destinationId: string) {
         { subactivity: { activity: { destinationId } } },
       ],
     },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getPackagesBySubactivity(subactivityId: string) {
   return prisma.package.findMany({
     where: { subactivityId },
+    cacheStrategy: { ttl: 60 }
   });
 }
 export async function getTotalPackageCountByDestination(destinationId: string) {
@@ -45,6 +49,7 @@ export async function getTotalPackageCountByDestination(destinationId: string) {
       ],
     },
     _count: true,
+    cacheStrategy: { ttl: 60 }
   });
 
   return result._count;
