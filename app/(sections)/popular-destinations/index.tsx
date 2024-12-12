@@ -9,7 +9,7 @@ export function PopularDestinations() {
         title="Top Destinations"
         subtitle="Explore the most popular destinations"
         hasButton
-        buttonHref="/"
+        buttonHref="destinations"
         buttonLabel="View all destinations"
       >
         <DestinationsCarousel />

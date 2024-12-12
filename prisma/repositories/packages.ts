@@ -1,6 +1,16 @@
 import prisma from '..';
 
 // Packages
+export async function getPackages() {
+  return prisma.package.findMany({
+    include: {
+      destination: true,
+      activity: true,
+      subactivity: true,
+    },
+    cacheStrategy: { ttl: 60 }
+  });
+}
 export async function getPackageBySlug(slug: string) {
   return prisma.package.findUnique({
     where: { slug },

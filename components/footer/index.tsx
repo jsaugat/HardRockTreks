@@ -26,7 +26,7 @@ const communityLinks = [
 
 export default function Footer() {
   return (
-    <footer className="pt-16 lg:pt-10 container pb-3 bg-foreground text-primary-foreground flex flex-col gap-44">
+    <footer className="pt-16 lg:pt-10 px-4 sm:px-6 md:px-default pb-3 bg-foreground text-primary-foreground flex flex-col gap-44 w-full">
       {/* FOOTER TOP */}
       <main className="flex flex-col gap-20 lg:gap-10 md:flex-row justify-between">
         {/*TITLE AND SOCIAL SECTION */}

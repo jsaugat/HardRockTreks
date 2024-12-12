@@ -1,7 +1,8 @@
 import React, { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { cache } from "react"; // Import React's cache utility
-import { getActivitiesByDestination as fetchActivitiesByDestination, getDestinationBySlug as fetchDestinationBySlug } from "@/prisma/repositories/destinations";
+import { getDestinationBySlug as fetchDestinationBySlug } from "@/prisma/repositories/destinations";
+import { getActivitiesByDestination as fetchActivitiesByDestination, } from "@/prisma/repositories/activities";
 import { ActivitiesGrid } from "../../../components/destinations/ActivitiesGrid";
 import { CountrySideNav } from "@/components/destinations/CountrySideNav";
 import { Col } from "@/components/flex-layouts";
