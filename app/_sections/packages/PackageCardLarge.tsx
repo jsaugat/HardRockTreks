@@ -5,13 +5,13 @@ import { ArrowUpRight, ChartColumn, ChevronRight, SunDim } from "lucide-react";
 import Image from "next/image";
 
 export const LargePackageCard = ({ pkg }: { pkg: any }) => {
-  const { title, subtitle, description, image, duration, difficulty, price } =
+  const { name, subtitle, description, image, duration, difficulty, price } =
     pkg;
   return (
-    <Card key={title} className="p-3 h-[400px] md:h-[480px] flex rounded-3xl">
+    <Card key={name} className="p-3 h-[400px] md:h-[480px] flex rounded-3xl">
       {/* //? IMAGE SECTION - LEFT */}
       <div className="relative h-full w-3/5 rounded-xl overflow-hidden">
-        <Image src={image} alt={title} fill style={{ objectFit: "cover" }} />
+        <Image src={image} alt={name || ""} fill style={{ objectFit: "cover" }} />
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black" />
       </div>
       {/* //? TEXT SECTION - RIGHT */}
@@ -20,7 +20,7 @@ export const LargePackageCard = ({ pkg }: { pkg: any }) => {
           <header>
             {/* TITLE */}
             <h2 className="text-3xl lg:text-4xl font-familjenGrotesk font-semibold">
-              {title}
+              {name || "Title not loaded"}
             </h2>
             {/* SUBTITLE */}
             <h3 className="text-xl lg:text-2xl font-familjenGrotesk font-normal text-muted-foreground">

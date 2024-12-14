@@ -27,7 +27,7 @@ export const SubActivitiesGrid: React.FC<SubActivitiesGridProps> = ({
               {subactivity.image ? (
                 <Image
                   src={subactivity.image}
-                  alt={subactivity.name}
+                  alt={subactivity.name || ""}
                   className="w-full h-full object-cover"
                   height={300} // Remove fixed height if you want it to take the entire height of the container
                   width={300} // Remove fixed width if you want it to take the entire width of the container

@@ -42,7 +42,7 @@ export const SmallPackageCard = ({ pkg }: { pkg: any }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground z-10" />
       <Image
         src={pkg.image}
-        alt={pkg.name}
+        alt={pkg.name || ""}
         fill
         style={{ objectFit: "cover" }}
         className="absolute inset-0"

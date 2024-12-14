@@ -28,7 +28,7 @@ export default async function DestinationsPage() {
               <div className="relative h-72">
                 <Image
                   src={destination.image}
-                  alt={`Scenic view of ${destination.name}`}
+                  alt={`Scenic view of ${destination.name || ""}`}
                   fill
                   className="object-cover"
                 />

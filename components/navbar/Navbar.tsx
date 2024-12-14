@@ -36,10 +36,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="navbar fixed top-0 lg:py-1 z-20 w-full bg-background/90 backdrop-blur-lg md:backdrop-blur-lg md:bg-transparent">
-        <div className="container pt-1 h-16 flex items-center md:bg-transparent">
+      <header className="navbar fixed top-0 lg:py-1 z-20 w-full bg-background/90 xl:bg-transparent backdrop-blur-lg md:backdrop-blur-lg mg:bg-transparent">
+        <div className="container pt-1 h-16 flex items-center w-full mx-auto">
           {/* Justify Between */}
-          <div className="mx-0 flex justify-between w-full">
+          <div className="flex justify-between w-full">
             <Logo />
             <section className="flex items-center gap-2">
               <MainNavMenu />
@@ -47,7 +47,7 @@ export default function Navbar() {
                 <ButtonWithIcon
                   icon={<PhoneCall className="w-4 h-4 text-background" />}
                   label="Contact us"
-                  className="hidden lg:flex"
+                  className="hidden xl:flex"
                 />
               </Link>
             </section>
@@ -55,7 +55,7 @@ export default function Navbar() {
             <Button
               size="icon"
               variant="ghost"
-              className="lg:hidden rounded-md  w-12"
+              className="xl:hidden rounded-md  w-12"
               onClick={toggleNav}
             >
               <Menu className="text-foreground w-7 h-7" />

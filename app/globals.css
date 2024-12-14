@@ -92,15 +92,29 @@
 
 /* Set container margin for elements other than hero and tripPlanner */
 .container > *:not(.hero):not(.tripPlanner):not(.navbar) {
-  margin-left: 1rem;
+  margin-left: 1rem; /* Default for small screens (sm) */
   margin-right: 1rem;
 }
 
-/* For medium and larger screens */
+/* For medium screens (md) and larger */
+.container > *:not(.hero):not(.tripPlanner):not(.navbar) {
+  margin-left: 1rem; /* Default for small screens (sm) */
+  margin-right: 1rem;
+}
+
+/* For medium screens (md) and larger */
 @media (min-width: 768px) {
   .container > *:not(.hero):not(.tripPlanner):not(.navbar) {
-    margin-left: 2rem; /* equivalent to px-4 */
-    margin-right: 2rem; /* equivalent to px-4 */
+    margin-left: 2rem; /* Medium screens (md) */
+    margin-right: 2rem;
+  }
+}
+
+/* For large screens (lg) and larger */
+@media (min-width: 1024px) {
+  .container > *:not(.hero):not(.tripPlanner):not(.navbar) {
+    margin-left: 3rem; /* Large screens (lg) */
+    margin-right: 3rem;
   }
 }
 

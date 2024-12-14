@@ -24,7 +24,7 @@ export const ActivitiesGrid: React.FC<ActivitiesGridProps> = ({
               {activity.image ? (
                 <Image
                   src={activity.image}
-                  alt={activity.name}
+                  alt={activity.name || ""}
                   className="w-full h-full object-cover"
                   height={300} // Remove fixed height if you want it to take the entire height of the container
                   width={300} // Remove fixed width if you want it to take the entire width of the container

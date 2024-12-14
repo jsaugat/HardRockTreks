@@ -71,7 +71,7 @@ export const DestinationsCarousel = () => {
             <div className="relative w-full h-[400px] lg:h-[440px] rounded-3xl overflow-hidden">
               <Image
                 src={destination.image}
-                alt={destination.title}
+                alt={destination.title || ""}
                 fill
                 className="rounded-xl"
                 style={{

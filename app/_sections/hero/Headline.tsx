@@ -1,4 +1,5 @@
 import React from "react";
+import Balancer from "react-wrap-balancer";
 
 export const Headline = () => {
   return (
@@ -20,8 +21,10 @@ export const Headline = () => {
 const SmallHeadline = () => {
   return (
     <h1 className="text-5xl sm:text-6xl text-center font-familjenGrotesk uppercase text-primary-foreground font-bold drop-shadow-md">
-      <span className="bg-clip-text text-transparent bg-gradient-to-br from-primary-foreground via-primary-foreground to-[#366fff] drop-shadow-[0_1px_10px_rgba(59,130,246,0.5)]">
-        From Trails<br className="sm:hidden" /> to Summits
+      <span
+        // className="bg-clip-text text-transparent bg-gradient-to-br from-primary-foreground via-primary-foreground to-[#366fff] drop-shadow-[0_1px_10px_rgba(59,130,246,0.5)]"
+      >
+        <Balancer>From Trails to Summits</Balancer>
       </span>
       <span className="text-xl font-semibold block">Your Next Adventure Awaits</span>
     </h1>

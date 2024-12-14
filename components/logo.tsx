@@ -55,13 +55,13 @@ export function Logo({ className }: { className?: string }) {
           <p
             className={cn(
               // "bg-clip-text text-transparent bg-gradient-to-br from-[#2427ff] to-[#ff7300] md:text-primary-foreground tracking-tight",
-              "md:text-primary-foreground md:mix-blend-difference",
+              "text-foreground md:text-primary-foreground md:mix-blend-difference",
               pathname !== "/" && "md:text-foreground"
             )}
           >
             Hard Rock Treks &<br className="md:hidden" /> Expeditions
           </p>
-          <span className="hidden lg:block font-normal text-base">
+          <span className="hidden xl:block font-normal text-base">
             Since 1993
           </span>
         </div>

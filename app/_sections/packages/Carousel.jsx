@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import packagesData from "@/data/packages.json";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,19 +7,19 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { SliderNavigationButtons } from "./CarouselNavigation";
 import { useRef } from "react";
-import useWindowDimensions from '@/hooks/useWindowDimension';
 import { SmallPackageCard } from './PackageCardSmall';
 import { LargePackageCard } from './PackageCardLarge';
+import packagesData from "@/data/packages.json";
 
 export const PackagesCarousel = () => {
   const packagesSwiperContainerRef = useRef(null); // Type swiperContainerRef correctly
-  const { width } = useWindowDimensions();
 
   const [swiperInstance, setSwiperInstance] = useState(null); // Store Swiper instance
   const [isInView, setIsInView] = useState(false);
 
   // Set up IntersectionObserver to observe the carousel component
   useEffect(() => {
+    console.log({ packagesData })
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsInView(entry.isIntersecting);
@@ -69,8 +68,8 @@ export const PackagesCarousel = () => {
         onSlideChange={() => console.log("Package slide changed.")}
         className="h-[440px] md:h-[520px]"
       >
-        {packagesData.map((pkg) => (
-          <SwiperSlide key={pkg.title} className="overflow-visible">
+        {packagesData.map((pkg, idx) => (
+          <SwiperSlide key={pkg.title || idx} className="overflow-visible">
             <div className="block lg:hidden">
               {/* Small Package Card for smaller screens */}
               <SmallPackageCard pkg={pkg} />

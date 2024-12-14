@@ -25,7 +25,7 @@ export const PackageImage: React.FC<ImageGalleryProps> = ({ name, image }) => {
       <div className='absolute z-10 inset-0 bg-gradient-to-br from-transparent via-transparent to-black pointer-events-none' />
       <Image
         src={image}
-        alt={`Package image ${image}`}
+        alt={`Package image ${image || ""}`}
         fill={true}
         objectFit="cover"
         className="hover:scale-105 transition-transform duration-500"

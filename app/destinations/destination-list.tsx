@@ -27,7 +27,7 @@ export function DestinationsList({
         >
           <Image
             src={destination.image}
-            alt={destination.name}
+            alt={destination.name || ""}
             width={400}
             height={300}
             className="object-cover w-full h-64 transition-transform group-hover:scale-105"

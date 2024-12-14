@@ -131,7 +131,7 @@ export const SearchbarDialog = () => {
           </p>
         </div>
         <button className="px-4 py-2 rounded-full text-white bg-gradient-to-br to-violet-400 via-primary from-primary">
-          Get Started
+          Search
         </button>
       </div>
 

@@ -73,7 +73,7 @@ export const ActivitiesCarousel = () => {
             <Card className="relative h-[360px] md:h-[400px] w-full rounded-3xl overflow-hidden">
               <Image
                 src={act.image}
-                alt={act.title}
+                alt={act.title || "Act title"}
                 fill
                 style={{ objectFit: "cover" }}
               />
