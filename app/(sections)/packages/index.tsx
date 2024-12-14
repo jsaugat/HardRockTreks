@@ -9,7 +9,7 @@ export function Packages() {
         title="Packages"
         subtitle="Choose our range of fixed departure packages for 2024."
         hasButton
-        buttonHref="/"
+        buttonHref="packages"
         buttonLabel="View all packages"
       >
         <PackagesCarousel />

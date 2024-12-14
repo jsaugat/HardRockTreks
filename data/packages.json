@@ -1,26 +1,26 @@
 [
   {
-    "title": "Everest Base Camp Trek",
+    "name": "Everest Base Camp Trek",
     "description": "Embark on an unforgettable journey to the Everest Base Camp, where you can explore the breathtaking landscapes and rich Sherpa culture of the Khumbu Area.",
     "image": "https://images.unsplash.com/photo-1662958882371-9b3c5d9a0c25?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "price": "1050",
+    "startingPrice": "1050",
     "duration": "17 Days",
     "difficulty": "Moderate"
   },
   {
-    "title": "Classic Annapurna Base Camp (sanctuary) Trek",
+    "name": "Classic Annapurna Base Camp (sanctuary) Trek",
     "description": "Discover the rich history, ancient architecture, and vibrant traditions that make Bhaktapur Durbar Square a must-visit cultural heritage site.",
     "image": "https://images.unsplash.com/photo-1708355606076-fb22f9ed235d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "price": "1050",
+    "startingPrice": "1050",
     "duration": "17 Days",
     "difficulty": "Moderate"
   },
   {
-    "title": "Kathmandu Valley Trek",
+    "name": "Kathmandu Valley Trek",
     "subtitle": "Chisopani, Nagarkot, Dhulikhel, Panauti.",
     "description": "Discover the rich history, ancient architecture, and vibrant traditions that make Bhaktapur Durbar Square a must-visit cultural heritage site.",
     "image": "https://plus.unsplash.com/premium_photo-1661963741928-673ed7f7c00b?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "price": "1050",
+    "startingPrice": "1050",
     "duration": "17 Days",
     "difficulty": "Moderate"
   }

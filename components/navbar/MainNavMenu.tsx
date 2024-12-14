@@ -100,9 +100,9 @@ export function MainNavMenu() {
                                 <NavigationMenuLink asChild>
                                   <Link
                                     href={activity.href}
-                                    className="text-sm text-muted-foreground hover:text-primary flex items-center"
+                                    className="text-sm text-muted-foreground hover:text-primary flex items-center group"
                                   >
-                                    <ArrowDownRight className="h-4 w-4 mr-1" />
+                                    <ArrowDownRight className="h-4 w-4 mr-1 group-hover:-rotate-90 transition-all duration-150 ease-in-out" />
                                     <span>{activity.label}</span>
                                   </Link>
                                 </NavigationMenuLink>

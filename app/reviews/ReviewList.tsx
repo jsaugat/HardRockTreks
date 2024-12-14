@@ -1,11 +1,9 @@
 // components/ReviewList.tsx
-"use client"
-
-import { useQuery } from "@tanstack/react-query"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Frown, LoaderCircle, Star, UserRound } from "lucide-react"
+import { getApprovedReviews } from "@/prisma/repositories/reviews"
 
 // Interface definition for a Review object
 interface Review {
@@ -15,16 +13,7 @@ interface Review {
   createdAt: string
   serviceRating: number
   review: string
-  avatar: string
-}
-
-// Function to fetch reviews from the API
-async function fetchReviews(): Promise<Review[]> {
-  const response = await fetch('/api/reviews')
-  if (!response.ok) {
-    throw new Error('Failed to fetch reviews')
-  }
-  return response.json()
+  avatar: string | null;
 }
 
 // Function to calculate the average rating from a list of reviews
@@ -33,21 +22,11 @@ function calculateAverageRating(reviews: Review[]): string {
   return (totalRating / reviews.length).toFixed(1)
 }
 
-export default function ReviewList() {
-  const { data: reviews, isLoading, error } = useQuery({
-    queryKey: ['reviews'],
-    queryFn: fetchReviews,
-    refetchInterval: 1000,
-  })
-  if (isLoading) {
-    return <div className="mx-auto text-center flex gap-2 justify-center items-center">
-      <LoaderCircle className="animate-spin w-5 h-5" />
-      Loading reviews...
-    </div>
-  }
-  if (error) {
-    return <div className="text-center text-red-500">Error loading reviews.</div>
-  }
+export default async function ReviewList() {
+  const reviews = await getApprovedReviews();
+
+  console.log({ reviews })
+
   if (!reviews?.length) {
     return (
       <div className="space-y-6">
@@ -69,7 +48,11 @@ export default function ReviewList() {
       </div>)
   }
 
-  const averageRating = calculateAverageRating(reviews)
+  const formattedReviews = reviews.map(review => ({
+    ...review,
+    createdAt: review.createdAt.toString()
+  }));
+  const averageRating = calculateAverageRating(formattedReviews)
   return (
     <div className="space-y-6">
       {/* Review List Header */}
@@ -89,7 +72,7 @@ export default function ReviewList() {
             <CardContent className="p-6">
               <div className="flex gap-4">
                 <Avatar className="hidden md:block">
-                  <AvatarImage src={review.avatar} alt={review.name} />
+                  <AvatarImage src={review.avatar ?? ""} alt={review.name} />
                   <AvatarFallback>
                     <UserRound className="h-6 w-6 text-muted-foreground" />
                   </AvatarFallback>

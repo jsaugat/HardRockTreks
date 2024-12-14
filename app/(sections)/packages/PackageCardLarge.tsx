@@ -1,6 +1,7 @@
+import { Col } from "@/components/flex-layouts";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowUpRight, ChartColumn, SunDim } from "lucide-react";
+import { ArrowUpRight, ChartColumn, ChevronRight, SunDim } from "lucide-react";
 import Image from "next/image";
 
 export const LargePackageCard = ({ pkg }: { pkg: any }) => {
@@ -45,17 +46,31 @@ export const LargePackageCard = ({ pkg }: { pkg: any }) => {
               Starting from
             </span>
             <span className="text-2xl lg:text-3xl font-medium">
-              ${price} USD
+              USD
+              ${price}
+              <span className="text-muted-foreground font-normal">
+                /Person
+              </span>
             </span>
           </p>
-          {/* BOOK BUTTON */}
-          <Button className="pr-1 lg:w-full lg:h-12 border border-primary bg-gradient-to-r from-primary via-primary to-blue-400 transition-all duration-300 hover:ring flex justify-between items-center">
-            <span className="w-10"></span>
-            <span>Book Now</span>
-            <div className="rounded-full bg-background h-10 w-10 flex items-center justify-center ml-2">
-              <ArrowUpRight className="h-6 w-6 text-primary" />
-            </div>
-          </Button>
+          {/* Buttons */}
+          <Col gap={2}>
+            <Button className="pr-1 lg:w-full lg:h-12 border border-primary bg-white hover:bg-white text-lg text-primary transition-all duration-300 hover:ring flex justify-between items-center">
+              <span className="w-10"></span>
+              <span>View details</span>
+              <div className="rounded-full h-10 w-10 flex items-center justify-center ml-2">
+                <ChevronRight className="h-6 w-6 text-primary" />
+              </div>
+            </Button>
+
+            <Button className="pr-1 lg:w-full lg:h-12 text-lg border border-primary bg-gradient-to-r from-primary via-primary to-blue-400 transition-all duration-300 hover:ring flex justify-between items-center">
+              <span className="w-10"></span>
+              <span>Book Now</span>
+              <div className="rounded-full bg-background h-10 w-10 flex items-center justify-center ml-2">
+                <ArrowUpRight className="h-6 w-6 text-primary" />
+              </div>
+            </Button>
+          </Col>
         </div>
       </section>
     </Card>

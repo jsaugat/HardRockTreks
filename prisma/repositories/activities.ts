@@ -1,6 +1,17 @@
 import prisma from '..';
 
 // Activities
+export async function getActivities() {
+  const activities = await prisma.activity.findMany({
+    include: {
+      subactivities: true,
+      _count: { select: { packages: true } }
+    },
+    cacheStrategy: { ttl: 60 }
+  });
+  const count = activities.length;
+  return { activities, count };
+}
 export async function getActivitiesByDestination(destinationId: string) {
   return prisma.activity.findMany({
     where: { destinationId },

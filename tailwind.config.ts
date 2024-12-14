@@ -27,7 +27,7 @@ const config: Config = {
       spacing: {
         smallNavbarOffset: '72px',
         // it sums up the height of the navbar, top margin or spacing of the navbar and extra 10px
-        navbarOffset: 'calc(72px + 10px)',
+        navbarOffset: 'calc(72px + 40px)',
         default: '32px'
       },
       backdropBlur: {
