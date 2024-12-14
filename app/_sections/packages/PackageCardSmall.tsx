@@ -116,7 +116,7 @@ const ContentSection = ({
     {/* --- Action Buttons --- */}
     <div className="flex justify-between gap-3">
       <ActionButton
-        text="View Details"
+        text="More Details"
         bgClass="bg-white text-primary"
         iconBgColor="bg-white"
         icon={<ChevronRight className={`h-6 w-6 text-primary`} />}

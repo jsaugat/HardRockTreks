@@ -2,7 +2,7 @@ import prisma from '..';
 
 // Packages
 export async function getPackages() {
-  const packages = await prisma.package.findMany({
+  const data = await prisma.package.findMany({
     include: {
       destination: true,
       activity: true,
@@ -10,8 +10,8 @@ export async function getPackages() {
     },
     cacheStrategy: { ttl: 60 }
   });
-  const count = packages.length;
-  return { packages, count };
+  const count = data.length;
+  return { data, count };
 }
 export async function getPackageBySlug(slug: string) {
   return prisma.package.findUnique({

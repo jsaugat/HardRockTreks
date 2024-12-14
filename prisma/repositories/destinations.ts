@@ -2,7 +2,7 @@ import prisma from '..';
 
 // Destinations
 export async function getDestinations() {
-  return prisma.destination.findMany({
+  const data = await prisma.destination.findMany({
     include: {
       activities: {
         include: {
@@ -21,6 +21,8 @@ export async function getDestinations() {
     },
     cacheStrategy: { ttl: 60 }
   });
+  const count = data.length;
+  return { data, count };
 }
 export async function getDestinationBySlug(slug: string) {
   const destination = prisma.destination.findUnique({

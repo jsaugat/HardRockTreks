@@ -106,7 +106,7 @@ const ContentSection = ({
       className="text-sm leading-tight"
       style={{
         display: "-webkit-box",
-        WebkitLineClamp: 7,
+        WebkitLineClamp: 5,
         WebkitBoxOrient: "vertical",
         overflow: "hidden",
       }}>
@@ -114,9 +114,9 @@ const ContentSection = ({
     </p>
 
     {/* --- Action Buttons --- */}
-    <div className="flex justify-between gap-3">
+    <div className="h-fit flex flex-col md:flex-row items-between justify-between gap-3 mt-3">
       <ActionButton
-        text="View Details"
+        text="More Details"
         bgClass="bg-white text-primary"
         iconBgColor="bg-white"
         icon={<ChevronRight className={`h-6 w-6 text-primary`} />}
@@ -155,7 +155,7 @@ const ActionButton = ({
 }) => (
   <Button
     onClick={onClick}
-    className={`mt-3 pr-1 w-full h-10 ${bgClass} transition-all font-familjenGrotesk font-light flex justify-between items-center`}
+    className={`pr-1 w-full h-10 ${bgClass} transition-all font-familjenGrotesk font-light flex justify-between items-center`}
   >
     <span className="font-semibold text-lg">{text}</span>
     <div

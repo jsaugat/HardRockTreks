@@ -2,15 +2,15 @@ import prisma from '..';
 
 // Subactivities
 export async function getSubactivities() {
-  const subactivities = await prisma.subactivity.findMany({
+  const data = await prisma.subactivity.findMany({
     include: {
       packages: true,
       _count: { select: { packages: true } },
     },
     cacheStrategy: { ttl: 60 }
   })
-  const count = subactivities.length;
-  return { subactivities, count };
+  const count = data.length;
+  return { data, count };
 }
 export async function getRelevantSubactivities(destinationId: string, activityId: string) {
   const subactivities = await prisma.subactivity.findMany({

@@ -57,7 +57,7 @@ export const LargePackageCard = ({ pkg }: { pkg: any }) => {
           <Col gap={2}>
             <Button className="pr-1 lg:w-full lg:h-12 border border-primary bg-white hover:bg-white text-lg text-primary transition-all duration-300 hover:ring flex justify-between items-center">
               <span className="w-10"></span>
-              <span>View details</span>
+              <span>More details</span>
               <div className="rounded-full h-10 w-10 flex items-center justify-center ml-2">
                 <ChevronRight className="h-6 w-6 text-primary" />
               </div>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react';
 
 export default async function DestinationsPage() {
-  const destinations = await getDestinations()
+  const { data: destinations, count } = await getDestinations();
 
   return (
     <main className="max-w-7xl mx-auto pt-navbarOffset md:pt-0">

@@ -1,7 +1,8 @@
 import { SearchbarDialog } from "@/components/home/Searchbar";
 import Image from "next/image";
 import { Headline } from "./Headline";
-import { ArrowDown, Phone } from "lucide-react";
+import { ArrowDown, LocateFixed, Phone } from "lucide-react";
+import Link from "next/link";
 import ButtonWithIcon from "@/components/ButtonWithIcon";
 
 export default function Hero() {
@@ -19,23 +20,9 @@ export default function Hero() {
       <div className="absolute inset-0 z-[9] w-full h-full bg-gradient-to-b from-foreground/20 via-foreground/40 to-foreground" />
       <section className="relative z-10 -top-20 md:static text-center space-y-4">
         <Headline />
-        {/* <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
-          Discover amazing destinations and plan your next adventure with us.
-        </p>
-        <div className="flex justify-center gap-4">
-          <Button asChild size="lg" className='rounded-full bg-gradient-to-br from-indigo-500 via-primary to-secondary'>
-            <Link href="/destinations">Explore Now</Link>
-          </Button>
-          <Button variant="outline" size="lg" asChild>
-            <Link href="/contact">Contact Us</Link>
-          </Button>
-        </div> */}
         <div className="flex flex-col items-center justify-center gap-3">
-          <SearchbarDialog />
-          {/* <ButtonWithIcon
-            icon={<Phone className="w-4 h-4 text-primary-foreground" />}
-            label="Contact Us"
-          /> */}
+          {/* <SearchbarDialog /> */}
+          <Explore />
         </div>
       </section>
       {/* EXPLORE MORE */}
@@ -57,5 +44,28 @@ export default function Hero() {
       </div>
       {/* <ArrowDown className="md:hidden w-20 h-20 animate-bounce absolute bottom-5 text-primary-foreground" /> */}
     </div>
+  );
+}
+
+function Explore() {
+  return (
+    <Link href="/explore" className="w-full">
+      <div
+        className="lg:w-1/2 p-1 mx-auto flex items-center justify-between space-x-2 border rounded-full bg-secondary w-[300px] cursor-pointer"
+      >
+        <div className="flex items-center gap-3">
+          <div className="border p-2 rounded-full bg-gradient-to-br from-primary via-primary to-violet-400 flex items-center justify-center">
+            <LocateFixed className="h-5 w-5 text-secondary" />
+          </div>
+          <p className="h-full rounded-full text-muted-foreground flex-1 text-center">
+            <span className="inline-block lg:hidden">Search Trips</span>
+            <span className="hidden lg:inline-block">Find Your Adventure.</span>
+          </p>
+        </div>
+        <button className="px-4 py-2 rounded-full text-white bg-gradient-to-br to-violet-400 via-primary from-primary">
+          Search
+        </button>
+      </div>
+    </Link>
   );
 }

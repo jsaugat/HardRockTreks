@@ -16,6 +16,7 @@ import { MapPin, Compass, ArrowDownRight } from 'lucide-react'
 
 const routes = [
   { href: "/", label: "Home" },
+  { href: "/explore", label: "Explore" },
   {
     href: "/destinations",
     label: "Destinations",
